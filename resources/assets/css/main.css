@@ -6,7 +6,7 @@
     /*background-color: #337ab7;*/
     background-color: #e9ebee;
 	margin-bottom: 0px;
-	border-bottom: solid #3b5998;
+	border-bottom: solid #1d9863;
 }
 .noUi-connect{
     background-color: #3b5998!important;
@@ -244,7 +244,7 @@ select.red {border-color:red; background-color:rgba(255,0,0,.2);}
 .loading:after {
     content:''; 
     display:block; 
-    background:rgba(255,255,255,.8) url(../images/spinner.gif) center no-repeat;
+    background:rgba(255,255,255,.8) url(../images/loader-fading-circles.gif) center no-repeat;
     background-size:50px 50px;
     position:absolute; 
     top:0; 
