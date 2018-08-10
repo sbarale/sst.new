@@ -23,9 +23,12 @@
         "bootstrap-tagsinput": "^0.7.1",
         "bootstrap-typeahead": "^2.3.2",
         "bootstrap3": "^3.3.5",
+        "jquery.formslider": "^1.2.6",
         "maskedinput": "^3.3.11",
+        "moment": "^2.22.2",
         "normalize": "^0.3.1",
         "nouislider": "^11.1.0",
+        "parsley": "^0.1.0",
         "rupture": "^0.7.1",
         "stylus": "^0.54.5"
     }

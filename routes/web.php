@@ -12,5 +12,10 @@
 */
 
 Route::get( '/', function () {
-	return view( 'fronts.sst.layout' );
+	return view( 'fronts.sst.index' );
 } );
+
+Route::get( '/refinance', function () {
+	return view( 'fronts.sst.loan.home.refinance.refinance_v1' );
+} );
+

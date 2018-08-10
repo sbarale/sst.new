@@ -24871,6 +24871,9 @@ window.onload = function () {
 
 
 
+// import 'parsley'
+// import 'jquery.formslider'
+// import 'moment'
 
 
 window.$ = window.jQuery = __WEBPACK_IMPORTED_MODULE_0_jquery_src_jquery_js___default.a;

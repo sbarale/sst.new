@@ -32,6 +32,9 @@ import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap-tagsinput';
 import 'bootstrap-typeahead';
 import 'nouislider';
+// import 'parsley'
+// import 'jquery.formslider'
+// import 'moment'
 import './components/init';
 
 window.$ = window.jQuery = $;
