@@ -19,3 +19,7 @@ Route::get( '/refinance', function () {
 	return view( 'fronts.sst.loan.home.refinance.refinance_v1' );
 } );
 
+Route::get( '/remodeling/bath', function () {
+	return view( 'fronts.sst.remodeling.bath.index' );
+} );
+

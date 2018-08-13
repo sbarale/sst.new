@@ -29,12 +29,14 @@ window.onload = function () {
 
 import $ from 'jquery/src/jquery.js'
 import 'bootstrap/dist/js/bootstrap.js';
+import 'jquery-inputmask'
 import 'bootstrap-tagsinput';
 import 'bootstrap-typeahead';
 import 'nouislider';
-// import 'parsley'
+import 'parsley';
+
 // import 'jquery.formslider'
-// import 'moment'
+import 'moment';
 import './components/init';
 
 window.$ = window.jQuery = $;

@@ -3987,6 +3987,10 @@ init-package-json@^1.10.3:
     validate-npm-package-license "^3.0.1"
     validate-npm-package-name "^3.0.0"
 
+inputmask@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-4.0.0.tgz#98d7da2c08208a474badc692c1122edb5580247b"
+
 internal-ip@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-1.2.0.tgz#ae9fbf93b984878785d50a8de1b356956058cf5c"
@@ -4369,11 +4373,19 @@ isurl@^1.0.0-alpha5:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
 
+jquery-inputmask@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery-inputmask/-/jquery-inputmask-1.0.1.tgz#b4e208b32db0a86b284b3aa090386692b79dd516"
+
 jquery.formslider@^1.2.6:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/jquery.formslider/-/jquery.formslider-1.2.6.tgz#5c0ddc0b8c971a32f93c78e9596e3b6de889bf8d"
   dependencies:
     npm "^5.8.0"
+
+jquery.maskedinput@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/jquery.maskedinput/-/jquery.maskedinput-1.4.1.tgz#3ea8f4cdc4eafce7354c27b66a73d0f44defc327"
 
 jquery@^3.3.1:
   version "3.3.1"
@@ -4965,10 +4977,6 @@ map-visit@^1.0.0:
   resolved "https://registry.yarnpkg.com/map-visit/-/map-visit-1.0.0.tgz#ecdca8f13144e660f1b5bd41f12f3479d98dfb8f"
   dependencies:
     object-visit "^1.0.0"
-
-maskedinput@^3.3.11:
-  version "3.3.11"
-  resolved "https://registry.yarnpkg.com/maskedinput/-/maskedinput-3.3.11.tgz#2ab7ed8ce69a0492c38037e55665aab58f8ea660"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"

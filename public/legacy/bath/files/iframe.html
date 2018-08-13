@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- saved from url=(0178)http://d2m2wsoho8qq12.cloudfront.net/iframe.html?token=AFC001AA-560D-B654-2E19-DB3D7E92029C&apiurl=http%3A%2F%2Fcreate.leadid.com%2F2.5.0&lck=E2DDD392-D0F0-0334-A497-F349DED4D1C9 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+</head>
+<body>
+  <script type="text/javascript">
+  function init() {
+    // Retrieve the LeadiD token from this URL's querystring
+    var token = getQueryVariable('token', location.search);
+
+    // Check if we have a uuid in cookie jar
+    var uuidCookie = getCookie('uuid');
+
+    // Check if we have a UUID in local storage
+    try {
+      var uuidLocalStorage = 'object' == typeof localStorage && localStorage.getItem('uuid');
+    } catch(error) {
+      // Catch security errors in browsers like Chrome that are averse to local storage
+      // access attempts in the context of an iframe when 3rd party cookies are blocked
+      var uuidLocalStorage = 0;
+    }
+
+    var uuid = uuidCookie || uuidLocalStorage;
+
+    // If we did not find a uuid, then make one
+    if (!(uuid)) {
+      uuid = createUUID();
+    }
+
+    // Store UUID cookie 
+    setCookie('uuid', uuid);
+
+    // Save UUID to local storage
+    try {
+      'object' == typeof localStorage && localStorage.setItem('uuid', uuid);
+    } catch(error) {
+      // Catch security errors in browsers like Chrome that are averse to local storage
+      // access attempts in the context of an iframe when 3rd party cookies are blocked
+    }
+
+    // Add script to the page, passing token & uuid parameters along in request
+    addScript(token, uuid);
+  }
+
+  /**
+   * Add script to the page
+   *
+   * @param String token
+   *   LeadiD token
+   *
+   * @param String uuid
+   *   uuid associated with token
+   *
+   */
+  function addScript(token, uuid) {
+    var apiurl = getQueryVariable('apiurl', location.search);
+
+    if (apiurl) {
+      // Create a script element object
+      var script = document.createElement('scr' + 'ipt');
+
+      // Construct binary string indicating storage methods
+      // Bit 1: cookie
+      var cookieBit = getCookie('uuid') ? 1 : 0;
+
+      // Bit 2: local storage
+      try {
+        var localStorageBit = 'object' == typeof localStorage && localStorage.getItem('uuid') ? 2 : 0;
+      } catch(error) {
+        // Catch security errors in browsers like Chrome that are averse to local storage
+        // access attempts in the context of an iframe when 3rd party cookies are blocked
+        var localStorageBit = 0;
+      }
+
+      // Perform bitwise or operation to get method number
+      var methods = localStorageBit | cookieBit;
+
+      var lck = getQueryVariable('lck', location.search);
+
+      // Add script tag regardless of whether any storage methods worked
+      // Set the script element src to the js file; set token, uuid & methods parameters in querystring
+      script.src = decodeURIComponent(apiurl) + '/SaveDeviceId.js'
+                 + '?token='   + token
+                 + '&uuid='    + uuid
+                 + '&methods=' + methods;
+      if (lck) {
+        script.src += '&lck=' + getQueryVariable('lck', location.search);
+      }
+
+      script.setAttribute('type', 'text/javascript');
+
+      // Append script to the DOM
+      document.body.appendChild(script); 
+    }
+  }
+
+  /**
+   * Check whether a variable is defined.
+   *
+   * @param String val
+   *   The variable to test
+   *
+   * @return Boolean
+   */
+  function isDefined(val) {
+    return 'undefined' != typeof val;
+  };
+
+  /**
+   * Gets the value of a variable in the query string of this URL.
+   *
+   * @param String variable
+   *   Name of the variable to get the value of
+   *
+   * @return String
+   */
+  function getQueryVariable(variable) {
+    var querystring = location.search.split('?')[1];
+    if (isDefined(querystring)) {
+      var vars = querystring.split('&');
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (pair[0] == variable) {
+          return isDefined(pair[1]) ? pair[1] : '';
+        }
+      }
+    }
+
+    return null; // Query Variable not found
+  }
+
+  /**
+   * Set a cookie in the browser
+   *
+   * @param String name
+   *   Name of the cookie to set
+   * @param value
+   *   Value to set for the cookie
+   * @param Number minutes
+   *   Duration in minutes until the cookie expires
+   */
+  function setCookie(name, value) {
+    var expirationDate
+      , expirationString
+      , cookieValue;
+
+    // Expire cookie on 1/17/2038 (due to 32-bit integer overflow bug in some browsers)
+    var minutes = (2147299200000 - +new Date()) / 60000;
+
+    expirationDate = new Date();
+    expirationDate.setTime(expirationDate.getTime() + (minutes * 60 * 1000));
+
+    expirationString = '; expires=' + expirationDate.toUTCString();
+
+    cookieValue = escape(value);
+
+    document.cookie = name + '=' + cookieValue + expirationString + '; path=/';
+  }
+
+  /**
+   * Polyfill for String.trim()
+   */
+  if (!String.prototype.trim) {
+    String.prototype.trim = function() {
+      return this.replace(/^\s+|\s+$/gm, '');
+    }
+  }
+
+  /**
+   * Gets a cookie from the browser
+   *
+   * @param String name
+   *   Cookie to get the value of
+   *
+   * @return String
+   */
+  function getCookie(name) {
+    var cookieName
+      , cookieValue
+      , cookieArray = document.cookie.split(';');
+
+    for (var index = 0; index < cookieArray.length; ++index) {
+      cookieName  = cookieArray[index].substr(0, cookieArray[index].indexOf('=')).trim();
+      cookieValue = cookieArray[index].substr(cookieArray[index].indexOf('=') + 1);
+
+      if (cookieName == name) {
+        return unescape(cookieValue);
+      }
+    }
+  }
+
+  /**
+   * Creates a 128-bit (modified) UUID (lower-case hexadecimal representation with no dashes)
+   *
+   * @return String
+   */
+  function createUUID() {
+    // Courtesy of stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript
+    var d = new Date().getTime();
+    var uuid = 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = (d + Math.random() * 16) % 16 | 0;
+      d = Math.floor(d / 16);
+      return ('x' == c ? r : (r&0x7|0x8)).toString(16);
+    });
+    return uuid;
+  };
+
+  (function() {
+    try {
+      init();
+    } catch(error) {
+      // Silently swallow error here
+    }
+  })();
+  </script><script src="./SaveDeviceId.js" type="text/javascript"></script>
+
+</body></html>

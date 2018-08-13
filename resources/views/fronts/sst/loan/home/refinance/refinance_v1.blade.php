@@ -57,7 +57,8 @@ if ( isset( $st_t_val ) ) {
 }
 ?>
 @extends('fronts.sst.layout')
-@section('logo','images/composed/mortgage-refinance.png')
+@section('logo','images/sst-landscape.png')
+@section('logo-section','images/mortgage-refinance.png')
 @section('content')
     <div class="container">
         <div class="secondarybg whitebg">

@@ -19,12 +19,12 @@
     background-color: #3b5998 !important;
 }
 
-#brand {
+.brand {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-#brand img {
+.brand img {
     max-height: 60px;
 }
 
@@ -261,14 +261,17 @@
         font-size: 18px;
     }
 
-    #brand {
+    .brand {
         margin-top: 10px;
         margin-bottom: 0;
     }
 
-    #brand img {
+    .brand img {
         margin: 0 auto;
         max-height: 50px;
+    }
+    .bullet {
+        text-align: center;
     }
 }
 
@@ -297,6 +300,10 @@ select.red {
     position: relative;
 }
 
+.bullet {
+    text-align: left;
+}
+
 .loading:after {
     content: '';
     display: block;
@@ -307,6 +314,14 @@ select.red {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+
+@media screen and (max-width: 568px) {
+    .bullet {
+        text-align: left;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -324,9 +339,24 @@ select.red {
     #survey_headline {
         font-size: 16px !important;
     }
+
+
+    .bullet {
+        text-align: center;
+    }
 }
 
 #ssn {
     position: relative;
     background: url(../images/privacysecurity.png) no-repeat 8px 8px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.row-centered {
+    text-align: center;
 }
