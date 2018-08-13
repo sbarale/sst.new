@@ -59,13 +59,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 
 	$obj = $offer->postLeads( $data );
 
-	$debug      = var_export( $obj, false );
-	$debug_data = var_export( $data, false );
-	if ( strpos( $debug, 'Success' ) !== false ) {
-		$bbd_status = 'accept';
-	} else {
-		$bbd_status = 'reject';
-	}
 }
 
 ?>
@@ -73,12 +66,23 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        dataLayer = [];
+    </script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-M2H3LLJ');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M2H3LLJ');</script>
     <!-- End Google Tag Manager -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -92,8 +96,10 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 </head>
 <body class="graybg">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2H3LLJ"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2H3LLJ"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
@@ -106,7 +112,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                     <div class="counter col_fourth">
                         <!--<h5 class="count-text ">People used our service:</h5>-->
                         <h3 class="timer count-title" style="margin-top:-10px" id="count-number" data-to="98870" data-speed="1500"></h3>
-
                     </div>
                 </div>
             </div>
@@ -137,33 +142,10 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 				<a href="tel:8889981190" style="color: #fff; "> <div style="margin-bottom: 15px;" ><span style="font-size: 25px; background-color: red;  padding:10px;   border-radius: 15px;"> Call Now: (888) 998-1190</a></span></div>-->
                 <h2>Thank You <? echo $first_name . " " . $last_name; ?></h2>
                 <h3><img src='./img/compleet.png'>Step 1 Complete! </h3>
-
-
                 <h3>Congratulations you're just one step closer to your dreamed bathroom remodeling project!</h3>
                 <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
                 <br>
-				<?php
-				if ( $bbd_status == 'accept' ) {
-					// Insert here Conversion GTM
-
-					echo "<!-- Jpl2 Facebook Pixel Code -->
-						<script>
-						!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-						n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-						n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-						t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-						document,'script','https://connect.facebook.net/en_US/fbevents.js');
-						
-						fbq('init', '1572218342826061');
-						fbq('track', 'Lead');</script>";
-				} else {
-					// Insert here Failed GTM
-				}
-
-
-				?>
-
-
+				<?php $offer->track(); ?>
             </div>
 
         </div>
@@ -171,10 +153,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     </div>
 
 </div>
-<!-- <div id="map_canvas" style="height:60%;top:30px"></div>-->
-<!-- new comments -->
-
-
 <div style="opacity: 1.0; margin-top: 10px; margin-bottom: 30px; width: 100px;
     " class="center-block">
 </div>
