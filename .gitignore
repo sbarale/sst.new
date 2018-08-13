@@ -5,6 +5,7 @@
 /vendor
 /.idea
 /.vscode
+/.rocketeer
 /.vagrant
 Homestead.json
 Homestead.yaml

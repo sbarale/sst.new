@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo -e "-CURRENT- branch pushed to live\n"
+
+if [ `git status --porcelain |wc -l` -ne 0 ]
+then
+        echo -e "\nUncommited changes exist.\nPlease commit first.\n";
+        exit 1
+fi
+bumpversion patch
+REVISION=`git rev-parse HEAD`
+echo ${REVISION:0:9} > REVISION
+git add REVISION
+gulp --production
+git add .
+git ci -am"Updated Revision and packed js code"
+git push
+rocketeer deploy
