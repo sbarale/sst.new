@@ -6,7 +6,7 @@ $project_url = 'http://smartsavings.today/';
 $project_root = '/storage/vol1/sites/apps/smartsavings.today/';
 
 $slack_hook = 'https://hooks.slack.com/services/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';
-$slack_channel = '#general';
+$slack_channel = '#deploy_bot';
 @endsetup
 
 @task('put_app_up', ['on' => 'web'])
@@ -44,5 +44,9 @@ put_app_down
 pull_latest_changes
 install_dependencies
 put_app_up
-@slack($slack_hook, $slack_channel, "Envoy task $task ran on <$project_url|[$project_name]>")
 @endmacro
+
+@after
+@slack($slack_hook, $slack_channel, "Envoy task $task ran on <$project_url|[$project_name]>")
+@endafter
+
