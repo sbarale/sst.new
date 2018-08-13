@@ -44,9 +44,5 @@ put_app_down
 pull_latest_changes
 install_dependencies
 put_app_up
-@endmacro
-
-@finished
 @slack($slack_hook, $slack_channel, "Envoy task $task ran on <$project_url|[$project_name]>")
-@endfinished
-
+@endmacro
