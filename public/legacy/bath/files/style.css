@@ -1,38 +1,38 @@
-body {font-family: Helvetica, Arial, Verdana; font-size:13px;margin:5px auto;}
+body {font-family: 'Oswald', sans-serif; font-size:13px;margin:5px auto;}
 img {border:0;}
-h1 {font-family: 'Montserrat', sans-serif;font-size:60px;margin:0px;color:#0c2c4a;font-weight:400;}
-h2 {font-family: 'Montserrat', sans-serif;font-size:28px;font-weight:400;color:#0c2c4a;margin:0px 0px 30px 0px;padding:0px;text-align:center;}
+h1 {font-family: 'Oswald', sans-serif;font-size:60px;margin:0px;color:#0c2c4a;font-weight:400;}
+h2 {font-family: 'Oswald', sans-serif;font-size:28px;font-weight:400;color:#0c2c4a;margin:0px 0px 30px 0px;padding:0px;text-align:center;}
 label {font-size:16px;}
 .clear {clear:both;}
 .ctr {margin:20px auto;text-align:center;}
 .hide {display:none;}
-.start {margin:0px auto;font-family: 'HelveticaNeue-CondensedBlack',Helvetica, Verdana;font-size:28px;color:#0c2c4a;text-align:center;font-weight:bold;}
+.start {margin:0px auto;font-family: 'Oswald',sans-serif;font-size:28px;color:#0c2c4a;text-align:center;font-weight:bold;}
 .steptitle {font-size:20px;text-align:center;}
 .callicon {vertical-align:middle;margin-right:5px;}
 .callnum {font-weight:bold;font-size:25px;margin-top:0px;margin-bottom:0px;color:#0c2c4a;}
 .callmsg {font-weight:bold;font-size:15px;margin-top:0px;margin-bottom:0px;margin-left:45px;color:#0c2c4a;}
-.logowrapper {float:left;clear:both;width:auto;}
+.logowrapper {float:left;clear:both;width:30%;}
 .phonewrapper {float:right;width:350px;}
 .fullwrapper {float:left;padding:0px 0px 0px 20px;}
 #container {max-width:1050px;width:100%;margin:auto;}
 #tycontainer {background:#fff;padding:30px;float:left;clear:both;text-align:center;color:#0c2c4a;font-size:18px;margin:10px;}
-#tycontainer p {font-family: Arial, Verdana, sans-serif;margin:10px;color:#0c2c4a;font-weight:bold;font-size:21px;}
+#tycontainer p {font-family: 'Oswald',sans-serif;margin:10px;color:#0c2c4a;font-weight:bold;font-size:21px;}
 #topcontainer {float:left;clear:both;margin:0;background:url('main.jpg') no-repeat top left;min-height:545px;}
 #top {max-width:1050px;width:100%; margin:0;padding:0;float:left;clear:both;}
 #main {max-width:1050px;width:100%;min-height:489px;float:left;padding:0;margin:10px auto;}
 #description p {font-weight:500;color:#2d3236;font-size:19px;margin-top:10px;margin-left:10px;line-height:1.3;}
 #title {max-width:1050px;width:100%;float:left;clear:both;text-align:center;margin-top:0px;}
 #rightbox {float:left; width:420px;margin-left:650px;}
-#step1, #step2 {font-family: Arial, Helvetica, Verdana; font-size:12px; color:#313131; padding:0; margin:0;}
+#step1, #step2 {font-family: 'Oswald',sans-serif; font-size:12px; color:#313131; padding:0; margin:0;}
 #laststepbox {float:left; width:470px;margin-left:650px; font-family: Arial, Helvetica, Verdana; font-size:12px; color:#0c2c4a;}
 #form_table {max-width:420px; width:100%;margin:12px 0 0 0;padding:0;}
-#form_table td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}
+#form_table td {font-family: 'Oswald',sans-serif;font-size:15px; padding:0 0 7px 0; margin:0;}
 #form_table2 {max-width:420px; width:100%;margin:12px 0 0 0;padding:0;}
-#form_table2 td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}
+#form_table2 td {font-family: 'Oswald',sans-serif;font-size:15px; padding:0 0 7px 0; margin:0;}
 #form_table3 {margin:12px 12px 0 12px;padding:0;}
-#form_table3 td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}
+#form_table3 td {font-family: 'Oswald',sans-serif;font-size:15px; padding:0 0 7px 0; margin:0;}
 #form_box {float:left;}
-#footer {border-top:1px solid #eee;max-width:1050px;width:100%;float:left;font-family: Arial, Helvetica, Verdana; font-size: 12px; color: #7e7e7e; line-height: 1.2; margin:5px 0; padding:5px 0;text-align:center;}
+#footer {border-top:1px solid #eee;max-width:1050px;width:100%;float:left;font-family: 'Oswald',sans-serif; font-size: 12px; color: #7e7e7e; line-height: 1.2; margin:5px 0; padding:5px 0;text-align:center;}
 #btn_continue2 {margin-top:10px;font-weight:bold;background:#fdc23a;color:#000;border:3px solid #fff; padding:14px 100px;border:2px solid #fff;letter-spacing:1px;border-radius:10px;font-size:25px;text-decoration:none;cursor:pointer;min-width:230px;-webkit-box-shadow: 0px 0px 17px 0px rgba(189,189,189,1);
 -moz-box-shadow: 0px 0px 17px 0px rgba(189,189,189,1);
 box-shadow: 0px 0px 17px 0px rgba(189,189,189,1);}
@@ -45,20 +45,20 @@ box-shadow: 0px 0px 17px 0px rgba(189,189,189,1);}
 	padding:0 0 0 10px;
 }
 .bullets li {
-	list-style-type:disc;
-	font-weight:bold;
-	padding-left:0px;
-	padding-bottom:10px;
-	font-size:19px;
-	margin-bottom:5px;
-	color:#2d3236;
+	list-style-type: disc;
+	font-weight: lighter;
+	padding-left: 0px;
+	/* padding-bottom: 10px; */
+	/* font-size: 19px; */
+	margin-bottom: 5px;
+	color: #737373;
 }
 
 .disclaimer {
 	font-size:11px;
 	margin:0 auto;
 	padding:10px 0px;
-	text-align:center;
+	text-align:justify;
 	font-weight:normal;
 	line-height:1.3;
 }

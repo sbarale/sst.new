@@ -19,22 +19,22 @@ $(function () {
         return $sections.index($sections.filter('.current'));
     }
 
-    // Previous button is easy, just go back
-    $('.form-navigation .previous').click(function() {
+// Previous button is easy, just go back
+    $('.form-navigation .previous').click(function () {
         navigateTo(curIndex() - 1);
     });
 
-    // Next button goes forward iff current block validates
-    $('.form-navigation .next').click(function() {
+// Next button goes forward iff current block validates
+    $('.form-navigation .next').click(function () {
         $('.demo-form').parsley().whenValidate({
             group: 'block-' + curIndex()
-        }).done(function() {
+        }).done(function () {
             navigateTo(curIndex() + 1);
         });
     });
 
-    // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
-    $sections.each(function(index, section) {
+// Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
+    $sections.each(function (index, section) {
         $(section).find(':input').attr('data-parsley-group', 'block-' + index);
     });
     navigateTo(0); // Start at the beginning

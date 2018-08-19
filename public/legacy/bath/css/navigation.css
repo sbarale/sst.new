@@ -1,0 +1,53 @@
+.test-form {
+    /*margin-top: 50px;*/
+}
+
+.form-section {
+    display: none;
+}
+
+.current {
+    display: block;
+}
+
+label.floating {
+    top: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+label.floating.up {
+    top: -16px;
+    opacity: 1;
+}
+
+/* error message class - added to global styles */
+label .floating-desc {
+    display: none;
+}
+
+.has-error label .floating-desc {
+    display: inline;
+}
+
+/* utility class - added to global styles */
+.text-black {
+    color: black !important;
+}
+
+.field {
+    margin-top: 50px;
+}
+
+.form-group {
+    padding: 0px 5px 0px 0px;
+    /*margin: 0px 0px 5px 0px;*/
+}
+
+.form-navigation {
+    margin-top: 20px;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}

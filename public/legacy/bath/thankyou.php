@@ -14,7 +14,7 @@ require_once( 'OfferSender.php' );
 $campaign_id  = '5b6313889dc73';
 $campaign_key = 'fxYHVwbMWT4t2By6mpn8';
 
-$offer_url = 'http://geek3.leadspediatrack.com/post.do';
+$offer_url = 'http://track.geek3.io/post.do';
 
 
 $offer      = new OfferSender( $offer_url );
@@ -48,7 +48,8 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'address'          => $_POST['address'],
 		'city'             => $_POST['city'],
 		'state'            => $_POST['state'],
-		'zip_code'         => $ip,
+		'zip_code'         => $_POST['zip_code'],
+		'ip_address'       => $ip,
 		'landing_page_url' => $_SERVER['REQUEST_URI'],
 		'universal_leadid' => $_POST['universal_leadid'],
 		'click_id'         => $click_id,
@@ -58,7 +59,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 	];
 
 	$obj = $offer->postLeads( $data );
-
 }
 
 ?>
