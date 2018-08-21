@@ -77,7 +77,7 @@ class OfferSender {
 	 *
 	 * @return array $respond Status and message respond
 	 */
-	private function sendLeads() {
+	private function sendLeads( $force_true = false ) {
 		$obj    = simplexml_load_file( $this->prepare_url );
 		$status = $obj->status;
 
@@ -114,6 +114,14 @@ class OfferSender {
 					'message' => $status . " (" . @$obj->error . ")",
 				];
 			}
+		}
+
+		if ( $force_true ) {
+			$this->success = true;
+			$respond       = [
+				'status'  => 1,
+				'message' => "Success",
+			];
 		}
 
 		return $respond;
