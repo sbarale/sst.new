@@ -58,7 +58,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
 	];
 
-	$obj = $offer->postLeads( $data );
+	$obj = $offer->postLeads( $data, false, true );
 }
 
 ?>

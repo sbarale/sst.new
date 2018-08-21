@@ -61,14 +61,14 @@ class OfferSender {
 	 *
 	 * @return array $this->sendLeads() Status and message respond
 	 */
-	public function postLeads( $params = [], $csv = false ) {
+	public function postLeads( $params = [], $csv = false, $force_true = false ) {
 		$this->user_data   = $params;
 		$this->create_csv  = $csv;
 		$this->prepare_url = $this->offer_url
 		                     . ( parse_url( $this->offer_url, PHP_URL_QUERY ) ? '&' : '?' )
 		                     . http_build_query( $this->user_data );
 
-		return $this->sendLeads();
+		return $this->sendLeads( $force_true );
 	}
 
 
