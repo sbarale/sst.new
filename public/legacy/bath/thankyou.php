@@ -101,6 +101,9 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
+<script>
+    fbq('track','Lead');
+</script>
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
         <nav id="primary-nav" class="row">
