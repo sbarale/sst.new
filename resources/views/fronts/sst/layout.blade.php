@@ -78,13 +78,12 @@
             <p style="text-align:center;color:#424242">
 
                 <strong>Copyright 2018 | All Rights Reserved |
-                    <a href="/privacy.pdf" target="_blank">Privacy Policy</a> &amp;
+                    <a href="/privacy.html" target="_blank">Privacy Policy</a> &amp;
                     <a href="/terms.html" target="_blank">Terms</a></strong>
             <p style="text-align:center;">
-                <strong><a href="https://geek3.io">Affiliates </a> -
-                    <a href="https://geek3.io">Buy leads</a></strong>
+                <strong><a href="https://geek3.leadspedia.net">Affiliates </a> -
+                    <a href="https://geek3.leadspedia.net">Buy leads</a></strong>
             </p>
-            <p style="text-align:center;"><a href="https://blog.smartsavings.today/about-us.php">About Us</a></p>
 
         </div>
     </div>
