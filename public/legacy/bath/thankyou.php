@@ -69,21 +69,21 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     <script>
         dataLayer = [];
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-M2H3LLJ');</script>
-    <!-- End Google Tag Manager -->
+<!--    <!-- Google Tag Manager -->-->
+<!--    <script>(function (w, d, s, l, i) {-->
+<!--            w[l] = w[l] || [];-->
+<!--            w[l].push({-->
+<!--                'gtm.start':-->
+<!--                    new Date().getTime(), event: 'gtm.js'-->
+<!--            });-->
+<!--            var f = d.getElementsByTagName(s)[0],-->
+<!--                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';-->
+<!--            j.async = true;-->
+<!--            j.src =-->
+<!--                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
+<!--            f.parentNode.insertBefore(j, f);-->
+<!--        })(window, document, 'script', 'dataLayer', 'GTM-M2H3LLJ');</script>-->
+<!--    <!-- End Google Tag Manager -->-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -95,15 +95,13 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     <link href="css/main.css" rel="stylesheet" type='text/css'/>
 </head>
 <body class="graybg">
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2H3LLJ"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
-<script>
-    fbq('track','Lead');
-</script>
+<!--<!-- Google Tag Manager (noscript) -->-->
+<!--<noscript>-->
+<!--    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2H3LLJ"-->
+<!--            height="0" width="0" style="display:none;visibility:hidden"></iframe>-->
+<!--</noscript>-->
+<!--<!-- End Google Tag Manager (noscript) -->-->
+
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
         <nav id="primary-nav" class="row">
@@ -148,7 +146,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                 <h3>Congratulations you're just one step closer to your dreamed bathroom remodeling project!</h3>
                 <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
                 <br>
-				<?php $offer->track(); ?>
+				<?php $offer->showPixel(); ?>
             </div>
 
         </div>
