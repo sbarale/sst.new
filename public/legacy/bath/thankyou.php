@@ -25,8 +25,9 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 
 	$phone = preg_replace( "#[[:punct:]]#", "", $_POST['phone_home'] );
 
-	$status       = "";
-	$lead         = "";
+	$status = "";
+	$lead   = "";
+
 	$adid         = isset( $_POST['adid'] ) ? $_POST['adid'] : 0;
 	$kwid         = isset( $_POST['kwid'] ) ? $_POST['kwid'] : 0;
 	$custom_fb_px = isset( $_POST['custom_fb_px'] ) ? $_POST['custom_fb_px'] : '';
@@ -58,7 +59,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
 	];
 
-	$obj = $offer->postLeads( $data, false, true );
+	$obj = $offer->postLeads( $data, false );
 }
 
 ?>
@@ -69,21 +70,21 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     <script>
         dataLayer = [];
     </script>
-<!--    <!-- Google Tag Manager -->-->
-<!--    <script>(function (w, d, s, l, i) {-->
-<!--            w[l] = w[l] || [];-->
-<!--            w[l].push({-->
-<!--                'gtm.start':-->
-<!--                    new Date().getTime(), event: 'gtm.js'-->
-<!--            });-->
-<!--            var f = d.getElementsByTagName(s)[0],-->
-<!--                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';-->
-<!--            j.async = true;-->
-<!--            j.src =-->
-<!--                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
-<!--            f.parentNode.insertBefore(j, f);-->
-<!--        })(window, document, 'script', 'dataLayer', 'GTM-M2H3LLJ');</script>-->
-<!--    <!-- End Google Tag Manager -->-->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M2H3LLJ');</script>
+    <!-- End Google Tag Manager -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -147,6 +148,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                 <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
                 <br>
 				<?php $offer->showPixel(); ?>
+				<?php $offer->track(); ?>
             </div>
 
         </div>
