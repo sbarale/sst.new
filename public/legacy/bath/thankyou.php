@@ -148,7 +148,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                 <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
                 <br>
 				<?php $offer->showPixel(); ?>
-				<?php $offer->track(); ?>
+				<?php //$offer->track(); ?>
             </div>
 
         </div>
