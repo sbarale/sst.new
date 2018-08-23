@@ -11,6 +11,7 @@
  */
 
 class OfferSender {
+	public    $fb_id   = false;
 	protected $success = false;
 	/**
 	 * Offer full url w/ or w/o parameters.
@@ -206,14 +207,19 @@ DATA;
 
 	public function showPixel() {
 
-		echo <<<"DATA"
-					<script>
+		if ( $this->fb_id ) {
+			$show_px = "fbq('init','" . $this->fb_id . "');";
+		} else {
+			$show_px = "";
+		}
+		echo <<<DATA
+					<script>  
 					!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 					n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 					n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
 					t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 					document,'script','https://connect.facebook.net/en_US/fbevents.js');
-					
+					$show_px
 					fbq('init', '210251666509998');
 					fbq('track', 'Lead');
 					</script>";

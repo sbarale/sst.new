@@ -35,6 +35,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 	$is_test      = isset( $_POST['is_test'] ) ? $_POST['is_test'] : 0;
 	$pub_id       = isset( $_POST['pub_id'] ) ? $_POST['pub_id'] : 0;
 	$sub_id       = isset( $_POST['sub_id'] ) ? $_POST['sub_id'] : 0;
+	$fbid         = isset( $_GET['fbid'] ) ? $_GET['fbid'] : "";
 	$ip           = $offer->getUserIP();
 
 
@@ -147,8 +148,8 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                 <h3>Congratulations you're just one step closer to your dreamed bathroom remodeling project!</h3>
                 <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
                 <br>
-				<?php $offer->showPixel(); ?>
-				<?php //$offer->track(); ?>
+				<?php //$offer->showPixel(); ?>
+				<?php $offer->track(); ?>
             </div>
 
         </div>

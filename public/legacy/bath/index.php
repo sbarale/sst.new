@@ -68,7 +68,7 @@
             </div>
             <div class="col-md-5">
                 <section class="test-form">
-                    <form id="demo-form" action="thankyou.php" method="post" autocomplete="off" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
+                    <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" autocomplete="off" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
                         <input type="hidden" id="zip_code" name="zip_code" value="">
                         <input type="hidden" id="address" name="address" value="">
                         <input type="hidden" id="city" name="city" value="">
