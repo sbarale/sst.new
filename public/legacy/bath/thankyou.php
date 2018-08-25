@@ -104,12 +104,12 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     <link href="css/main.css" rel="stylesheet" type='text/css'/>
 </head>
 <body class="graybg">
-<!--<!-- Google Tag Manager (noscript) -->-->
+<!--<!-- Google Tag Manager (noscript) -->
 <!--<noscript>-->
 <!--    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2H3LLJ"-->
 <!--            height="0" width="0" style="display:none;visibility:hidden"></iframe>-->
 <!--</noscript>-->
-<!--<!-- End Google Tag Manager (noscript) -->-->
+<!--<!-- End Google Tag Manager (noscript) -->
 
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
