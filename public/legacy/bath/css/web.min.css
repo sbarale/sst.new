@@ -413,10 +413,11 @@ td, th {
 }
 
 label.floating {
-    font-size: 11.083px;
-    font-size: .6414rem;
+    /*font-size: 11.083px;*/
+    /*font-size: .6414rem;*/
     margin-bottom: 3.525px;
-    margin-bottom: .204rem
+    margin-bottom: .204rem;
+    font-weight: normal;
 }
 
 .base {
@@ -603,7 +604,7 @@ ol ol, ol ul, ul ol, ul ul {
 
 .list-diamond, .store .icon-uber {
     display: inline-block;
-    fill: #9f005b;
+    fill: #bd2e14;
     height: 11.082px;
     height: .64137rem;
     margin-right: 7.997px;
@@ -2204,7 +2205,7 @@ label.floating {
 }
 
 label.floating.up {
-    top: -16px;
+    top: -22px;
     opacity: 1
 }
 
@@ -2452,7 +2453,7 @@ input[type=checkbox].disabled, input[type=checkbox]:disabled, input[type=radio].
 }
 
 .has-error, .has-error .checkbox, .has-error .checkbox-inline, .has-error.checkbox-inline label, .has-error.checkbox label, .has-error .form-control-label, .has-error .radio, .has-error .radio-inline, .has-error.radio-inline label, .has-error.radio label, .has-error .text-help, .has-error label, .parsley-error, .parsley-error .checkbox, .parsley-error .checkbox-inline, .parsley-error.checkbox-inline label, .parsley-error.checkbox label, .parsley-error .form-control-label, .parsley-error .radio, .parsley-error .radio-inline, .parsley-error.radio-inline label, .parsley-error.radio label, .parsley-error .text-help, .parsley-error label {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error label .floating-desc, .parsley-error label .floating-desc {
@@ -2460,52 +2461,52 @@ input[type=checkbox].disabled, input[type=checkbox]:disabled, input[type=radio].
 }
 
 .has-error .c-indicator, .has-error .r-indicator, .parsley-error .c-indicator, .parsley-error .r-indicator {
-    border-color: #9f005b
+    border-color: #bd2e14
 }
 
 .has-error.form-control, .has-error .form-control, .parsley-error.form-control, .parsley-error .form-control {
-    border-color: #9f005b;
-    color: #9f005b;
-    box-shadow: inset 0 0 0 1px #9f005b
+    border-color: #bd2e14;
+    color: #bd2e14;
+    box-shadow: inset 0 0 0 1px #bd2e14
 }
 
 .has-error.form-control::-webkit-input-placeholder, .has-error .form-control::-webkit-input-placeholder, .parsley-error.form-control::-webkit-input-placeholder, .parsley-error .form-control::-webkit-input-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control::-moz-placeholder, .has-error .form-control::-moz-placeholder, .parsley-error.form-control::-moz-placeholder, .parsley-error .form-control::-moz-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control:-ms-input-placeholder, .has-error .form-control:-ms-input-placeholder, .parsley-error.form-control:-ms-input-placeholder, .parsley-error .form-control:-ms-input-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control::placeholder, .has-error .form-control::placeholder, .parsley-error.form-control::placeholder, .parsley-error .form-control::placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control:active, .has-error .form-control:active, .has-error.form-control:focus, .has-error .form-control:focus, .parsley-error.form-control:active, .parsley-error .form-control:active, .parsley-error.form-control:focus, .parsley-error .form-control:focus {
-    border-color: #9f005b;
-    box-shadow: inset 0 0 0 1px #9f005b;
+    border-color: #bd2e14;
+    box-shadow: inset 0 0 0 1px #bd2e14;
     -webkit-transition: box-shadow .3s ease-in-out ease-out;
     transition: box-shadow .3s ease-in-out ease-out
 }
 
 .has-error.form-control:active::-webkit-input-placeholder, .has-error .form-control:active::-webkit-input-placeholder, .has-error.form-control:focus::-webkit-input-placeholder, .has-error .form-control:focus::-webkit-input-placeholder, .parsley-error.form-control:active::-webkit-input-placeholder, .parsley-error .form-control:active::-webkit-input-placeholder, .parsley-error.form-control:focus::-webkit-input-placeholder, .parsley-error .form-control:focus::-webkit-input-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control:active::-moz-placeholder, .has-error .form-control:active::-moz-placeholder, .has-error.form-control:focus::-moz-placeholder, .has-error .form-control:focus::-moz-placeholder, .parsley-error.form-control:active::-moz-placeholder, .parsley-error .form-control:active::-moz-placeholder, .parsley-error.form-control:focus::-moz-placeholder, .parsley-error .form-control:focus::-moz-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control:active:-ms-input-placeholder, .has-error .form-control:active:-ms-input-placeholder, .has-error.form-control:focus:-ms-input-placeholder, .has-error .form-control:focus:-ms-input-placeholder, .parsley-error.form-control:active:-ms-input-placeholder, .parsley-error .form-control:active:-ms-input-placeholder, .parsley-error.form-control:focus:-ms-input-placeholder, .parsley-error .form-control:focus:-ms-input-placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .has-error.form-control:active::placeholder, .has-error .form-control:active::placeholder, .has-error.form-control:focus::placeholder, .has-error .form-control:focus::placeholder, .parsley-error.form-control:active::placeholder, .parsley-error .form-control:active::placeholder, .parsley-error.form-control:focus::placeholder, .parsley-error .form-control:focus::placeholder {
-    color: #9f005b
+    color: #bd2e14
 }
 
 @media (min-width: 544px) {
@@ -6362,7 +6363,7 @@ img[src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.r
 }
 
 .homepage-content .container-fluid {
-    background-color: #9f005b
+    background-color: #bd2e14
 }
 
 @media (min-width: 768px) {
@@ -6501,7 +6502,7 @@ img[src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.r
 
 .center-cell {
     height: calc(100vw / 3 - 7px);
-    background-color: #9f005b
+    background-color: #bd2e14
 }
 
 .mobile-search-callout aside {
@@ -7096,7 +7097,7 @@ img[src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.r
 }
 
 .mall-alert {
-    background-color: #9f005b;
+    background-color: #bd2e14;
     color: #fff;
     padding: 11.082px 0;
     padding: .64137rem 0
@@ -7434,7 +7435,7 @@ img[src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.r
     position: absolute;
     right: 15px;
     padding: 10px;
-    background-color: #9f005b;
+    background-color: #bd2e14;
     line-height: 1;
     top: 19.151px;
     top: 1.10833rem;
@@ -8177,7 +8178,7 @@ img[src="https://adc3ef35f321fe6e725a-fb8aac3b3bf42afe824f73b606f0aa4c.ssl.cf1.r
 }
 
 .directions-icon.end {
-    fill: #9f005b;
+    fill: #bd2e14;
     width: 16px;
     height: 21px;
     left: 15.552px;
@@ -8414,7 +8415,7 @@ main {
 }
 
 .text-brand-primary {
-    color: #9f005b
+    color: #bd2e14
 }
 
 .text-brand-secondary {

@@ -33,9 +33,9 @@ function initAutocomplete() {
                 }
             }
             if (street_number && route) {
-                $('#address').val(street_number + ' ' + route);
+                // $('#address').val(street_number + ' ' + route);
                 console.log('yes street_number +route');
-                $('#address2').val(place.formatted_address);
+                $('#address').val(place);
             }
             else {
                 console.log('NO street_number +route');
@@ -44,19 +44,18 @@ function initAutocomplete() {
                 $('#address2').val(address_without_google);
                 address_without_google = address_without_google.substring(0, address_without_google.indexOf(','));
                 console.log(address_without_google);
-                $('#address').val(address_without_google);
+                $('#address').val(place);
 
             }
 
         }
-        $('#zip_code, #zip2').val(zip);
-        $('#city').val(city);
-        $('#state').val(state);
-        $("#country").text('in ' + state_full);
-
-        if (!zip.length) {
-            $('#zip_code').attr('type', 'text');
-        }
-        $('.btn-page4').removeAttr('disabled');
+        // $('#zip_code').val(zip);
+        // $('#city').val(city);
+        // $('#state').val(state);
+        // $("#country").text('in ' + state_full);
+        //
+        // if (!zip.length) {
+        //     $('#zip_code').attr('type', 'text');
+        // }
     });
 }

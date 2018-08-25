@@ -23,12 +23,14 @@
     <!--    <link href="./files/css.css" rel="stylesheet">-->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/web.min.css">
     <link rel="stylesheet" type="text/css" href="./files/style.css">
 
     <link rel="stylesheet" href="css/navigation.css">
     <script type="text/javascript" src="//parsleyjs.org/dist/parsley.js"></script>
+    <script type="text/javascript" src="/js/jquery.maskedinput.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -68,12 +70,11 @@
             </div>
             <div class="col-md-5">
                 <section class="test-form">
-                    <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" autocomplete="off" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
-                        <input type="hidden" id="zip_code" name="zip_code" value="">
+                    <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
                         <input type="hidden" id="address" name="address" value="">
-                        <input type="hidden" id="city" name="city" value="">
-                        <input type="hidden" id="country" name="country" value="">
-                        <input type="hidden" id="state" name="state" value="">
+                        <!--                        <input type="hidden" id="city" name="city" value="">-->
+                        <!--                        <input type="hidden" id="country" name="country" value="">-->
+                        <!--                        <input type="hidden" id="state" name="state" value="">-->
                         <input type="hidden" name="_submit" value="1"/>
                         <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
 
@@ -85,8 +86,8 @@
                                 </div>
                                 <div class="row field">
                                     <div class="form-group">
-                                        <label for="zip_code" class="floating">Zip Code<span class="floating-desc">: Missing value</span></label>
-                                        <input class="form-control" type="text" id="zip_code" name="zip_code" data-trigger="change" data-parsley-required placeholder="ENTER YOUR ZIP CODE"/>
+                                        <label for="zip_code" class="floating">Zip Code<span class="floating-desc">: Enter 5-digit zip code</span></label>
+                                        <input autocomplete="billing postal-code" class="form-control" type="text" id="zip_code" name="zip_code" data-parsley-required data-parsley-type="digits" data-parsley-length="[5, 5]" placeholder="ENTER YOUR ZIP CODE"/>
                                     </div>
                                 </div>
                             </div>
@@ -97,8 +98,9 @@
                                 </div>
                                 <div class="row field">
                                     <div class="form-group">
-                                        <label for="address_mask" class="floating">Address :<span class="floating-desc">: Missing value</span></label>
-                                        <input class="form-control" type="text" id="address_mask" name="address_mask" data-trigger="change" data-parsley-required placeholder="ENTER YOUR ADDRESS"/>
+                                        <label for="address_mask" class="floating">Address<span class="floating-desc">: Required field</span></label>
+                                        <input type="hidden" id="address" name="address">
+                                        <input autocomplete="disabled" class="form-control" type="text" id="address_mask" name="address_mask"  data-parsley-required placeholder="ENTER YOUR ADDRESS"/>
                                     </div>
                                 </div>
                             </div>
@@ -109,23 +111,23 @@
                                 </div>
                                 <div class="row field">
                                     <div class="form-group col-md-6">
-                                        <label for="first_name" class="floating">First Name<span class="floating-desc">: (20 chars min, 200 max)</span></label>
-                                        <input class="form-control" id="first_name" name="first_name" data-trigger="change" data-parsley-required placeholder="FIRST NAME">
+                                        <label for="first_name" class="floating">First Name<span class="floating-desc">: Required</span></label>
+                                        <input autocomplete="name" class="form-control" id="first_name" name="first_name" data-trigger="change" data-parsley-required placeholder="FIRST NAME">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="last_name" class="floating">Last Name<span class="floating-desc">: (20 chars min, 200 max)</span></label>
-                                        <input class="form-control" id="last_name" name="last_name" data-trigger="change" data-parsley-required placeholder="LAST NAME">
+                                        <label for="last_name" class="floating">Last Name<span class="floating-desc">: Required</span></label>
+                                        <input autocomplete="last" class="form-control" id="last_name" name="last_name" data-trigger="change" data-parsley-required placeholder="LAST NAME">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                        <label for="email_address" class="floating">Email<span class="floating-desc">: Missing</span></label>
-                                        <input class="form-control" id="email_address" name="email_address" data-trigger="change" data-parsley-required placeholder="EMAIL">
+                                        <label for="email_address" class="floating">Email<span class="floating-desc">: Required</span></label>
+                                        <input autocomplete="email" class="form-control" id="email_address" name="email_address" data-trigger="change" data-parsley-required data-parsley-type="email" placeholder="EMAIL">
                                     </div>
 
                                     <div class="form-group col-md-6">
-                                        <label for="phone_home" class="floating">Message<span class="floating-desc">: (20 chars min, 200 max)</span></label>
-                                        <input class="form-control" id="phone_home" name="phone_home" data-trigger="change" data-parsley-required placeholder="PHONE">
+                                        <label for="phone_home" class="floating">Phone<span class="floating-desc">: (10 digits only)</span></label>
+                                        <input autocomplete="tel" class="form-control" id="phone_home" name="phone_home" data-trigger="change" data-parsley-required  data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" placeholder="PHONE">
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +170,7 @@
                 <a href="#" style="font-style: italic">offers</a> on my telephone number I provided above, including my wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a condition of purchase and that I may revoke my consent at any time.</label>
         </p>
         <p>© 2018 smartsavings.today |
-            <a href="https://smartsavings.today/privacy.pdf" style="">Privacy Policy</a> |
+            <a href="https://smartsavings.today/privacy.html" style="">Privacy Policy</a> |
             <a href="https://smartsavings.today/terms.html">Terms of Service</a>
         </p>
     </div>
@@ -226,6 +228,12 @@
 <div id="LeadiD-wrapper-element" class=" LeadiD-ignore-mutation" style="width: 1px; height: 1px; overflow: hidden; position: fixed; left: -1px; top: 0px;">
     <iframe class=" LeadiD-ignore-element LeadiD-ignore-mutation" src="./files/iframe.html"></iframe>
 </div>
+<script>
+    $(document).ready(function () {
+        $('#zip_code').mask('99999',{autoclear: false});
+        $('#phone_home').mask('(999) 999-9999',{autoclear: false});
+    });
+</script>
 </body>
 </html>
 
