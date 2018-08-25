@@ -6,7 +6,6 @@ function initAutocomplete() {
     });
     autocomplete.addListener('place_changed', function () {
         var place = autocomplete.getPlace();
-        console.log(place);
         var zip = '';
         var street_number = '';
         var route = '';
@@ -32,21 +31,8 @@ function initAutocomplete() {
                     state_full = place.address_components[i].long_name;
                 }
             }
-            if (street_number && route) {
-                // $('#address').val(street_number + ' ' + route);
-                console.log('yes street_number +route');
-                $('#address').val(place);
-            }
-            else {
-                console.log('NO street_number +route');
-//                      $('#address').val(place.formatted_address);
-                var address_without_google = document.getElementById('address_mask').value;
-                $('#address2').val(address_without_google);
-                address_without_google = address_without_google.substring(0, address_without_google.indexOf(','));
-                console.log(address_without_google);
-                $('#address').val(place);
-
-            }
+            $('#address').val(place.formatted_address);
+            console.log(place.formatted_address);
 
         }
         // $('#zip_code').val(zip);

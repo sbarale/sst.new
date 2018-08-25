@@ -71,9 +71,9 @@
             <div class="col-md-5">
                 <section class="test-form">
                     <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
-                        <input type="hidden" id="address" name="address" value="">
-                        <!--                        <input type="hidden" id="city" name="city" value="">-->
-                        <!--                        <input type="hidden" id="country" name="country" value="">-->
+                        <input type="hidden" id="address" name="address" value="" data-parsley-required>
+                        <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? 1 : 0; ?>">
+                        <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
                         <!--                        <input type="hidden" id="state" name="state" value="">-->
                         <input type="hidden" name="_submit" value="1"/>
                         <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
@@ -87,7 +87,7 @@
                                 <div class="row field">
                                     <div class="form-group">
                                         <label for="zip_code" class="floating">Zip Code<span class="floating-desc">: Enter 5-digit zip code</span></label>
-                                        <input autocomplete="billing postal-code" class="form-control" type="text" id="zip_code" name="zip_code" data-parsley-required data-parsley-type="digits" data-parsley-length="[5, 5]" placeholder="ENTER YOUR ZIP CODE"/>
+                                        <input pattern="^\d{5,6}(?:[-\s]\d{4})?$" autocomplete="billing postal-code" class="form-control" type="text" id="zip_code" name="zip_code" data-parsley-required data-parsley-type="digits" data-parsley-length="[5, 5]" placeholder="ENTER YOUR ZIP CODE"/>
                                     </div>
                                 </div>
                             </div>
@@ -99,8 +99,7 @@
                                 <div class="row field">
                                     <div class="form-group">
                                         <label for="address_mask" class="floating">Address<span class="floating-desc">: Required field</span></label>
-                                        <input type="hidden" id="address" name="address">
-                                        <input autocomplete="disabled" class="form-control" type="text" id="address_mask" name="address_mask"  data-parsley-required placeholder="ENTER YOUR ADDRESS"/>
+                                        <input pattern="^[a-zA-Z\d\s\-\,\#\.\+]+$" autocomplete="billing address" class="form-control" type="text" id="address_mask" name="address_mask" data-parsley-required placeholder="ENTER YOUR ADDRESS"/>
                                     </div>
                                 </div>
                             </div>
@@ -112,11 +111,11 @@
                                 <div class="row field">
                                     <div class="form-group col-md-6">
                                         <label for="first_name" class="floating">First Name<span class="floating-desc">: Required</span></label>
-                                        <input autocomplete="name" class="form-control" id="first_name" name="first_name" data-trigger="change" data-parsley-required placeholder="FIRST NAME">
+                                        <input autocomplete="fname" class="form-control" id="first_name" name="first_name" data-trigger="change" data-parsley-required placeholder="FIRST NAME">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="last_name" class="floating">Last Name<span class="floating-desc">: Required</span></label>
-                                        <input autocomplete="last" class="form-control" id="last_name" name="last_name" data-trigger="change" data-parsley-required placeholder="LAST NAME">
+                                        <input autocomplete="lname" class="form-control" id="last_name" name="last_name" data-trigger="change" data-parsley-required placeholder="LAST NAME">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -127,7 +126,7 @@
 
                                     <div class="form-group col-md-6">
                                         <label for="phone_home" class="floating">Phone<span class="floating-desc">: (10 digits only)</span></label>
-                                        <input autocomplete="tel" class="form-control" id="phone_home" name="phone_home" data-trigger="change" data-parsley-required  data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" placeholder="PHONE">
+                                        <input autocomplete="tel" class="form-control" id="phone_home" name="phone_home" data-trigger="change" data-parsley-required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" placeholder="PHONE">
                                     </div>
                                 </div>
                             </div>
@@ -230,8 +229,17 @@
 </div>
 <script>
     $(document).ready(function () {
-        $('#zip_code').mask('99999',{autoclear: false});
-        $('#phone_home').mask('(999) 999-9999',{autoclear: false});
+        $('#zip_code').mask('99999', { autoclear: false });
+        $('#phone_home').mask('(999) 999-9999', { autoclear: false });
+        $('.demo-form').parsley().on('form:validate', function (formInstance) {
+            if ($('#address') === "") {
+                formInstance.validationResult = false;
+
+            }
+            // var ok = formInstance.isValid({ group: 'block-1', force: true });
+            // if (!ok) formInstance.validationResult = false;
+
+        });
     });
 </script>
 </body>

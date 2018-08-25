@@ -60,7 +60,14 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
 	];
 
-	$obj = $offer->postLeads( $data, false );
+	$debug = isset( $_POST['debug'] ) ? ( $_POST['debug'] == 1 ? true : false ) : false;
+	if ( ! $debug ) {
+		$obj = $offer->postLeads( $data, false );
+	} else {
+		echo "<pre>";
+		print_r( $data );
+		die();
+	}
 }
 
 ?>
