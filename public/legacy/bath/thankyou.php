@@ -57,6 +57,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'adid'             => $adid,
 		'kwid'             => $kwid,
 		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
+		'release'          => file_get_contents( __DIR__ . "/../../VERSION.txt" ),
 	];
 
 	$debug = isset( $_POST['debug'] ) ? ( $_POST['debug'] == 1 ? true : false ) : false;
