@@ -33,10 +33,11 @@ function initAutocomplete() {
             }
             $('#address_mask').val(place.formatted_address);
             $('#address').val(place.formatted_address);
+            $('#zip_code').val(zip);
+
             console.log(place.formatted_address);
 
         }
-        // $('#zip_code').val(zip);
         // $('#city').val(city);
         // $('#state').val(state);
         // $("#country").text('in ' + state_full);
