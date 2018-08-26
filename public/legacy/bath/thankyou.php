@@ -38,7 +38,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 	$fbid         = isset( $_GET['fbid'] ) ? $_GET['fbid'] : "";
 	$ip           = $offer->getUserIP();
 
-
 	$data = [
 		'lp_test'          => $is_test,
 		'lp_campaign_id'   => $campaign_id,

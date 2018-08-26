@@ -31,6 +31,7 @@ function initAutocomplete() {
                     state_full = place.address_components[i].long_name;
                 }
             }
+            $('#address_mask').val(place.formatted_address);
             $('#address').val(place.formatted_address);
             console.log(place.formatted_address);
 

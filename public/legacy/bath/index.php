@@ -99,7 +99,7 @@
                                 <div class="row field">
                                     <div class="form-group">
                                         <label for="address_mask" class="floating">Address<span class="floating-desc">: Required field</span></label>
-                                        <input pattern="^[a-zA-Z\d\s\-\,\#\.\+]+$" autocomplete="billing address" class="form-control" type="text" id="address_mask" name="address_mask" data-parsley-required placeholder="ENTER YOUR ADDRESS"/>
+                                        <input autocomplete="billing address" class="form-control" type="text" id="address_mask" name="address_mask" data-parsley-required data-parsley-google placeholder="ENTER YOUR ADDRESS"/>
                                     </div>
                                 </div>
                             </div>
@@ -231,15 +231,37 @@
     $(document).ready(function () {
         $('#zip_code').mask('99999', { autoclear: false });
         $('#phone_home').mask('(999) 999-9999', { autoclear: false });
-        $('.demo-form').parsley().on('form:validate', function (formInstance) {
-            if ($('#address') === "") {
-                formInstance.validationResult = false;
 
+        // $('#address_mask').parsley().on('field:validate', function (e) {
+        //     // In here, `this` is the parlsey instance of #some-input
+        //     if ($('#address').val() === "") {
+        //         e.addError('address_mask', {});
+        //         console.log('hehe');
+        //         console.log(e);
+        //         e.parent.validationResult = null;
+        //     }
+        // });
+        window.Parsley.addValidator('google', {
+            validateString: function (value) {
+                return value === $('#address').val();
+            },
+            messages: {
+                en: 'Address is required',
             }
-            // var ok = formInstance.isValid({ group: 'block-1', force: true });
-            // if (!ok) formInstance.validationResult = false;
-
         });
+
+
+        // $('#address_mask').parsley().on('field:validate', function (formInstance) {
+        //     console.log('validating');
+        //     console.log(formInstance);
+        //     if ($('#address').val() === "") {
+        //         console.log('empty');
+        //         formInstance.validationResult = false;
+        //     }
+        //     // var ok = formInstance.isValid({ group: 'block-1', force: true });
+        //     // if (!ok) formInstance.validationResult = false;
+        //
+        // });
     });
 </script>
 </body>
