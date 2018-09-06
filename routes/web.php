@@ -23,3 +23,6 @@ Route::get( '/remodeling/bath', function () {
 	return view( 'fronts.sst.remodeling.bath.index' );
 } );
 
+Route::get( '/remodeling/bath2', 'LeadController@bath');
+
+Route::post( '/remodeling/bath2', 'LeadController@postForm');
