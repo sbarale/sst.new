@@ -364,6 +364,15 @@ ul li img {
 .secure-img{
     margin-top: 13px;
 }
+.bottom-bullets{
+    width: 100%;
+    margin-top: 40px;
+}
+.bottom-bullets li{
+    float: none;
+    max-width: 100%;
+    text-align: center;
+}
 
 @media (max-width: 3199px) {
     .img-bg{

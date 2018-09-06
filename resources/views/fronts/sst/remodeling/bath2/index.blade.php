@@ -13,7 +13,8 @@
 
         <form name="apply_form" action="/remodeling/bath2" id="apply_form" class="form-horizontal quiz_form" method="POST">
             {{ csrf_field() }}
-            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">Need Roof Replacement & Installation in your area?</h1>
+            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
+            <h3>Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
             <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send</h1>
             <input type="hidden" name="_submit" value="1" />
             <div class="progress">
@@ -34,7 +35,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="text" id="zip_code" name="zip_code" class="form-control input-lg" maxlength="5" placeholder="ENTER YOUR ZIP CODE" data-parsley-type="number" data-parsley-length="[5, 5]" required data-parsley-error-message="Please provide your zip code." data-parsley-group="block1">
+                                <input type="text" id="zip_code" name="zip_code" class="form-control input-lg" maxlength="5" placeholder="ENTER YOUR ZIP CODE" data-parsley-type="number" data-parsley-length="[5, 5]" required data-parsley-error-message="Please provide your zip code." data-parsley-group="block1" autocomplete="somevarystrangevalue">
                             </div>
                         </div>
                         <div class="row">
@@ -83,21 +84,21 @@
                         <div class="row">
                             <div class="col-sm-6 col-xs-6">
                                 First Name
-                                <input type="text" id="first_name" name="first_name" class="form-control input-lg" required data-parsley-error-message="Please enter your first name" data-parsley-group="block3" placeholder="First Name" />
+                                <input type="text" id="first_name" name="first_name" class="form-control input-lg" required data-parsley-error-message="Please enter your first name" data-parsley-group="block3" placeholder="First Name" autocomplete="somevarystrangevalue2" />
                             </div>
                             <div class="col-sm-6 col-xs-6">
                                 Last Name
-                                <input type="text" id="last_name" name="last_name" class="form-control input-lg" required data-parsley-error-message="Please enter your last name" data-parsley-group="block3" placeholder="Last Name" />
+                                <input type="text" id="last_name" name="last_name" class="form-control input-lg" required data-parsley-error-message="Please enter your last name" data-parsley-group="block3" placeholder="Last Name" autocomplete="somevarystrangevalue3" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
                                 Email
-                                <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" />
+                                <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" autocomplete="somevarystrangevalue4" />
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 Phone
-                                <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" />
+                                <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5" />
                             </div>
                         </div>
                         <div class="row">
@@ -169,6 +170,19 @@
             </div>
 
         </form>
+
+        <ul class="bullets bottom-bullets">
+            <li> Tub to Shower Conversions, Soaker Tubs, Custom Accessories.
+            </li>
+            <li> Avoid the inconvenience and mess of weeks and weeks of construction.
+            </li>
+            <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
+            </li>
+            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
+            </li>
+            <li> High-quality products. Quick, expert installation. Outstanding warranty.
+            </li>
+        </ul>
 
     </div>
     <div style="text-align: center;" class="center-block whitebg" >
