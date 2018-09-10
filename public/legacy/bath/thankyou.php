@@ -150,10 +150,11 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
             <div class="quiz_form ">
                 <!--
 				<a href="tel:8889981190" style="color: #fff; "> <div style="margin-bottom: 15px;" ><span style="font-size: 25px; background-color: red;  padding:10px;   border-radius: 15px;"> Call Now: (888) 998-1190</a></span></div>-->
-                <h2>Thank You <? echo $first_name . " " . $last_name; ?></h2>
                 <h3><img src='./img/compleet.png'>Step 1 Complete! </h3>
-                <h3>Congratulations you're just one step closer to your dreamed bathroom remodeling project!</h3>
-                <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
+
+
+                <h2>Hi <?php echo $first_name ?>, My name is Ace with Bath Wraps! </h2>
+                <h3>I am your virtual assistant here to help you get connected with a local bath wraps dealer for your FREE in home estimate, ill call you from 310-409-1196 in a moment to connect you with a scheduling agent, please make sure to answer!</h3>
                 <br>
 				<?php //$offer->showPixel(); ?>
 				<?php $offer->track(); ?>
