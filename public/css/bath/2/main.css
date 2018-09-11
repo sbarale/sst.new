@@ -364,14 +364,27 @@ ul li img {
 .secure-img{
     margin-top: 13px;
 }
-.bottom-bullets{
+.bottom-bullets-parent{
     width: 100%;
+    text-align: center;
+}
+.bottom-bullets{
     margin-top: 40px;
+    display: inline-block;
+    width: auto;
+    float: none;
 }
 .bottom-bullets li{
     float: none;
     max-width: 100%;
-    text-align: center;
+    text-align: left;
+    font-weight: bolder;
+}
+.thankyou-inner{
+    padding: 40px;
+}
+.thankyou-desc{
+    line-height: 2em;
 }
 
 @media (max-width: 3199px) {
@@ -411,6 +424,9 @@ ul li img {
 }
 /* xs */
 @media (max-width: 767px) {
+    .thankyou-desc{
+        font-size: 16px;
+    }
 	.navbar .header_number{
 		float: none;
 		text-align: center;

@@ -65,9 +65,7 @@
     <div class="secondarybg  whitebg">
         @yield('content')
 
-        <div style="padding-bottom: 10px; padding-top: 10px; background-color: #f2f2f2; color:#999999;">
-            <strong></strong></br>
-        </div>
+
     </div>
 </div>
 
