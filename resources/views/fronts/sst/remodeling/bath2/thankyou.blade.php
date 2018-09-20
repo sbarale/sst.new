@@ -3,7 +3,7 @@
 @section ('content')
 <div class="quiz_form ">
     <h2>Thank You {{$fname}} {{$lname}}</h2>
-    <h3><img src='/images/bath/2/compleet.png'> Roof installation/replacement Step 1 Complete</h3>
+    <h3><img src='/images/bath/2/compleet.png'>Step 1 Complete</h3>
     <h3>Congratulations You Will Be Contacted Shortly For Your Free Quote</h3></br>
     <h2 style="color:#fff; background-color: #3b5998; padding: 5px;">Important Notice</h2>
     <h3>During your free evaluation you may need a Fresh Copy of your Credit Report.</h3>

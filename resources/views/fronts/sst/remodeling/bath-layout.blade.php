@@ -24,12 +24,16 @@
             @media (max-width: 3199px) {
                 .img-bg{
                     background-image: url(@yield('big-bg-img','/images/bath/2/background_2.jpg'));
+                    -webkit-background-size: cover;
+                    background-size: cover;
                 }
             }
             /* md */
             @media (max-width: 1199px) {
                 .img-bg{
                     background-image: url(@yield('small-bg-img','/images/bath/2/background_1.jpg'));
+                    -webkit-background-size: cover;
+                    background-size: cover;
                 }
             }
         </style>
