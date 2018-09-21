@@ -329,6 +329,7 @@
 
 
         $(function () {
+            $("#phone").mask("999-999-9999");
             function commafy(num) {
                 var str = num.toString().split('.');
                 if (str[0].length >= 5) {

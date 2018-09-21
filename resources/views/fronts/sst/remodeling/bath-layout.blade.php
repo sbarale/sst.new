@@ -41,22 +41,7 @@
     @show
 
     @section('scripts')
-        <!-- Facebook Pixel Code -->
-            <script>
-                !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-                    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-                    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-                    document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-                fbq('init', '119417412251829');
-
-                fbq('track', "PageView");
-            </script>
-            <noscript><img height="1" width="1" style="display:none"
-                           src="https://www.facebook.com/tr?id=119417412251829&ev=PageView&noscript=1"
-                /></noscript>
-            <!-- End Facebook Pixel Code -->
     @show
 </head>
 <body class="graybg">
@@ -97,7 +82,7 @@
         <div class="summary_terms">
             <p style="text-align:center;color:#424242">
 
-                <strong>Copyright 2018 | All Rights Reserved | <a href="https://savings-scanner.com/privacy.pdf" target="_blank">Privacy Policy</a> &amp; <a href="https://savings-scanner.com/terms.html" target="_blank">Terms</a></strong>
+                <strong>Copyright 2018 | All Rights Reserved | <a href="/privacy.html" target="_blank">Privacy Policy</a> &amp; <a href="/terms.html" target="_blank">Terms</a></strong>
             </p>
             <p style="text-align:center;">
                 <strong><a   href="http://affiliates.purpleleads.com/signup">Affiliates </a> <!-- - <a href="https://purpleleads.com/leads">Buy leads</a> --></strong>
