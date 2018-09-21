@@ -116,7 +116,7 @@ abstract class LeadspediaController extends BaseController {
 				'adid'             => $adid,
 				'kwid'             => $kwid,
 				'Trusted_Form_URL' => Input::post( 'xxTrustedFormCertUrl', false ),
-				'urlupsell'        => "http://tracking.jvprpl.com/aff_c?offer_id=136&aff_id=1008&aff_sub=$email&aff_sub2=$first_name&aff_sub3=$last_name&aff_sub4=$zip&source=$st_t_val&aff_sub5=$st_custom_value_val",
+				'urlupsell'        => "",
 			];
 
 
