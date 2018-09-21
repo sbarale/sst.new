@@ -102,13 +102,17 @@ abstract class LeadspediaController extends BaseController {
 				'email_address'    => $email,
 				'first_name'       => $first_name,
 				'last_name'        => $last_name,
-				'phone_home'       => Input::post( 'phone_home', false ),
+				'phone_home'       => $phone,
 				'address'          => Input::post( 'address', false ),
 				'zip_code'         => $zip,
 				'ip_address'       => $ip,
 				'landing_page_url' => Request::server( 'REQUEST_URI' ),
 				'universal_leadid' => Input::post( 'universal_leadid', false ),
 				'click_id'         => $click_id,
+				'sub_id'           => $sub_id,
+				'pub_id'           => $pub_id,
+				'fbid'             => $fbid,
+				'custom_fb_px'     => $custom_fb_px,
 				'adid'             => $adid,
 				'kwid'             => $kwid,
 				'Trusted_Form_URL' => Input::post( 'xxTrustedFormCertUrl', false ),
@@ -118,14 +122,12 @@ abstract class LeadspediaController extends BaseController {
 
 			$debug = Input::post( 'debug', false ) == 1 ? true : false;
 			if ( ! $debug ) {
-				// $obj = $offer->postLeads( $this->post_data, false );
+				$obj = $offer->postLeads( $this->post_data, false );
 			} else {
 				echo "<pre>";
 				print_r( $this->post_data );
 				die();
 			}
 		}
-
-
 	}
 }
