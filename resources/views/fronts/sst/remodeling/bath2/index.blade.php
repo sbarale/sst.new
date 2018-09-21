@@ -157,18 +157,20 @@
             @include('fronts.sst._common.hidden_fields')
         </form>
 
-        <ul class="bullets bottom-bullets">
-            <li> Tub to Shower Conversions, Soaker Tubs, Custom Accessories.
-            </li>
-            <li> Avoid the inconvenience and mess of weeks and weeks of construction.
-            </li>
-            <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
-            </li>
-            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
-            </li>
-            <li> High-quality products. Quick, expert installation. Outstanding warranty.
-            </li>
-        </ul>
+        <div class="bottom-bullets-parent">
+            <ul class="bullets bottom-bullets">
+                <li> Tub to Shower Conversions, Soaker Tubs, Custom Accessories.
+                </li>
+                <li> Avoid the inconvenience and mess of weeks and weeks of construction.
+                </li>
+                <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
+                </li>
+                <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
+                </li>
+                <li> High-quality products. Quick, expert installation. Outstanding warranty.
+                </li>
+            </ul>
+        </div>
 
     </div>
     <div style="text-align: center;" class="center-block whitebg">
@@ -311,6 +313,7 @@
 
 
         $(function () {
+            $("#phone").mask("999-999-9999");
             function commafy(num) {
                 var str = num.toString().split('.');
                 if (str[0].length >= 5) {

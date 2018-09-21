@@ -1,7 +1,7 @@
 @extends('fronts.sst.remodeling.bath-thankyou-layout')
 @section('title','Thank You!')
 @section ('content')
-<div class="quiz_form ">
+<div class="quiz_form thankyou-inner">
     <h2>Thank You {{$fname}} {{$lname}}</h2>
     <h3><img src='/images/bath/2/compleet.png'>Step 1 Complete</h3>
     <h3>Congratulations You Will Be Contacted Shortly For Your Free Quote</h3></br>
