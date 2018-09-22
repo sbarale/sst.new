@@ -28,5 +28,5 @@ Route::get( '/remodeling/bath', function () {
  * and it will invoke getIndex() and postIndex() automatically. This way we can use just
  * one line per offer/campaign.
  */
-Route::get( '/remodeling/bath2', 'Offers\BathwrapsController@showForm' );
-Route::post( '/remodeling/bath2', 'Offers\BathwrapsController@postForm' );
+Route::get( '/remodeling/bath/{id}', 'Offers\BathwrapsController@showForm' );
+Route::post( '/remodeling/bath/{id}', 'Offers\BathwrapsController@postForm' );

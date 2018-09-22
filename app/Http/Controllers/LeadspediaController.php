@@ -60,9 +60,9 @@ abstract class LeadspediaController extends BaseController {
 	 * where you return the view that you need for a specific form.
 	 * You can pass pre-populated values using $this->data.
 	 */
-	abstract public function showForm();
+	abstract public function showForm($id = 1);
 
-	public function postForm() {
+	public function postForm($id = 1) {
 		if ( empty( $this->offer_credentials ) ) {
 			die( 'Must provide campaign_id and campaign_key' );
 		}
