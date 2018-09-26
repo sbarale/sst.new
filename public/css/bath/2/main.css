@@ -386,13 +386,11 @@ ul li img {
 .thankyou-desc{
     line-height: 2em;
 }
-
-@media (max-width: 3199px) {
-    .img-bg{
-        margin: auto;
-        background-repeat: no-repeat;
-        padding-bottom: 50px;
-    }
+.img-bg{
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    background-position: center;
 }
 /* md */
 @media (max-width: 1199px) {

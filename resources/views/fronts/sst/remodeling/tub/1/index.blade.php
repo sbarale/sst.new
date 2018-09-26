@@ -1,7 +1,7 @@
-@extends('fronts.sst.remodeling.bath-layout')
+@extends('fronts.sst.remodeling.tub-layout')
 @section('title','Take the Quiz to See if you Qualify')
-@section('big-bg-img','/images/bath/2/background_2.jpg')
-@section('small-bg-img','/images/bath/2/background_1.jpg')
+@section('big-bg-img','/images/tub/bg1.jpg')
+@section('small-bg-img','/images/tub/bg1.jpg')
 @section('head')
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
@@ -11,13 +11,12 @@
 @section('content')
     <div class="secondarybg whitebg">
 
-        <form name="apply_form" action="/remodeling/bath/2" id="apply_form" class="form-horizontal quiz_form" method="POST">
+        <form name="apply_form" action="/remodeling/tub/1" id="apply_form" class="form-horizontal quiz_form" method="POST">
             {{ csrf_field() }}
             <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? 1 : 0; ?>">
             <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
-            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
-            <h3>Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
-            <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send</h1>
+            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">Compare Walk-in Tub Quotes & Save Big</h1>
+            <h3>Share a few quick details to receive competing price quotes.</h3>
             <input type="hidden" name="_submit" value="1"/>
             <div class="progress">
                 <div class="progress-bar progress-bar-primary form-progress-bar" role="progressbar" style="width: 0%"></div>
@@ -31,7 +30,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h2>
-                                    Get Pricing and Availability for:
+                                    Zip Code:
                                 </h2>
                             </div>
                         </div>
@@ -53,7 +52,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h2>
-                                    Please enter the street address of the home.
+                                    Street Address
                                 </h2>
                             </div>
                         </div>
@@ -95,12 +94,12 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
-                                Email
-                                <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" autocomplete="somevarystrangevalue4"/>
+                                Phone Number
+                                <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue4"/>
                             </div>
                             <div class="col-sm-6 col-xs-12">
-                                Phone
-                                <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
+                                Alt Phone Number
+                                <input type="tel" id="alt_phone" name="alt_phone" class="form-control input-lg" data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
                             </div>
                         </div>
                         <div class="row">
@@ -159,19 +158,10 @@
             @include('fronts.sst._common.hidden_fields')
         </form>
 
-        <div class="bottom-bullets-parent">
-            <ul class="bullets bottom-bullets">
-                <li> Tub to Shower Conversions, Soaker Tubs, Custom Accessories.
-                </li>
-                <li> Avoid the inconvenience and mess of weeks and weeks of construction.
-                </li>
-                <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
-                </li>
-                <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
-                </li>
-                <li> High-quality products. Quick, expert installation. Outstanding warranty.
-                </li>
-            </ul>
+        <div style="max-width: 600px; text-align: left; margin:0px auto;">
+            <b>WHY IT MAKES SENSE</b>
+            <br>
+            You're interested in a walk-in tub that fits your needs at a great price. Instead of spending hours searching websites, BuyerZone does the work for you to find quality dealers who will provide competing price quotes for you to compare. You save valuable time and get to choose the best option based on your budget.
         </div>
 
     </div>
@@ -242,7 +232,7 @@
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
 
-                $("#apply_form").attr("action", "/remodeling/bath/2?state=" + state); //Will set the state in thankyoupage
+                $("#apply_form").attr("action", "/remodeling/tub/1?state=" + state); //Will set the state in thankyoupage
 
                 state_provider = state;
 
@@ -316,6 +306,7 @@
 
         $(function () {
             $("#phone").mask("999-999-9999");
+            $("#alt_phone").mask("999-999-9999");
             function commafy(num) {
                 var str = num.toString().split('.');
                 if (str[0].length >= 5) {

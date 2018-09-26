@@ -62,7 +62,7 @@ abstract class LeadspediaController extends BaseController {
 	 */
 	abstract public function showForm($id = 1);
 
-	public function postForm($id = 1) {
+	public function postForm($id = 1, $custom_fields = []) {
 		if ( empty( $this->offer_credentials ) ) {
 			die( 'Must provide campaign_id and campaign_key' );
 		}
@@ -119,6 +119,7 @@ abstract class LeadspediaController extends BaseController {
 				'urlupsell'        => "",
 			];
 
+            $this->post_data = array_merge($this->post_data, $custom_fields);
 
 			$debug = Input::post( 'debug', false ) == 1 ? true : false;
 			if ( ! $debug ) {
