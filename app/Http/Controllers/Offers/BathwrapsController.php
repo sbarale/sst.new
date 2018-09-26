@@ -12,15 +12,15 @@ class BathwrapsController extends LeadspediaController {
 		'campaign_key' => 'fxYHVwbMWT4t2By6mpn8',
 	];
 
-	public function showForm($id = 1) {
+	public function showForm( $id = 1 ) {
 		return view( "fronts.sst.remodeling.bath.$id.index", $this->data );
 	}
 
-	public function postForm($id = 1) {
+	public function postForm( $id = 1, $custom_fields = [] ) {
 		/*
 		 * Call the parent class for functionality
 		 */
-		parent::postForm($id);
+		parent::postForm( $id, $custom_fields );
 
 		/*
 		 * Return the specialized version of the view
