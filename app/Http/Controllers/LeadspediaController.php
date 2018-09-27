@@ -26,13 +26,14 @@ abstract class LeadspediaController extends BaseController {
 	protected $offer_credentials = [];
 
 	public function __construct() {
-		$adid         = Input::get( 'adid', false );
-		$kwid         = Input::get( 'kwid', '1' );
-		$ad_presell   = Input::get( 'ad_presell', false );
-		$ad_image     = Input::get( 'ad_image', false );
-		$ad_headline  = Input::get( 'ad_headline', false );
-		$st_t         = Input::get( 'st-t', false );
-		$st_custom_id = Input::get( '_st_custom_id', false );
+		$adid          = Input::get( 'adid', false );
+		$kwid          = Input::get( 'kwid', '1' );
+		$ad_presell    = Input::get( 'ad_presell', false );
+		$ad_image      = Input::get( 'ad_image', false );
+		$ad_headline   = Input::get( 'ad_headline', false );
+		$st_t          = Input::get( 'st-t', false );
+		$st_custom_id  = Input::get( '_st_custom_id', false );
+		$lp_request_id = Input::get( 'lp_request_id', '' );
 		if ( Input::has( '_st_custom_value' ) ) {
 			$st_custom_value = Input::get( '_st_custom_value', false );
 		} else {
@@ -52,6 +53,7 @@ abstract class LeadspediaController extends BaseController {
 			'st_custom_value' => $st_custom_value,
 			'click_id'        => $click_id,
 			'sub_id'          => $sub_id,
+			'lp_request_id'   => $lp_request_id,
 		];
 	}
 
@@ -60,9 +62,9 @@ abstract class LeadspediaController extends BaseController {
 	 * where you return the view that you need for a specific form.
 	 * You can pass pre-populated values using $this->data.
 	 */
-	abstract public function showForm($id = 1);
+	abstract public function showForm( $id = 1 );
 
-	public function postForm($id = 1, $custom_fields = []) {
+	public function postForm( $id = 1, $custom_fields = [] ) {
 		if ( empty( $this->offer_credentials ) ) {
 			die( 'Must provide campaign_id and campaign_key' );
 		}
@@ -99,6 +101,7 @@ abstract class LeadspediaController extends BaseController {
 				'lp_test'          => $is_test,
 				'lp_campaign_id'   => $campaign_id,
 				'lp_campaign_key'  => $campaign_key,
+				'lp_request_id'    => Input::post( 'lp_request_id' ),
 				'email_address'    => $email,
 				'first_name'       => $first_name,
 				'last_name'        => $last_name,
@@ -119,7 +122,7 @@ abstract class LeadspediaController extends BaseController {
 				'urlupsell'        => "",
 			];
 
-            $this->post_data = array_merge($this->post_data, $custom_fields);
+			$this->post_data = array_merge( $this->post_data, $custom_fields );
 
 			$debug = Input::post( 'debug', false ) == 1 ? true : false;
 			if ( ! $debug ) {
