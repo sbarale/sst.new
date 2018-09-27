@@ -1,5 +1,74 @@
 <?php
+/**
+ * This file work with OfferSender
+ * and send data to the database
+ * also show the thank you page
+ *
+ * @package    …
+ * @author     Vadym
+ * @version    1.0
+ */
+require_once( 'OfferSender.php' );
 
+
+$campaign_id  = '5b6313889dc73';
+$campaign_key = 'fxYHVwbMWT4t2By6mpn8';
+
+$offer_url = 'http://track.geek3.io/post.do';
+
+
+$offer      = new OfferSender( $offer_url );
+$first_name = isset( $_POST['first_name'] ) ? $_POST['first_name'] : '';
+$last_name  = isset( $_POST['last_name'] ) ? $_POST['last_name'] : '';
+
+if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
+
+	$phone = preg_replace( "#[[:punct:]]#", "", $_POST['phone_home'] );
+
+	$status = "";
+	$lead   = "";
+
+	$adid         = isset( $_POST['adid'] ) ? $_POST['adid'] : 0;
+	$kwid         = isset( $_POST['kwid'] ) ? $_POST['kwid'] : 0;
+	$custom_fb_px = isset( $_POST['custom_fb_px'] ) ? $_POST['custom_fb_px'] : '';
+	$click_id     = isset( $_POST['click_id'] ) ? $_POST['click_id'] : 0;
+	$is_test      = isset( $_POST['is_test'] ) ? $_POST['is_test'] : 0;
+	$pub_id       = isset( $_POST['pub_id'] ) ? $_POST['pub_id'] : 0;
+	$sub_id       = isset( $_POST['sub_id'] ) ? $_POST['sub_id'] : 0;
+	$fbid         = isset( $_GET['fbid'] ) ? $_GET['fbid'] : "";
+	$ip           = $offer->getUserIP();
+
+	$data = [
+		'lp_test'          => $is_test,
+		'lp_campaign_id'   => $campaign_id,
+		'lp_campaign_key'  => $campaign_key,
+		'email_address'    => $_POST['email_address'],
+		'first_name'       => $first_name,
+		'last_name'        => $last_name,
+		'phone_home'       => $_POST['phone_home'],
+		'address'          => $_POST['address'],
+		// 'city'             => $_POST['city'],
+		// 'state'            => $_POST['state'],
+		'zip_code'         => $_POST['zip_code'],
+		'ip_address'       => $ip,
+		'landing_page_url' => $_SERVER['REQUEST_URI'],
+		'universal_leadid' => $_POST['universal_leadid'],
+		'click_id'         => $click_id,
+		'adid'             => $adid,
+		'kwid'             => $kwid,
+		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
+		'release'          => file_get_contents( __DIR__ . "/../../VERSION.txt" ),
+	];
+
+	$debug = isset( $_POST['debug'] ) ? ( $_POST['debug'] == 1 ? true : false ) : false;
+	if ( ! $debug ) {
+		$obj = $offer->postLeads( $data, false );
+	} else {
+		echo "<pre>";
+		print_r( $data );
+		die();
+	}
+}
 
 ?>
 
@@ -81,10 +150,11 @@
             <div class="quiz_form ">
                 <!--
 				<a href="tel:8889981190" style="color: #fff; "> <div style="margin-bottom: 15px;" ><span style="font-size: 25px; background-color: red;  padding:10px;   border-radius: 15px;"> Call Now: (888) 998-1190</a></span></div>-->
-                <h2>Thank You <? echo $first_name . " " . $last_name; ?></h2>
                 <h3><img src='./img/compleet.png'>Step 1 Complete! </h3>
-                <h3>Congratulations you're just one step closer to your dreamed bathroom remodeling project!</h3>
-                <h3>You Will Be Contacted Shortly For Your Free Quote</h3>
+
+
+                <h2>Hi <?php echo $first_name ?>, My name is Ace with Bath Wraps! </h2>
+                <h3>I am your virtual assistant here to help you get connected with a local bath wraps dealer for your FREE in home estimate, ill call you from 310-409-1196 in a moment to connect you with a scheduling agent, please make sure to answer!</h3>
                 <br>
 				<?php //$offer->showPixel(); ?>
 				<?php $offer->track(); ?>
