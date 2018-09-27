@@ -76,6 +76,7 @@
                         <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
                         <!--                        <input type="hidden" id="state" name="state" value="">-->
                         <input type="hidden" name="_submit" value="1"/>
+                        <input type="hidden" name="lp_request_id" value="<?php echo isset( $_GET['rid'] ) ? $_GET['rid'] : ''; ?>"/>
                         <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
 
                         <div class="well well-lg">
