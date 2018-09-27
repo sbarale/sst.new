@@ -58,10 +58,7 @@
     <img src="/images/bath/2/SecureSeal.png"/>
 </div>
 <div class="summary_terms">
-    <p style="text-align:center;">
-        <strong>Copyright 2018 | All Rights Reserved | <a href="/privacy.html" target="_blank">Privacy Policy</a> &amp;
-            <a href="/terms.html" target="_blank">Terms</a></strong>
-    </p>
+    @include('fronts.sst.footer')
 </div>
 
 

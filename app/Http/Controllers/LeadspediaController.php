@@ -33,6 +33,9 @@ abstract class LeadspediaController extends BaseController {
 		$ad_headline  = Input::get( 'ad_headline', false );
 		$st_t         = Input::get( 'st-t', false );
 		$st_custom_id = Input::get( '_st_custom_id', false );
+        $debug        = Input::get( 'debug', false );
+        $test         = Input::get( 'test', false );
+        $dev          = Input::get( 'dev', false );
 		if ( Input::has( '_st_custom_value' ) ) {
 			$st_custom_value = Input::get( '_st_custom_value', false );
 		} else {
@@ -52,6 +55,9 @@ abstract class LeadspediaController extends BaseController {
 			'st_custom_value' => $st_custom_value,
 			'click_id'        => $click_id,
 			'sub_id'          => $sub_id,
+            'debug'           => $debug,
+            'test'            => $test,
+            'dev'             => $dev
 		];
 	}
 

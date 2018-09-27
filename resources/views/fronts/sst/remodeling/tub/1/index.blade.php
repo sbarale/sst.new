@@ -1,10 +1,31 @@
-@extends('fronts.sst.remodeling.tub-layout')
+@extends('fronts.sst.remodeling.slider-layout')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/tub/bg1.jpg')
 @section('small-bg-img','/images/tub/bg1.jpg')
+@section('header-middle-img','/images/bat.png')
 @section('head')
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
+    <style>
+        .btn-page2, .btn-page3{
+            font-size:28px!important;
+            padding: 10px 56px!important;
+            margin-top: 20px;
+        }
+        .btn-page1{
+            max-width: 250px;
+            width: 100%;
+        }
+        @media screen and (max-width: 480px){
+            .btn-page1{
+                margin: 3px!important;
+                margin-bottom: 10px!important;
+            }
+            .btn-page1 img{
+                width: 80%;
+            }
+        }
+    </style>
 @endsection
 
 
@@ -13,8 +34,6 @@
 
         <form name="apply_form" action="/remodeling/tub/1" id="apply_form" class="form-horizontal quiz_form" method="POST">
             {{ csrf_field() }}
-            <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? 1 : 0; ?>">
-            <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
             <h1 class="header" id="survey_headline" style="text-transform: uppercase;">Compare Walk-in Tub Quotes & Save Big</h1>
             <h3>Share a few quick details to receive competing price quotes.</h3>
             <input type="hidden" name="_submit" value="1"/>

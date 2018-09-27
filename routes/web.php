@@ -33,3 +33,6 @@ Route::post( '/remodeling/bath/{id}', 'Offers\BathwrapsController@postForm' );
 
 Route::get( '/remodeling/tub/{id}', 'Offers\TubController@showForm' );
 Route::post( '/remodeling/tub/{id}', 'Offers\TubController@postForm' );
+
+Route::get( '/remodeling/refinance/{id}', 'Offers\RefinanceController@showForm' );
+Route::post( '/remodeling/refinance/{id}', 'Offers\RefinanceController@postForm' );

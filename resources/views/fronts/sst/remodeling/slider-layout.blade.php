@@ -57,7 +57,7 @@
                                 <a href="/"><img src="/images/sst-landscape.png" class=" img-responsive pull-left"/></a>
                             </div>
                             <div class="col-md-4 hidden-xs hidden-sm">
-                                <img src="/images/bat.png" class="img-responsive center-block"/>
+                                <img src="@yield('header-middle-img','/images/gray-bg-px.jpg')" class="img-responsive center-block"/>
                             </div>
                             <div class="col-md-4 hidden-xs">
                                 <img src="/images/secure2.png" class="img-responsive pull-right secure-img"/>
@@ -78,17 +78,7 @@
 
 
 <div class="container" style="padding-top:12px;">
-    <div class="row">
-        <div class="summary_terms">
-            <p style="text-align:center;color:#424242">
-
-                <strong>Copyright 2018 | All Rights Reserved | <a href="/privacy.html" target="_blank">Privacy Policy</a> &amp; <a href="/terms.html" target="_blank">Terms</a></strong>
-            </p>
-            <p style="text-align:center;">
-                <strong><a   href="http://affiliates.purpleleads.com/signup">Affiliates </a> <!-- - <a href="https://purpleleads.com/leads">Buy leads</a> --></strong>
-            </p>
-        </div>
-    </div>
+    @include('fronts.sst.footer')
 </div>
 @section('footer-scripts')
     <script type='text/javascript' src='/js/jquery.nouislider.all.min.js'></script>

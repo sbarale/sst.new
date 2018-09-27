@@ -8,7 +8,8 @@
 
         @if(!empty($urlupsell))
             <h2 style="color:#fff; background-color: #3b5998; padding: 5px;">Important Notice</h2>
-            <h3>During your free evaluation you may need a Fresh Copy of your Credit Report.</h3>
+            <h3>During your free eval\
+                ation you may need a Fresh Copy of your Credit Report.</h3>
             <h3>To download your credit please
                 <a href="{{$urlupsell}}" style="background-color: #e9ebee; text-decoration: none; color:#424242;  padding: 5px;">click here now.</a>
             </h3>
