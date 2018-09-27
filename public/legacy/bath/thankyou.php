@@ -56,6 +56,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 		'click_id'         => $click_id,
 		'adid'             => $adid,
 		'kwid'             => $kwid,
+		'lp_request_id'    => $_POST['lp_request_id'],
 		'Trusted_Form_URL' => $_POST['xxTrustedFormCertUrl'],
 		'release'          => file_get_contents( __DIR__ . "/../../VERSION.txt" ),
 	];
