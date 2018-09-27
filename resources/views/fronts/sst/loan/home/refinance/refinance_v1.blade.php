@@ -808,7 +808,7 @@ if ( isset( $st_t_val ) ) {
             </div>
         </div>
     </div>
-    <div style="opacity: 0.8; margin-top: 10px; margin-bottom: 30px; width: 280px;" class="center-block">
+    <div style="opacity: 0.8; margin-top: 10px; margin-bottom: 30px; width: 280px; text-align: center" class="center-block">
 
         <img src="images/SecureSeal.png"/>
     </div>

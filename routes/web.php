@@ -23,3 +23,13 @@ Route::get( '/remodeling/bath', function () {
 	return view( 'fronts.sst.remodeling.bath.index' );
 } );
 
+/*
+ * by using 'controller' instead of get/post we make use of Laravel's controller routing
+ * and it will invoke getIndex() and postIndex() automatically. This way we can use just
+ * one line per offer/campaign.
+ */
+Route::get( '/remodeling/bath/{id}', 'Offers\BathwrapsController@showForm' );
+Route::post( '/remodeling/bath/{id}', 'Offers\BathwrapsController@postForm' );
+
+Route::get( '/remodeling/tub/{id}', 'Offers\TubController@showForm' );
+Route::post( '/remodeling/tub/{id}', 'Offers\TubController@postForm' );
