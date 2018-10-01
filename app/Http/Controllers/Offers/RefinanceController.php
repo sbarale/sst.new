@@ -17,6 +17,19 @@ class RefinanceController extends LeadspediaController {
     }
 
     public function postForm( $id = 1, $custom_fields = [] ) {
+        $custom_fields = [
+            'loan_type'                     => Input::post( 'loan_type', '' ),
+            'property_type'                 => Input::post( 'property_type', '' ),
+            'loan_type_fixed_or_adjustable' => Input::post( 'loan_type_fixed_or_adjustable', '' ),
+            'va_status'                     => Input::post( 'va_status', '' ),
+            'credit'                        => Input::post( 'credit', '' ),
+            'property_value'                => Input::post( 'property_value', '' ),
+            'loan_balance'                  => Input::post( 'loan_balance', '' ),
+            'second_mortgage'               => Input::post( 'second_mortgage', '' ),
+            'balance_second_mortgage_value' => Input::post( 'balance_second_mortgage_value', '' ),
+            'fha_loan'                      => Input::post( 'fha_loan', '' ),
+            'additional_cash'               => Input::post( 'additional_cash', '' ),
+        ];
         /*
          * Call the parent class for functionality
          */

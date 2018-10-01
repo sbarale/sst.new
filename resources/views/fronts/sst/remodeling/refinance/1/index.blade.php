@@ -353,7 +353,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div id="animated6" style="margin-top: 20px; display: none;">
-                                    <img src="images/checker.gif"/>
+                                    <img src="/images/bath/2/loader.gif"/>
 
                                 </div>
 

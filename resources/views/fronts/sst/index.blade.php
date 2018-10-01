@@ -31,14 +31,14 @@
     <div class="" id="offers">
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/refinance',
+                'href'  => '/remodeling/refinance/1',
                 'title' => 'Refinance Mortgage (US only)',
                 'desc'  => 'It may be easier than you think to refinance your current mortgage.',
                 'img' => 'images/mortgage-refinance.png'
             ])
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/freerateupdate/',
+                'href'  => '/remodeling/home-purchase/1',
                 'title' => 'Home Purchase (US only)',
                 'desc'  => 'Comparing loan offers from different lenders can save you time and money.',
                 'img' => 'images/mortgage-purchase.png'
@@ -107,7 +107,7 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/legacy/bath/',
+                'href'  => '/remodeling/bath/1',
                 'title' => 'Bathroom Remodels (US only)',
                 'desc'  => 'Find a Bathroom Remodels specialist from our network.',
                 'img' => 'images/bat.png'
