@@ -85,6 +85,7 @@
     <script type="text/javascript" src="/js/moment.min.js"></script>
     <script type="text/javascript" src="/js/parsley.min.js"></script>
     <script type="text/javascript" src="/js/formslider.js"></script>
+    <script type="text/javascript" src="/js/jquery.autotab.js"></script>
     <script src="/js/bootstrap-tagsinput.min.js"></script>
     <script src="/js/bootstrap-typeahead.js"></script>
 

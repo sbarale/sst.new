@@ -458,6 +458,7 @@
                         </div>
 
                     </div>
+                </div>
             @include('fronts.sst._common.hidden_fields')
         </form>
 

@@ -39,3 +39,6 @@ Route::post( '/remodeling/refinance/{id}', 'Offers\RefinanceController@postForm'
 
 Route::get( '/remodeling/home-purchase/{id}', 'Offers\HomePurchaseController@showForm' );
 Route::post( '/remodeling/home-purchase/{id}', 'Offers\HomePurchaseController@postForm' );
+
+Route::get( '/remodeling/car-loan/{id}', 'Offers\CarLoanController@showForm' );
+Route::post( '/remodeling/car-loan/{id}', 'Offers\CarLoanController@postForm' );

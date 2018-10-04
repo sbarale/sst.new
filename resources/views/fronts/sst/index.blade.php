@@ -47,14 +47,14 @@
         <div class="row">
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => 'solar-overview.php',
+                'href'  => '',
                 'title' => 'Solar Energy',
                 'desc'  => 'Find a solar specialist from our network and start saving money on your energy bills.',
                 'img' => 'images/solar-1.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/ccl/1/index.php',
+                'href'  => '/remodeling/car-loan/1',
                 'title' => 'Car loan (US only)',
                 'desc'  => 'Comparing loan offers from different lenders can save you time and money.',
                 'img' => 'images/car-loan.png'
