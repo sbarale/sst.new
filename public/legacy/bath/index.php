@@ -72,8 +72,8 @@
                 <section class="test-form">
                     <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
                         <input type="hidden" id="address" name="address" value="" data-parsley-required>
-                        <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? 1 : 0; ?>">
-                        <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
+                        <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? $_GET['debug'] : 0; ?>">
+                        <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? $_GET['test'] : 0; ?>">
                         <!--                        <input type="hidden" id="state" name="state" value="">-->
                         <input type="hidden" name="_submit" value="1"/>
                         <input type="hidden" name="lp_request_id" value="<?php echo isset( $_GET['rid'] ) ? $_GET['rid'] : ''; ?>"/>
