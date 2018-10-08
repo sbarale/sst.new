@@ -385,6 +385,13 @@ ul li img {
     padding-bottom: 50px;
     background-position: center;
 }
+.blue-after-navbar{
+    text-align: center;
+    background-color: #3b5998;
+    color:white;
+    font-size: 30px;
+    line-height: 60px;
+}
 /* md */
 @media (max-width: 1199px) {
     .img-bg{
@@ -410,6 +417,10 @@ ul li img {
     }
     #secure-lock {
         margin-bottom: 20px;
+    }
+    .blue-after-navbar{
+        font-size: 22px;
+        line-height: 40px;
     }
 
 }
@@ -472,6 +483,10 @@ ul li img {
     .btn-page2 img, .btn-page3 img {
         max-width: 100%;
     }
+    .blue-after-navbar{
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
 
 @media screen and (max-width: 480px){
@@ -485,5 +500,9 @@ ul li img {
         font-size: 22px;
         margin-top: 50px;
         margin-bottom: 20px;
+    }
+    .blue-after-navbar{
+        font-size: 12px;
+        line-height: 1.2em;
     }
 }

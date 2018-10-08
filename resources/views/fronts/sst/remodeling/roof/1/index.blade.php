@@ -2,19 +2,16 @@
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/window/background_2.jpg')
 @section('small-bg-img','/images/window/background_2.jpg')
-@section('header-middle-img','/images/window.png')
-@section('top-blue-line-text','We make it easy to complete your window installation projects')
+@section('header-middle-img','/images/roof.png')
+@section('top-blue-line-text','We make it easy to complete your roof installation projects')
 @section('head')
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     <style>
-        .btn-page7{
+        .btn-page1, .btn-page4, .btn-page7{
             width: 100%;
         }
-        .btn-page9{
-            width: 100%;
-        }
-        .btn-page6, .btn-page2, .btn-page3{
+        .btn-page3, .btn-page2{
             font-size: 28px!important;
             padding: 10px 56px!important;
             margin-top: 20px;
@@ -27,11 +24,11 @@
 
     <div class="secondarybg whitebg">
 
-        <form name="apply_form" action="/remodeling/window/1" id="apply_form" class="form-horizontal quiz_form" method="POST">
+        <form name="apply_form" action="/remodeling/roof/1" id="apply_form" class="form-horizontal quiz_form" method="POST">
             {{ csrf_field() }}
-            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">Need Replacement Windows & Window Repairs in your area?</h1>
+            <h1 class="header" id="survey_headline" style="text-transform: uppercase;">Need Roof Replacement & Installation in your area?</h1>
 
-            <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send </h1>
+            <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send</h1>
             <input type="hidden" name="_submit" value="1" />
                 <div class="progress">
                     <div class="progress-bar progress-bar-primary form-progress-bar" role="progressbar" style="width: 0%"></div>
@@ -40,9 +37,6 @@
 
             <div id="flow-slider-container" class="slider-container">
                 <div class="slider-wrapper">
-
-
-
 
                     <!-- START STATE_QUESTION -->
                     <div class="slider-slide" id="zip_slide">
@@ -53,7 +47,6 @@
                                 </h2>
                                 <h5  id="lg-address_2">
                                     (we need this to analyze the savings for your location)
-
                                 </h5>
 
                             </div>
@@ -62,12 +55,12 @@
                             <div class="col-md-6 col-md-offset-3">
                                 <input type="hidden" id="address" name="address">
                                 <input type="text" id="address_mask" name="address_mask" class="form-control input-lg" required data-parsley-usaddress="1" data-parsley-error-message="Please provide your street number at the beginning" data-parsley-group="block4">
-                                <input type="hidden" pattern="[0-9]*" id="zip" name="zip" onChange="document.getElementById('zip2').value = this.value" class="form-control input-lg" required data-parsley-uszip="1" data-parsley-error-message="Please enter a valid zip" data-parsley-group="block1" placeholder="Enter Your Zip" maxlength="5" />
+                                <input type="hidden" pattern="[0-9]*" id="zip" name="zip" onChange="document.getElementById('zip2').value = this.value" class="form-control input-lg" required data-parsley-uszip="1" data-parsley-error-message="Please enter a valid zip" data-parsley-group="block4" placeholder="Enter Your Zip" maxlength="5" />
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <button type="button" class="btn btn-success btn-lg btn-page3" disabled >Next</button>
+                                <button type="button" class="btn btn-success btn-lg btn-page3"  disabled>Next</button>
                             </div>
                         </div>
 
@@ -75,33 +68,39 @@
                     <!-- END STATE_QUESTION -->
 
                     <!-- START STATE_QUESTION -->
-                    <div class="slider-slide" id="how_many_slide">
+                    <div class="slider-slide" id="roof_type_slide">
                         <div class="row">
                             <div class="col-xs-12">
                                 <h2>
-                                    How many windows do you need work on?
+                                    What type of roof are you interested in?
                                 </h2>
 
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-md-offset-3">
-                                <select id="windows_count" name="windows_count" class="form-control input-lg" required data-parsley-usaddress="1" data-parsley-error-message="Please write how many windows do you need work on." data-parsley-group="block6">
-                                    <option value="10+ windows">10+ windows</option>
-                                    <option value="6-9 windows">6-9 windows</option>
-                                    <option value="3-5 windows">3-5 windows</option>
-                                    <option value="2 windows">2 windows</option>
-                                    <option value="1 window">1 window</option>
-
-                                </select>
+                            <input type="hidden" name="roof_type" id="roof_type_val">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Asphalt Shingle" >Asphalt Shingle</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Natural Slate" >Natural Slate</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Wood / Composite Shake" >Wood / Composite Shake</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Metal" >Metal</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Tile" >Tile</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="Flat / Foam / Single Ply" >Flat / Foam / Single Ply</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-success btn-lg btn-page1" value="I am not sure" >I am not sure</button>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <button type="button" class="btn btn-success btn-lg btn-page6">Next</button>
-                            </div>
-                        </div>
-
                     </div>
                     <!-- END STATE_QUESTION -->
 
@@ -111,27 +110,23 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <h2>
-                                    Do you need to replace or repair the window(s)?
+                                    Do you need to replace or repair the roof?
                                 </h2>
 
                             </div>
                         </div>
                         <div class="row">
-                            <input type="hidden" id="replace_repair_val" name="replace_repair">
+                            <input type="hidden" name="replace_repair" id="replace_repair_val">
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-success btn-lg btn-page7" value="No">Replace windows</button>
+                                <button type="button" class="btn btn-success btn-lg btn-page4" value="No" >Replace</button>
                             </div>
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-success btn-lg btn-page7" value="No">Replace glass only</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-success btn-lg btn-page7" value="Yes">Repair frame/hardware</button>
+                                <button type="button" class="btn btn-success btn-lg btn-page4" value="Yes" >Repair</button>
                             </div>
                         </div>
-
-
                     </div>
                     <!-- END STATE_QUESTION -->
+
 
                     <!-- START STATE_QUESTION -->
                     <div class="slider-slide" id="own_home_slide">
@@ -144,21 +139,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <input type="hidden" id="own_home_val" name="own_home">
+                            <input type="hidden" name="own_home" id="own_home_val">
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-success btn-lg btn-page9" value="Yes">Yes, I own my home.</button>
+                                <button type="button" class="btn btn-success btn-lg btn-page7" value="Yes">Yes, I own my home.</button>
                             </div>
                             <div class="col-md-6">
-                                <button type="button" class="btn btn-success btn-lg btn-page9" value="No">No, I do not own my home.</button>
+                                <button type="button" class="btn btn-success btn-lg btn-page7" value="No">No. I do not own my home.</button>
                             </div>
                         </div>
-
-
                     </div>
                     <!-- END STATE_QUESTION -->
-
-
-
 
 
 
@@ -218,6 +208,8 @@
                                     <div id="tcpa" >
                                         <input type="hidden" id="leadid_tcpa_disclosure" />
                                         <label for="leadid_tcpa_disclosure">
+
+
                                             By clicking "GET MATCHES" I provide my signature, expressly authorizing up to four home improvement companies or their agents or partner companies to contact me at the number and address provided with home improvement quotes or to obtain additional information for such purpose, via live, prerecorded or autodialed calls, text messages or email. I understand that my signature is not a condition of purchasing any property, goods or services and that I may </label>
                                     </div>
 
@@ -261,36 +253,32 @@
 @endsection
 
 @section('bottom-info-part')
-    <div id="energyefficient" class="guide full-page bg-size-contain form-controls-windows" style="background-image: url('/images/window/img-crosssection.jpg'); background-position: right center;background-repeat: no-repeat;background-color: white;    background-size: 40%;">
+    <div id="replacement" class="guide full-page bg-size-cover form-controls-roof" style="background-image: url('/images/roof/hero-roofreplacement.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h2>Energy-Efficient Windows</h2>
-                            <p>Review these energy-saving options to make the best choice for your home window replacement project.</p>
+                            <h2>Roof Repair &amp; Installation</h2>
+                            <p>Replacing a roof is no simple task. We’ll cover what to expect and how to prepare when installing or replacing the roof on your home.</p>
                         </div>
                     </div>
 
                     <div class="icons-lists">
                         <ul>
                             <li>
-                                <img src="/images/window/icon-doublepane.png">
-                                Double Paned <br>Windows&nbsp;<span class="fa fa-angle-right"></span>
+                                <img src="/images/roof/img-roofinstall.png">
+                                Roof Installation Process&nbsp;<span class="fa fa-angle-right"></span>
                             </li>
                             <li>
-                                <img src="/images/window/icon-triplepane.png">
-                                Triple Paned <br>Windows&nbsp;<span class="fa fa-angle-right"></span>
+                                <img src="/images/roof/img-roofreplace.png">
+                                Roof Replacement&nbsp;<span class="fa fa-angle-right"></span>
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <img src="/images/window/icon-thermal.png">
-                                Thermal Pane <br>Windows&nbsp;<span class="fa fa-angle-right"></span>
-                            </li>
-                            <li>
-                                <img src="/images/window/icon-energystar.png">
-                                Energy <br>Star Ratings&nbsp;<span class="fa fa-angle-right"></span>
+                                <img src="/images/roof/img-shinglereplace.png">
+                                How to Install Roof Shingles&nbsp;<span class="fa fa-angle-right"></span>
                             </li>
                         </ul>
                     </div>
@@ -369,23 +357,6 @@
         });
     </script>
 
-    <script>
-        function codeAddress() {
-            var zip = document.getElementById('zip').value;
-            var address = document.getElementById('address_mask').value;
-            console.log(address);
-            $.get("https://ziptasticapi.com/" + zip, function (data) {
-                $("#country_name").html(data.city);
-                $('#city').val(data.city);
-                $('#address').val(address);
-                $('#address2').val(address);
-                $('#zip2').val(zip);
-                $('#state').val(data.state);
-                console.log(data);
-            }, "json");
-        }
-    </script>
-
     <script type="text/javascript">
 
         window.ParsleyConfig = {
@@ -443,25 +414,51 @@
     </script>
 
     <script type='text/javascript'>
-
-
         $(function () {
 
             $('#apply_form').parsley();
 
             var slider = $('#flow-slider-container').unslider({
-                'initialElement': $('#how_many_slide')
+                'initialElement': $('#roof_type_slide')
             });
 
             var slider_data = slider.data('unslider');
 
             $('#apply_form input').on('keypress', function (e) {
-
                 e.stopPropagation();
                 if (e.keyCode == 13) {
-
                     return false;
                 }
+            });
+
+            $('.btn-page1').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('#roof_type_val').val($(this).val());
+                $('.form-progress-bar').css({'width': '16.67%'});
+
+                slider_data.move('#replace_repair_slide');
+            });
+
+            $('.btn-page4').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('#replace_repair_val').val($(this).val());
+                $('.form-progress-bar').css({'width': '33.34%'});
+
+                slider_data.move('#own_home_slide');
+            });
+
+            $('.btn-page7').on('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $('#own_home_val').val($(this).val());
+                $('.form-progress-bar').css({'width': '66.68%'});
+
+                slider_data.move('#zip_slide');
             });
 
             $('.btn-page3').on('click', function (e) {
@@ -471,7 +468,7 @@
 
                     $("#survey_headline_slide3").hide();
                     $("#research_headline").show();
-                    $('.form-progress-bar').css({'width': '80%'});
+                    $('.form-progress-bar').css({'width': '83.35%'});
 
                     slider_data.move('#name_slide');
                     $("#survey_headline").hide();
@@ -479,44 +476,9 @@
                 }
             });
 
-            $('.btn-page6').on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                if ($('#apply_form').parsley().validate('block6') === true) {
-
-                    $('.form-progress-bar').css({'width': '16.67%'});
-                    slider_data.move('#replace_repair_slide');
-                }
-            });
-
-
-            $('.btn-page7').on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-                if ($('#apply_form').parsley().validate('block8') === true) {
-
-                    $('#replace_repair_val').val($(this).val());
-
-                    $('.form-progress-bar').css({'width': '50%'});
-                    slider_data.move('#own_home_slide');
-                }
-            });
-
-            $('.btn-page9').on('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                $('#own_home_val').val($(this).val());
-
-                $('.form-progress-bar').css({'width': '66.67%'});
-                slider_data.move('#zip_slide');
-
-            });
-
             $('.btn-page2').on('click', function (e) {
                 e.stopPropagation();
                 if ($('#apply_form').parsley().validate('block5') === true) {
-                    $('.btn-page5').addClass('disabled');
                     $('.form-progress-bar').css({'width': '100%'});
                     slider_data.move('#thankyou_slide');
                     $("#survey_headline").hide();

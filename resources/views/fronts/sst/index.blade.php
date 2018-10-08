@@ -122,7 +122,7 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/roof/1',
                 'title' => 'Roof replacement',
                 'desc'  => 'Find a roof specialist from our network.',
                 'img' => 'images/roof.png'

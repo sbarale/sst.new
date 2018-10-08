@@ -69,7 +69,7 @@
         </div>
     </div>
 </header>
-<div style="text-align: center;background-color: #3b5998;color:white;font-size: 30px;line-height: 60px;">
+<div class="blue-after-navbar">
     @yield('top-blue-line-text', '')
 </div>
 <div class="img-bg" style="{{}}">
@@ -78,6 +78,7 @@
     </div>
 </div>
 
+@yield('bottom-info-part')
 
 <div class="container" style="padding-top:12px;">
     @include('fronts.sst.footer')
