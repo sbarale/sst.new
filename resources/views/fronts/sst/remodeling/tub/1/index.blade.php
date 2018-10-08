@@ -251,7 +251,7 @@
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
 
-                $("#apply_form").attr("action", "/remodeling/tub/1?state=" + state); //Will set the state in thankyoupage
+                //$("#apply_form").attr("action", "/remodeling/tub/1?state=" + state); //Will set the state in thankyoupage
 
                 state_provider = state;
 

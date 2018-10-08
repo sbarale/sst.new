@@ -69,7 +69,9 @@
         </div>
     </div>
 </header>
-
+<div style="text-align: center;background-color: #3b5998;color:white;font-size: 30px;line-height: 60px;">
+    @yield('top-blue-line-text', '')
+</div>
 <div class="img-bg" style="{{}}">
     <div class="container">
         @yield('content')

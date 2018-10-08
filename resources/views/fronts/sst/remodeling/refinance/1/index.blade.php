@@ -706,7 +706,7 @@
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
 
-                $("#apply_form").attr("action", "/remodeling/refinance/1?state=" + state); //Will set the state in thankyoupage
+                //$("#apply_form").attr("action", "/remodeling/refinance/1?state=" + state); //Will set the state in thankyoupage
 
                 state_provider = state;
 

@@ -62,14 +62,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/auw/',
+                'href'  => '',
                 'title' => 'Auto Warranty (US only)',
                 'desc'  => 'Comparing Auto Warranty offers.',
                 'img' => 'images/car-loan.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/debt-overview.php',
+                'href'  => '',
                 'title' => 'Debt Settlement ( US and UK only )',
                 'desc'  => 'Be it refinance or new car purchase, it pays to shop around.',
                 'img' => 'images/debt.png'
@@ -77,14 +77,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/ins/funeral/uk/2/',
+                'href'  => '',
                 'title' => 'Insurance (UK only)',
                 'desc'  => 'Find an insurance specialist from our network.',
                 'img' => 'images/ins.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/tax/2/index.php',
+                'href'  => '',
                 'title' => 'TAX Settlement (US only)',
                 'desc'  => 'Check your eligibility for the IRS fresh start program.',
                 'img' => 'images/debt.png'
@@ -92,14 +92,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/tax/2/index.php',
+                'href'  => '',
                 'title' => 'TAX Settlement (US only)',
                 'desc'  => 'Check your eligibility for the IRS fresh start program.',
                 'img' => 'images/debt.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/mip_us/',
+                'href'  => '',
                 'title' => 'Medicare Supplemental Plans (US only)',
                 'desc'  => 'Find a Medicare specialist from our network.',
                 'img' => 'images/ins.png'
@@ -114,7 +114,7 @@
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/chw/1/',
+                'href'  => '',
                 'title' => 'Home Warrenty (US only)',
                 'desc'  => 'Find a Home Warrenty specialist from our network.',
                 'img' => 'images/chw.png'
@@ -122,14 +122,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/roof/',
+                'href'  => '',
                 'title' => 'Roof replacement',
                 'desc'  => 'Find a roof specialist from our network.',
                 'img' => 'images/roof.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/window/',
+                'href'  => '/remodeling/window/1',
                 'title' => 'Window replacement',
                 'desc'  => 'Find a window specialist from our network.',
                 'img' => 'images/window.png'
