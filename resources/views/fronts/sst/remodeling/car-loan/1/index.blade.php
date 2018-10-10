@@ -7,7 +7,7 @@
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     <style>
-        .btn-page2, .btn-page3{
+        .btn-page2, .btn-page3, .btn-page6, .btn-page5{
             font-size:28px!important;
             padding: 10px 56px!important;
             margin-top: 20px;
@@ -519,11 +519,11 @@
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
                                     Email
-                                    <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block5" placeholder="Enter Your Email"/>
+                                    <input type="email" id="email" name="email_address" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block5" placeholder="Enter Your Email"/>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
                                     Phone
-                                    <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-minlength="10" data-parsley-maxlength="14" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block5" placeholder="Enter Your Phone (With Area Code)"/>
+                                    <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-minlength="10" data-parsley-maxlength="14" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block5" placeholder="Enter Your Phone (With Area Code)"/>
                                 </div>
 
                             </div>

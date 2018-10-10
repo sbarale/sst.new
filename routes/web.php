@@ -48,3 +48,9 @@ Route::post( '/remodeling/window/{id}', 'Offers\WindowController@postForm' );
 
 Route::get( '/remodeling/roof/{id}', 'Offers\RoofController@showForm' );
 Route::post( '/remodeling/roof/{id}', 'Offers\RoofController@postForm' );
+
+Route::get( '/remodeling/home-warrenty/{id}', 'Offers\HomeWarrentyController@showForm' );
+Route::post( '/remodeling/home-warrenty/{id}', 'Offers\HomeWarrentyController@postForm' );
+
+Route::get( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@showForm' );
+Route::post( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@postForm' );

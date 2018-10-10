@@ -84,19 +84,13 @@
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/tax-settlement/1',
                 'title' => 'TAX Settlement (US only)',
                 'desc'  => 'Check your eligibility for the IRS fresh start program.',
                 'img' => 'images/debt.png'
             ] )
         </div>
         <div class="row">
-            @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
-                'title' => 'TAX Settlement (US only)',
-                'desc'  => 'Check your eligibility for the IRS fresh start program.',
-                'img' => 'images/debt.png'
-            ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
                 'href'  => '',
@@ -114,7 +108,7 @@
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/home-warrenty/1',
                 'title' => 'Home Warrenty (US only)',
                 'desc'  => 'Find a Home Warrenty specialist from our network.',
                 'img' => 'images/chw.png'

@@ -7,6 +7,11 @@
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     <style>
+        .btn-page4, .btn-page61, .btn-page62, .btn-page5, .btn-page66{
+            font-size:28px!important;
+            padding: 10px 56px!important;
+            margin-top: 20px;
+        }
         #estimated_value_text, #balance_mortgage_value_text, #balance_second_mortgage_value_text, #estimated_down_payment_value_text {
             font-size: 24px;
             margin-top: 50px;
@@ -499,7 +504,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <button type="button" id="btn-page64" class="btn btn-success btn-lg btn-page64">Next</button>
+                                    <button type="button" id="btn-page64" class="btn btn-success btn-lg btn-page64 btn-page66">Next</button>
                                 </div>
                             </div>
                         </div>
@@ -573,11 +578,11 @@
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
                                     Email
-                                    <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block5" placeholder="Enter Your Email"/>
+                                    <input type="email" id="email" name="email_address" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block5" placeholder="Enter Your Email"/>
                                 </div>
                                 <div class="col-sm-6 col-xs-12">
                                     Phone
-                                    <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block5" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)"/>
+                                    <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block5" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)"/>
                                 </div>
 
                             </div>
