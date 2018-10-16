@@ -47,7 +47,7 @@
         <div class="row">
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/solar-energy-choose/',
                 'title' => 'Solar Energy',
                 'desc'  => 'Find a solar specialist from our network and start saving money on your energy bills.',
                 'img' => 'images/solar-1.png'

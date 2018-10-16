@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Request;
 
 
+
 abstract class LeadspediaController extends BaseController {
 	/*
 	 * $data:

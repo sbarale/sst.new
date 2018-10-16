@@ -54,3 +54,10 @@ Route::post( '/remodeling/home-warrenty/{id}', 'Offers\HomeWarrentyController@po
 
 Route::get( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@showForm' );
 Route::post( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@postForm' );
+
+Route::get( '/remodeling/solar-energy-choose/', 'Offers\SolarEnergyController@showList' );
+
+Route::get( '/remodeling/solar-energy/{id}/{location}', 'Offers\SolarEnergyController@showForm' );
+Route::post( '/remodeling/solar-energy/{id}/{location}', 'Offers\SolarEnergyController@postForm' );
+
+Route::post( '/get-state-providers/', 'Offers\SolarEnergyController@getProviders' );
