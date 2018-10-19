@@ -180,7 +180,7 @@
         <div style="max-width: 600px; text-align: left; margin:0px auto;">
             <b>WHY IT MAKES SENSE</b>
             <br>
-            You're interested in a walk-in tub that fits your needs at a great price. Instead of spending hours searching websites, BuyerZone does the work for you to find quality dealers who will provide competing price quotes for you to compare. You save valuable time and get to choose the best option based on your budget.
+            You're interested in a walk-in tub that fits your needs at a great price. Instead of spending hours searching websites, Smart Savings Today does the work for you to find quality dealers who will provide competing price quotes for you to compare. You save valuable time and get to choose the best option based on your budget.
         </div>
 
     </div>
