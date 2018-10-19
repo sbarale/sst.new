@@ -253,12 +253,6 @@ tbody{
 }
 
 
-.btn-page2, .btn-page3, .btn-page6{
-    font-size:28px!important;
-    padding: 10px 56px!important;
-    margin-top: 20px;
-}
-
 .btn-success {
     background-color: #fa6900!important;
     border-color: #fa6900!important;
@@ -287,12 +281,11 @@ select.red {border-color:red; background-color:rgba(255,0,0,.2);}
     position: relative;
     background: url("/images/bath/2/privacysecurity.png") no-repeat 8px 8px;
 }
-.btn-page4, .btn-page7{
+
+.btn-block {
+    display: block;
     width: 100%;
-}
-.btn-page1{
-    max-width: 250px;
-    width: 100%;
+    max-width:100%;
 }
 
 .full-page {
@@ -392,6 +385,13 @@ ul li img {
     padding-bottom: 50px;
     background-position: center;
 }
+.blue-after-navbar{
+    text-align: center;
+    background-color: #3b5998;
+    color:white;
+    font-size: 30px;
+    line-height: 60px;
+}
 /* md */
 @media (max-width: 1199px) {
     .img-bg{
@@ -417,6 +417,10 @@ ul li img {
     }
     #secure-lock {
         margin-bottom: 20px;
+    }
+    .blue-after-navbar{
+        font-size: 22px;
+        line-height: 40px;
     }
 
 }
@@ -479,17 +483,13 @@ ul li img {
     .btn-page2 img, .btn-page3 img {
         max-width: 100%;
     }
+    .blue-after-navbar{
+        font-size: 16px;
+        line-height: 30px;
+    }
 }
 
 @media screen and (max-width: 480px){
-    .btn-page1{
-        margin: 3px!important;
-        margin-bottom: 10px!important;
-    }
-    
-    .btn-page1 img{
-        width: 80%;
-    }
     #survey_headline{
         font-size: 16px!important;
     }
@@ -500,5 +500,9 @@ ul li img {
         font-size: 22px;
         margin-top: 50px;
         margin-bottom: 20px;
+    }
+    .blue-after-navbar{
+        font-size: 12px;
+        line-height: 1.2em;
     }
 }

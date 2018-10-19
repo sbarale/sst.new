@@ -66,10 +66,10 @@ label {font-size:16px;}
 #title {max-width:1050px;width:100%;float:left;clear:both;text-align:center;margin-top:0px;}
 #rightbox {float:left; width:420px;margin-left:650px;}
 #step1, #step2 {font-family: Arial, Helvetica, Verdana; font-size:12px; color:#313131; padding:0; margin:0;}
-#laststepbox {float:left; width:470px;margin-left:650px; font-family: Arial, Helvetica, Verdana; font-size:12px; color:#0c2c4a;}
-#form_table {max-width:420px; width:100%;margin:12px 0 0 0;padding:0;}
+#laststepbox {float:left; width:470px; font-family: Arial, Helvetica, Verdana; font-size:12px; color:#0c2c4a;}
+#form_table { width:100%;margin:12px 0 0 0;padding:0;}
 #form_table td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}
-#form_table2 {max-width:420px; width:100%;margin:12px 0 0 0;padding:0;}
+#form_table2 { width:100%;margin:12px 0 0 0;padding:0;}
 #form_table2 td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}
 #form_table3 {margin:12px 12px 0 12px;padding:0;}
 #form_table3 td {font-family: Helvetica, Arial, Verdana;font-size:15px; padding:0 0 7px 0; margin:0;}

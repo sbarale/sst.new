@@ -1,10 +1,32 @@
-@extends('fronts.sst.remodeling.bath-layout')
+@extends('fronts.sst.remodeling.slider-layout')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/bath/2/background_2.jpg')
 @section('small-bg-img','/images/bath/2/background_1.jpg')
+@section('header-middle-img','/images/bat.png')
 @section('head')
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
+    <style>
+        .btn-page2, .btn-page3{
+            font-size:28px!important;
+            padding: 10px 56px!important;
+            margin-top: 20px;
+        }
+        .btn-page1{
+            max-width: 250px;
+            width: 100%;
+        }
+        @media screen and (max-width: 480px){
+            .btn-page1{
+                margin: 3px!important;
+                margin-bottom: 10px!important;
+            }
+
+            .btn-page1 img{
+                width: 80%;
+            }
+        }
+    </style>
 @endsection
 
 
@@ -13,8 +35,6 @@
 
         <form name="apply_form" action="/remodeling/bath/2" id="apply_form" class="form-horizontal quiz_form" method="POST">
             {{ csrf_field() }}
-            <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? 1 : 0; ?>">
-            <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? 1 : 0; ?>">
             <h1 class="header" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
             <h3>Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
             <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send</h1>
@@ -96,11 +116,11 @@
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
                                 Email
-                                <input type="email" id="email" name="email" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" autocomplete="somevarystrangevalue4"/>
+                                <input type="email" id="email" name="email_address" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" autocomplete="somevarystrangevalue4"/>
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 Phone
-                                <input type="tel" id="phone" name="phone" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
+                                <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
                             </div>
                         </div>
                         <div class="row">
@@ -242,7 +262,7 @@
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
 
-                $("#apply_form").attr("action", "/remodeling/bath/2?state=" + state); //Will set the state in thankyoupage
+                //$("#apply_form").attr("action", "/remodeling/bath/2?state=" + state); //Will set the state in thankyoupage
 
                 state_provider = state;
 

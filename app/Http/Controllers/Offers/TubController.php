@@ -16,8 +16,8 @@ class TubController extends LeadspediaController {
 		return view( "fronts.sst.remodeling.tub.$id.index", $this->data );
 	}
 
-	public function postForm( $id = 1, $custom_values = [] ) {
-		$custom_values = [
+	public function postForm( $id = 1, $custom_fields = [] ) {
+        $custom_fields = [
 			'alt_phone' => preg_replace( "#[[:punct:]]#", "", Input::post( 'alt_phone', '' ) ),
 			'city'      => Input::post( 'city', '' ),
 			'state'     => Input::post( 'state', '' ),
@@ -25,7 +25,7 @@ class TubController extends LeadspediaController {
 		/*
 		 * Call the parent class for functionality
 		 */
-		parent::postForm( $id, $custom_values );
+		parent::postForm( $id, $custom_fields );
 
 		/*
 		 * Return the specialized version of the view
