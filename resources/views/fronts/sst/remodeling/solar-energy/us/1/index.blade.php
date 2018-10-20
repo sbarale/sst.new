@@ -3,7 +3,7 @@
 @section('big-bg-img','/images/gray-bg-px.jpg')
 @section('small-bg-img','/images/gray-bg-px.jpg')
 @section('header-middle-img','/images/solar-1.png')
-@section('top-blue-line-text','We make it easy to complete your roof installation projects')
+@section('top-blue-line-text','')
 @section('head')
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
@@ -11,12 +11,62 @@
         .bbbb{
             width: 100%;
         }
-        .bbbb{
+        .btn-page4, .btn-page2, .btn-page5{
             font-size: 28px!important;
             padding: 10px 56px!important;
             margin-top: 20px;
         }
     </style>
+
+    <script type="text/javascript">
+
+        window.ParsleyConfig = {
+            errorsWrapper: '<div class="help-error" role="alert"></div>',
+            errorTemplate: '<div></div>',
+            validators: {
+                usphone: {
+                    fn: function (value, requirements) {
+
+                        var patt = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
+                        return patt.test(value);
+
+                        var digits = value.replace(/[^0-9]/g, "");
+                        var digits_count = digits.length;
+                        if (digits_count > 9) {
+                            var areacode = digits.substring(0, 3);
+                            var valid_phone = digits.match(/^[2-9][0-8][0-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/);
+                            if (valid_phone == null) {
+                                return false;
+                            } else if ($.inArray(areacode, ['555', '800', '866', '877', '888']) >= 0) {
+                                return false
+                            }
+
+                            return true;
+                        }
+                        return false;
+                    },
+                    priority: 32
+                },
+                uszip: {
+                    fn: function (value, requirements) {
+                        var digits = value.replace(/[^0-9]/g, "");
+                        var digits_count = digits.length;
+                        if (digits_count == 5) {
+                            return true;
+                        }
+                        return false;
+                    },
+                    priority: 32
+                },
+                usaddress: {
+                    fn: function (value, requirements) {
+                        var patt = /^[0-9].*$/;
+                        return patt.test(value);
+                    }
+                }
+            }
+        };
+    </script>
 @endsection
 
 
@@ -300,7 +350,7 @@
                                     <div id="tcpa" >
                                         <input type="hidden" id="leadid_tcpa_disclosure" />
                                         <label for="leadid_tcpa_disclosure">
-                                            By clicking above, you authorize savings-scanner.com and up to four <a href="Solar_Companies.html" target="_blank">Solar Companies</a> to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is a mobile phone or  is on any national or state “Do Not Call” list. Message and data rates may apply. Your consent here is not based on a condition of purchase.
+                                            By clicking above, you authorize smartsavings.today and up to four Solar Companies to call you and send you pre-recorded messages and text messages at the number you entered above, using an autodialer, with offers about their products or services, even if your phone number is a mobile phone or  is on any national or state “Do Not Call” list. Message and data rates may apply. Your consent here is not based on a condition of purchase.
                                         </label>
                                     </div>
 
@@ -349,6 +399,9 @@
 
 @section('footer-scripts')
     @parent
+
+    <script src="https://geoapi123.appspot.com"></script>
+
     <script>
         function codeAddress() {
             var zip = document.getElementById('zip').value;
@@ -366,62 +419,14 @@
         }
     </script>
 
-    <script type="text/javascript">
-
-        window.ParsleyConfig = {
-            errorsWrapper: '<div class="help-error" role="alert"></div>',
-            errorTemplate: '<div></div>',
-            validators: {
-                usphone: {
-                    fn: function (value, requirements) {
-
-                        var patt = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
-                        return patt.test(value);
-
-                        var digits = value.replace(/[^0-9]/g, "");
-                        var digits_count = digits.length;
-                        if (digits_count > 9) {
-                            var areacode = digits.substring(0, 3);
-                            var valid_phone = digits.match(/^[2-9][0-8][0-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/);
-                            if (valid_phone == null) {
-                                return false;
-                            } else if ($.inArray(areacode, ['555', '800', '866', '877', '888']) >= 0) {
-                                return false
-                            }
-
-                            return true;
-                        }
-                        return false;
-                    },
-                    priority: 32
-                },
-                uszip: {
-                    fn: function (value, requirements) {
-                        var digits = value.replace(/[^0-9]/g, "");
-                        var digits_count = digits.length;
-                        if (digits_count == 5) {
-                            return true;
-                        }
-                        return false;
-                    },
-                    priority: 32
-                },
-                usaddress: {
-                    fn: function (value, requirements) {
-                        var patt = /^[0-9].*$/;
-                        return patt.test(value);
-                    }
-                }
-            }
-        };
-    </script>
-
     <script type='text/javascript'>
         $(function () {
             var provider = $('#electricity_company');
             var empty_caption = '-- Please select --';
             var hidePopup = false;
             var state_provider = '';
+
+            $("#phone").mask("999-999-9999");
 
             var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address_mask'), {
                 types: ['address'],
@@ -657,6 +662,12 @@
             $('#zip_slide').on('formslider-endmove', function () {
                 $(this).find(':input:visible:enabled:first').focus();
             });
+
+
+            var statecurrent = (typeof geoip_region_name == typeof Function && geoip_region_name() != "") ? geoip_region_name() : "";
+
+            document.getElementById("statecurrent").innerHTML = statecurrent;
+
 
         });
     </script>

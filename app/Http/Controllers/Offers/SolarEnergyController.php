@@ -27,12 +27,25 @@ class SolarEnergyController extends LeadspediaController {
         return view( "fronts.sst.remodeling.solar-energy.$location.$id.index", $this->data );
     }
 
-    public function postForm( $id = 1, $custom_fields = [], $location = 'us' ) {
+    public function postForm( $id = 1, $location = 'us', $custom_fields = [] ) {
         $custom_fields = [
-            'homeowner'     => Input::post( 'homeowner', '' ),
-            'home_shaded'     => Input::post( 'home_shaded', '' ),
-            'electric_bill'     => Input::post( 'electric_bill', '' ),
-            'electricity_Company'     => Input::post( 'electricity_Company', '' ),
+            'homeowner'             => Input::post( 'homeowner', '' ),
+            'home_shaded'           => Input::post( 'home_shaded', '' ),
+            'electric_bill'         => Input::post( 'electric_bill', '' ),
+            'electricity_Company'   => Input::post( 'electricity_Company', '' ),
+            'home_age'              => Input::post( 'home_age', '' ),
+            'rent_or_own'           => Input::post( 'rent_or_own', '' ),
+            'system_size'           => Input::post( 'system_size', '' ),
+            'when_start'            => Input::post( 'when_start', '' ),
+            'detailed_quote'        => Input::post( 'detailed_quote', '' ),
+            'best_time'             => Input::post( 'best_time', '' ),
+            'finance_interest_new'  => Input::post( 'finance_interest_new', '' ),
+            'home_type'             => Input::post( 'home_type', '' ),
+            'type_of_roof'          => Input::post( 'type_of_roof', '' ),
+            'useful_area'           => Input::post( 'useful_area', '' ),
+            'profession_type'       => Input::post( 'profession_type', '' ),
+            'income_amount'         => Input::post( 'income_amount', '' ),
+            'gender'                => Input::post( 'gender', '' ),
         ];
         /*
          * Call the parent class for functionality

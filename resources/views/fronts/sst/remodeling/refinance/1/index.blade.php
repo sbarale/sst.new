@@ -18,6 +18,63 @@
             margin-bottom: 20px;
         }
     </style>
+
+    <script type="text/javascript">
+
+        window.ParsleyConfig = {
+            errorsWrapper: '<div class="help-error" role="alert"></div>',
+            errorTemplate: '<div></div>',
+            validators: {
+                usphone: {
+                    fn: function (value, requirements) {
+
+                        value = value.replace('(', '');
+                        value = value.replace(')', '');
+                        value = value.replace(' ', '');
+                        value = value.replace('-', '');
+                        console.log(value);
+
+                        var patt = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
+                        return patt.test(value);
+
+                        var digits = value.replace(/[^0-9]/g, "");
+                        var digits_count = digits.length;
+                        if (digits_count > 9) {
+                            var areacode = digits.substring(0, 3);
+                            var valid_phone = digits.match(/^[2-9][0-8][0-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/);
+                            if (valid_phone == null) {
+                                return false;
+                            } else if ($.inArray(areacode, ['555', '800', '866', '877', '888']) >= 0) {
+                                return false
+                            }
+
+                            return true;
+                        }
+                        return false;
+                    },
+                    priority: 32
+                },
+                uszip: {
+                    fn: function (value, requirements) {
+                        var digits = value.replace(/[^0-9]/g, "");
+                        var digits_count = digits.length;
+                        if (digits_count == 5) {
+                            return true;
+                        }
+                        return false;
+                    },
+                    priority: 32
+                },
+                usaddress: {
+                    fn: function (value, requirements) {
+                        var patt = /^[0-9].*$/;
+                        return patt.test(value);
+                    }
+                }
+            }
+        };
+
+    </script>
 @endsection
 
 
@@ -721,63 +778,6 @@
                 $('.btn-page4').removeAttr('disabled');
             });
         });
-    </script>
-
-    <script type="text/javascript">
-
-        window.ParsleyConfig = {
-            errorsWrapper: '<div class="help-error" role="alert"></div>',
-            errorTemplate: '<div></div>',
-            validators: {
-                usphone: {
-                    fn: function (value, requirements) {
-
-                        value = value.replace('(', '');
-                        value = value.replace(')', '');
-                        value = value.replace(' ', '');
-                        value = value.replace('-', '');
-                        console.log(value);
-
-                        var patt = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
-                        return patt.test(value);
-
-                        var digits = value.replace(/[^0-9]/g, "");
-                        var digits_count = digits.length;
-                        if (digits_count > 9) {
-                            var areacode = digits.substring(0, 3);
-                            var valid_phone = digits.match(/^[2-9][0-8][0-9][2-9][0-9][0-9][0-9][0-9][0-9][0-9]$/);
-                            if (valid_phone == null) {
-                                return false;
-                            } else if ($.inArray(areacode, ['555', '800', '866', '877', '888']) >= 0) {
-                                return false
-                            }
-
-                            return true;
-                        }
-                        return false;
-                    },
-                    priority: 32
-                },
-                uszip: {
-                    fn: function (value, requirements) {
-                        var digits = value.replace(/[^0-9]/g, "");
-                        var digits_count = digits.length;
-                        if (digits_count == 5) {
-                            return true;
-                        }
-                        return false;
-                    },
-                    priority: 32
-                },
-                usaddress: {
-                    fn: function (value, requirements) {
-                        var patt = /^[0-9].*$/;
-                        return patt.test(value);
-                    }
-                }
-            }
-        };
-
     </script>
 
     <script type='text/javascript'>

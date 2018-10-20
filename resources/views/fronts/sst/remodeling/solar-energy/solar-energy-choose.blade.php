@@ -11,7 +11,7 @@
             ])
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/solar-energy/au/1',
+                'href'  => '/remodeling/solar-energy/1/au',
                 'title' => 'Solar AU',
                 'desc'  => 'Solar Calculator for AU',
                 'img' => '/images/solar-au.png'
@@ -20,14 +20,14 @@
         <div class="row">
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/solar-energy/nl/1',
+                'href'  => '/remodeling/solar-energy/1/nl',
                 'title' => 'Solar NL',
                 'desc'  => 'Solar Calculator for NL',
                 'img' => '/images/solar-nl.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/solar-energy/be/1',
+                'href'  => '/remodeling/solar-energy/1/be',
                 'title' => 'Solar BE',
                 'desc'  => 'Solar Calculator for BE',
                 'img' => '/images/solar-be.png'
@@ -35,14 +35,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/solar-energy/de/1',
+                'href'  => '/remodeling/solar-energy/1/de',
                 'title' => 'Solar DE',
                 'desc'  => 'Solar Calculator for DE',
                 'img' => '/images/solar-de.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/solar-energy/fr/1',
+                'href'  => '/remodeling/solar-energy/1/fr',
                 'title' => 'Solar FR',
                 'desc'  => 'Solar Calculator for FR',
                 'img' => '/images/solar-fr.png'

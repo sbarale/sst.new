@@ -97,7 +97,7 @@
                                         <td align="center" colspan="2">
                                             <input type="submit" alt="Submit" id="btn_submit" value="Submit">
                                             <p class="disclaimer tcpa_disclaimer">
-                                                <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting this request for information, I hereby provide my signature, expressly consenting to receive information by email, auto-dialer and/or pre-recorded telephone calls, and/or SMS messages from or on behalf of savings-scanner.com and its
+                                                <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting this request for information, I hereby provide my signature, expressly consenting to receive information by email, auto-dialer and/or pre-recorded telephone calls, and/or SMS messages from or on behalf of smartsavings.today and its
                                                     <a href="#" style="font-style: italic">fulfillment partners</a> and may agree to receive other
                                                     <a href="#" style="font-style: italic">offers</a> on my telephone number I provided above, including my wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a condition of purchase and that I may revoke my consent at any time.</label>
                                             </p>
