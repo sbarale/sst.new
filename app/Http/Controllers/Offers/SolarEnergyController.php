@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vadym
- * Date: 10/10/18
- * Time: 9:56 PM
- */
 
 namespace App\Http\Controllers\Offers;
 

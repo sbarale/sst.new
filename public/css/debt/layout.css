@@ -1,0 +1,1691 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	font-size: 14px;
+	font-family: 'montserratlight', sans-serif;
+	color: #4c4c4d;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px;
+	background: #fff;
+	-webkit-font-smoothing: antialiased !important;
+
+}
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+img {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 0px;
+}
+
+
+a img {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	line-height: 0px;
+}
+
+.gradient {
+       filter: none;
+}
+
+
+
+
+.contentContainer {
+	width: 960px;
+	margin: 0px auto;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.contentContainerLeveldown {
+	width: 520px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+
+h1 {
+	font-family: 'montserratlight';
+	font-size: 32px;
+	color: #23b3f0;
+	letter-spacing: -1px;
+	margin: 0px 0px 8px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+h2 {
+	font-family: 'montserratlight';
+	font-size: 26px;
+	line-height: 33px;
+	font-weight: 400;
+	color: #333333;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 2px 0px;
+}
+
+
+h3 {
+	font-family: 'montserratlight';
+	font-size: 22px;
+	color: #333333;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+.red {
+	color: #eb2629;
+}
+
+.cyan {
+	color: #41bacf;
+}
+
+.center {
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+:focus {
+outline: 0;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 40px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(37, 37, 48, 0.30);
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 16px 10px 16px;
+    display: none;
+	  border-radius: 96px;
+	  -moz-border-radius: 96px;
+	  -webkit-border-radius: 96px;
+	-webkit-transition: background-color 300ms ease-out;
+    	-moz-transition: background-color 300ms ease-out;
+    	transition: background-color 300ms ease-out;
+}
+
+.back-to-top a 	   {  font-weight: bold; text-decoration: underline; color: #eb2629; }
+
+.back-to-top:hover {    
+    background-color: rgba(255, 255, 255, .9);
+    color: #464646;
+    
+}
+
+.gradTop {
+	width: 100%;
+	height: 20px;
+	margin: 0px 0px -20px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+	position: relative;
+	z-index: 2;
+	background: transparent;
+	background: url('/images/debt/grad-top.png');
+}
+
+
+
+
+/* --------------------------------- HEADER AREA ------------------------------------ */
+
+.header {
+	width: 100%;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px;
+	background: #fff;
+	position: relative;
+	z-index: 5000;
+}
+
+.headerInner {
+	width: 960px;
+	margin: 0px auto;
+	border: 0px;
+	padding: 25px 0px;
+	color: #fff;
+	position: relative;
+	z-index: 4000;
+}
+
+.logo {
+	float: left;
+	text-align: left;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+.topStrap {
+	float: right;
+	text-align: right;
+	font-size: 28px;
+	color: #949494;
+	margin: 0px;
+	border: 0px;
+	padding: 10px 0px 0px 0px;
+}
+.topStrap b {
+	color: #347cc8;
+}
+
+
+
+
+
+/* --------------------------------- SPLASH AREA ------------------------------------ */
+
+
+
+#splashArea {
+	min-height: 580px;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+	/*background: url('../../images/splash-bg.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;*/
+	/*
+	 -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	 */
+	background-color: #fafafa;
+}
+
+#splashArea .contentContainer{
+	position: relative;	
+}
+
+#splashArea h1 {
+	font-family: 'montserratlight';
+	font-size: 36px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 55px 0px 0px 0px;
+}
+
+#splashArea h2 {
+	font-family: 'montserratlight';
+	font-size: 23px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#splashArea ul{
+	font-family: 'montserratlight';
+	font-size: 20px;
+	color: #fff;
+	list-style: none;
+	padding: 40px 0px 0px 0px;
+	margin: 0px;
+	border: 0px;
+
+}
+
+#splashArea li {
+	text-align: left;
+	background-image: url('/images/debt/images/tick1.png');
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	padding-left: 28px;  /* space for the image */
+	padding-top: 0px;  /* space for the image */
+	padding-bottom: 17px;  /* space for the image */
+	border: 0px;
+}
+
+.splashButtonWrapper {
+	width: 540px;
+	padding: 16px 0px 16px 0px;
+	text-align: left;
+	margin: 20px 0px;
+	background-image: url('/images/debt/splash-arrow.png.html');
+	background-repeat: no-repeat;
+	background-position: 90% 32%;
+}
+
+
+.splashButton {
+	display: inline-block;
+	text-align: left;
+	font-family: 'montserratlight';
+	font-size: 28px;
+	line-height: 28px;
+	box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+	color: #fff;
+	margin: 0px;
+	border: 2px solid #fff;
+	text-decoration: none;
+	padding: 16px 20px 14px 20px;
+	-webkit-appearance: none;
+	-webkit-transition: background-color 400ms ease-out;
+    	-moz-transition: background-color 400ms ease-out;
+    	transition: background-color 400ms ease-out;
+	background: #e25c34;
+
+}
+
+
+
+#splashArea2 {
+	height: 140px;
+	position: relative;
+	z-index: 100;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+	background: url('/images/debt/splash-bg.jpg');
+	background-position: center center;
+	background-position: 50% 40%;
+	background-repeat: repeat-x;
+	/*
+	 -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	 */
+	background-color: #2b649c;
+}
+
+#splashArea2 h1 {
+	font-family: 'montserratlight';
+	font-size: 36px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 55px 0px 0px 0px;
+}
+
+
+
+
+/* --------------------------------- ROW ------------------------------------ */
+
+#row {
+	padding: 44px 0px 44px 0px;
+	text-align: left;
+	font-size: 15px;
+
+}
+
+
+#row h1 {
+	font-family: 'montserratlight';
+	font-size: 34px;
+	color: #1e6ab9;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 20px 0px;
+}
+
+
+#row ul{
+	list-style: none;
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
+	border: 0px;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+#row li {
+	text-align: left;
+	background-image: url('/images/debt/tick2.png');
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	padding-left: 30px;  /* space for the image */
+	padding-top: 0px;  /* space for the image */
+	padding-bottom: 10px;  /* space for the image */
+	border: 0px;
+}
+
+
+#row li.two {
+	background-image: url('/images/debt/step2.png.html');
+}
+
+#row li.three {
+	background-image: url('/images/debt/step3.png.html');
+}
+
+
+
+
+
+.pageButtonWrapper {
+	padding: 25px 0px 16px 0px;
+	text-align: left;
+	margin: 0px;
+
+}
+
+
+.pageButton {
+	display: inline-block;
+	text-align: center;
+	font-family: 'montserratregular';
+	font-size: 28px;
+	line-height: 28px;
+	box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+	color: #fff;
+	margin: 0px;
+	border: 2px solid #fff;
+	text-decoration: none;
+	padding: 16px 20px 14px 20px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-transition: background-color 400ms ease-out;
+    	-moz-transition: background-color 400ms ease-out;
+    	transition: background-color 400ms ease-out;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,7cbc0a+100 */
+background: #9dd53a; /* Old browsers */
+background: -moz-linear-gradient(top,  #9dd53a 0%, #7cbc0a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #9dd53a 0%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #9dd53a 0%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	border-radius: 9px;
+	text-decoration: none;
+}
+
+.pageButton:hover {
+	color: #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7cbc0a+0,9dd53a+100 */
+background: #7cbc0a; /* Old browsers */
+background: -moz-linear-gradient(top,  #7cbc0a 0%, #9dd53a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #7cbc0a 0%,#9dd53a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #7cbc0a 0%,#9dd53a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbc0a', endColorstr='#9dd53a',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+
+/* --------------------------------- ROW - GREY ------------------------------------ */
+
+#row.grey {
+	position: relative;
+	padding: 44px 0px 44px 0px;
+	font-size: 14px;
+	color: #29313a;
+	background: #f2f3f3;
+}
+
+#row.lightGrey {
+	position: relative;
+	padding: 44px 0px 0px 0px;
+	font-size: 14px;
+	color: #29313a;
+	background: #fafafa;
+}
+
+
+#row.lightGrey h1 {
+	display; block;
+	font-family: 'montserratlight';
+	font-size: 36px;
+	text-align: left;
+	letter-spacing: 0px;
+	color: #4e4e4e;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 0px;
+	padding: 50px 0px 0px 0px;
+}
+
+
+.instantBadge {
+	position: absolute;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	margin: -66px 0px 0px 780px;
+
+}
+
+
+#row.greyBlue {
+	position: relative;
+	padding: 44px 0px 44px 0px;
+	font-size: 14px;
+	color: #29313a;
+	background: #dcf1ff;
+}
+
+
+
+
+
+
+
+
+
+#row.blue {
+	position: relative;
+	padding: 44px 0px 44px 0px;
+	font-size: 14px;
+	color: #fff;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f86d0+0,1e6ab9+100 */
+background: #3f86d0; /* Old browsers */
+background: -moz-linear-gradient(top,  #3f86d0 0%, #1e6ab9 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #3f86d0 0%,#1e6ab9 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #3f86d0 0%,#1e6ab9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f86d0', endColorstr='#1e6ab9',GradientType=0 ); /* IE6-9 */
+}
+
+
+#row.blue h1 {
+	display; block;
+	font-family: 'montserratlight';
+	font-size: 36px;
+	text-align: center;
+	letter-spacing: 0px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border-bottom: 0px;
+	padding: 10px 0px 30px 0px;
+}
+
+
+
+
+
+#row .col {
+	float: left;
+	width: 320px;
+	padding: 0px 10px 0px 10px;
+	text-align: center;
+	font-family: 'montserratlight';
+	font-size: 14px;
+	color: #fff;
+	box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+}
+
+#row .col h1 {
+	display; block;
+	font-family: 'montserratlight';
+	font-size: 18px;
+	letter-spacing: 0px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 10px 0px 10px 0px;
+}
+
+
+
+#row .col50 {
+	float: left;
+	width: 480px;
+	padding: 0px 30px 0px 0px;
+	text-align: left;
+	font-family: 'montserratlight';
+	font-size: 18px;
+	color: #1a2d2e;
+	box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+}
+
+
+#row.grey ul{
+	font-family: 'montserratlight';
+	font-size: 18px;
+	color: #29313a;
+	list-style: none;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	border: 0px;
+
+}
+
+#row.grey li {
+	text-align: left;
+	background-image: url('/images/debt/tick2.png');
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	padding-left: 30px;  /* space for the image */
+	padding-top: 0px;  /* space for the image */
+	padding-bottom: 12px;  /* space for the image */
+	border: 0px;
+}
+
+
+
+
+#dmPlanPanel {
+	width: 380px;
+	display: inline-block;
+	background-color: #fff;
+	font-size: 18px;
+	color: #444444;
+	-moz-border-radius: 9px; 
+	-webkit-border-radius: 9px; 
+	border-radius: 9px;
+	border: 1px solid #d7d7d7;
+	padding: 20px;
+}
+
+#dmPlanPanel img {
+	padding: 0px 13px 0px 0px;
+	margin-top: -3px;
+}
+
+
+#dmPlanPanel h1 {
+	display: block;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 700;
+	color: #444444;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 20px 0px;	
+
+}
+
+#dmPlanPanel .total {
+	color: #1e6ab9;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 8px 0px 0px 0px;
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	padding: 3px 0px 1px 0px;	
+
+}
+
+#dmPlanPanel .total2 {
+	color: #3eaa14;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 8px 0px 0px 0px;
+	border-top: 1px solid #a6a6a6;
+	border-bottom: 1px solid #a6a6a6;
+	padding: 3px 0px 1px 0px;	
+
+}
+
+.arrowBg {
+	background-image: url('/images/debt/blue-arrow.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------- THANKYOU ROW ------------------------------------ */
+
+
+#thankyouRow {
+	padding: 48px;
+	text-align: left;
+	font-size: 16px;
+	color: #fff;
+	background: #3c84ce;
+}
+
+
+#thankyouRow h1 {
+	font-size: 35px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 10px 0px;
+}
+
+#thankyouRow h2 {
+	font-size: 30px;
+	color: #fff;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+
+
+
+
+#leftCol {
+	float: left;
+	width: 600px;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#rightCol {
+	float: right;
+	width: 340px;
+	text-align: center;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#rightCol h2 {
+	font-size: 18px;
+	color: #3eaa14;
+	text-align: center;
+	margin: 0px;
+	border: 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#rightCol ul{
+	list-style: none;
+	background: #fff;
+	padding: 12px;
+	margin: 0px auto 10px;
+	border: 0px;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+#rightCol li {
+	text-align: left;
+	color: #232830;
+	background-image: url('/images/debt/tick2.png');
+	background-repeat: no-repeat;
+	background-position: 0% 40%;
+	padding-left: 28px;  /* space for the image */
+	padding-top: 10px;  /* space for the image */
+	padding-bottom: 10px;  /* space for the image */
+	border: 0px;
+}
+
+
+
+.companyLogo {
+
+	text-align: center;
+	width: 280px;
+	margin: 0px auto 30px;
+	border: 1px solid #909090;
+	padding: 20px;
+}
+
+
+blockquote {
+	  background: #d8eaff;
+	  border-left: 10px solid #3eaa14;
+	  margin: 1.5em 0px;
+	  padding: 1em 20px;
+	  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+	  color: #5f6a76;
+	  content: open-quote;
+	  font-size: 4em;
+	  line-height: 0.1em;
+	  margin-right: 0.25em;
+	  vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+	
+}
+
+/* --------------------------------- FOOTER AREA ------------------------------------ */
+
+
+
+#footer {
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+	border: 0px;
+	padding: 60px 0px 70px 0px;
+	background: #e6e7e8;
+	text-align: left;
+	color: #626262;
+	font-size: 14px;
+
+}
+
+
+
+#footer .last {
+	margin-right: 3px
+
+}
+
+#footer a 	      {  font-weight: bold; text-decoration: none; color: #4b85be; }
+#footer a:active      {  color: #00aff0; text-decoration: underline;  }
+#footer a:hover	      {  color: #00aff0; text-decoration: none;  }
+
+
+
+a 	      {  font-weight: bold; text-decoration: underline; color: #1d93b3; }
+a:active      {  color: #1d93b3; text-decoration: underline;  }
+a:hover	      {  color: #1d93b3; text-decoration: none;  }
+
+
+.field-validation-error{
+	font-size: 16px;
+	font-weight: bold;
+	color: #FF0000;	
+	padding: 8px 0px 0px 0px;
+	line-height: 1em;
+}
+
+.hidden{
+	display: none;	
+}
+
+.field-validation-focus{
+	border: 			2px solid #FF0000;
+    border-radius: 		7px;
+    border-color: 		#9ecaed;
+    box-shadow:			0 0 10px #FF0000;
+    outline: 			none;
+}
+
+@media screen and (max-width: 768px){
+	html, body {
+		width: 100%;
+		height: 100%;
+		text-align: left;
+		font-size: 14px;
+		font-family: 'montserratlight';
+		color: #4c4c4d;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px;
+		background: #fff;
+		-webkit-font-smoothing: antialiased !important;
+
+	}
+
+	.clear {
+		clear: both;
+		display: block;
+		overflow: hidden;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+
+	img {
+		max-width: 100%;
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+		line-height: 0px;
+	}
+
+
+	a img {
+		border: 0px;
+		margin: 0px;
+		padding: 0px;
+		line-height: 0px;
+	}
+
+	.gradient {
+		filter: none;
+	}
+
+
+
+
+	.contentContainer {
+		margin: 0px auto;
+		border: 0px;
+		padding: 0px 12px 0px 12px;
+	}
+
+	.contentContainerLeveldown {
+		width: 520px;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+
+
+	h1 {
+		font-family: 'montserratlight';
+		font-size: 32px;
+		color: #23b3f0;
+		letter-spacing: -1px;
+		margin: 0px 0px 8px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	h2 {
+		font-family: 'montserratlight';
+		font-size: 26px;
+		line-height: 33px;
+
+		color: #333333;
+		margin: 0px 0px 10px 0px;
+		padding: 0px 0px 2px 0px;
+	}
+
+
+	h3 {
+		font-family: 'montserratlight';
+		font-size: 22px;
+		color: #333333;
+		margin: 0px 0px 10px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+
+	.red {
+		color: #eb2629;
+	}
+
+	.cyan {
+		color: #41bacf;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.right {
+		text-align: right;
+	}
+
+	:focus {
+		outline: 0;
+	}
+
+	.back-to-top {
+		position: fixed;
+		bottom: 2em;
+		right: 40px;
+		text-decoration: none;
+		color: #fff;
+		background-color: rgba(37, 37, 48, 0.30);
+		font-size: 12px;
+		text-align: center;
+		padding: 10px 16px 10px 16px;
+		display: none;
+		border-radius: 96px;
+		-moz-border-radius: 96px;
+		-webkit-border-radius: 96px;
+		-webkit-transition: background-color 300ms ease-out;
+		-moz-transition: background-color 300ms ease-out;
+		transition: background-color 300ms ease-out;
+	}
+
+	.back-to-top a 	   {  font-weight: bold; text-decoration: underline; color: #eb2629; }
+
+	.back-to-top:hover {
+		background-color: rgba(255, 255, 255, .9);
+		color: #464646;
+
+	}
+
+	.gradTop {
+		width: 100%;
+		height: 20px;
+		margin: 0px 0px -20px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+		position: relative;
+		z-index: 2;
+		background: transparent;
+		background: url('/images/debt/grad-top.png');
+	}
+
+
+
+
+	/* --------------------------------- HEADER AREA ------------------------------------ */
+
+	.header {
+		width: 100%;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px;
+		background: #fff;
+		position: relative;
+		z-index: 5000;
+	}
+
+	.headerInner {
+
+		margin: 0px auto;
+		border: 0px;
+		padding: 5px 0px;
+		color: #fff;
+		position: relative;
+		z-index: 4000;
+	}
+
+	.logo {
+		text-align: center;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.topStrap {
+		float: right;
+		text-align: right;
+		font-size: 23px;
+		color: #949494;
+		margin: 0px;
+		border: 0px;
+		padding: 10px 0px 0px 0px;
+	}
+	.topStrap b {
+		color: #347cc8;
+	}
+
+
+
+
+
+	/* --------------------------------- SPLASH AREA ------------------------------------ */
+
+
+
+	#splashArea {
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 20px 0px;
+		/*
+        background: url('../../images/splash-bg.jpg');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+         -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+         */
+		background-color: #fafafa;
+	}
+
+	.splashTitle {
+		text-align: center;
+		margin: 0px auto;
+		border: 0px;
+		padding: 22px 0px 0px 0px;
+	}
+
+
+	.splashImg {
+		text-align: center;
+		margin: 0px auto;
+		border: 0px;
+		padding: 12px 0px 0px 0px;
+	}
+
+
+
+
+	#splashArea h2 {
+		font-family: 'montserratlight';
+		font-size: 23px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#splashArea ul{
+		font-family: 'montserratlight';
+		font-size: 20px;
+		color: #fff;
+		list-style: none;
+		padding: 40px 0px 0px 0px;
+		margin: 0px;
+		border: 0px;
+
+	}
+
+	#splashArea li {
+		text-align: left;
+		background-image: url('/images/debt/tick1.png');
+		background-repeat: no-repeat;
+		background-position: 0% 0%;
+		padding-left: 28px;  /* space for the image */
+		padding-top: 0px;  /* space for the image */
+		padding-bottom: 17px;  /* space for the image */
+		border: 0px;
+	}
+
+	.splashButtonWrapper {
+		width: 540px;
+		padding: 16px 0px 16px 0px;
+		text-align: left;
+		margin: 20px 0px;
+		background-image: url('/images/debt/splash-arrow.png');
+		background-repeat: no-repeat;
+		background-position: 90% 32%;
+	}
+
+
+	.splashButton {
+		display: inline-block;
+		text-align: left;
+		font-family: 'montserratlight';
+		font-size: 28px;
+		line-height: 28px;
+		box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+		color: #fff;
+		margin: 0px;
+		border: 2px solid #fff;
+		text-decoration: none;
+		padding: 16px 20px 14px 20px;
+		-webkit-appearance: none;
+		-webkit-transition: background-color 400ms ease-out;
+		-moz-transition: background-color 400ms ease-out;
+		transition: background-color 400ms ease-out;
+		background: #e25c34;
+
+	}
+
+
+
+	#splashArea2 {
+		height: 140px;
+		position: relative;
+		z-index: 100;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+		background: url('/images/debt/splash-bg.jpg');
+		background-position: center center;
+		background-position: 50% 40%;
+		background-repeat: repeat-x;
+		/*
+         -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+         */
+		background-color: #2b649c;
+	}
+
+	#splashArea2 h1 {
+		font-family: 'montserratlight';
+		font-size: 36px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 55px 0px 0px 0px;
+	}
+
+
+
+
+	/* --------------------------------- ROW ------------------------------------ */
+
+	#row {
+		position: relative;
+		padding: 24px 0px 24px 0px;
+		text-align: left;
+		font-size: 15px;
+
+	}
+
+
+	#row h1 {
+		font-family: 'montserratlight';
+		font-size: 24px;
+		color: #1e6ab9;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 20px 0px;
+	}
+
+
+	#row ul{
+		list-style: none;
+		padding: 10px 0px 0px 0px;
+		margin: 0px;
+		border: 0px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	#row li {
+		text-align: left;
+		background-image: url('/images/debt/tick2.png');
+		background-repeat: no-repeat;
+		background-position: 0% 0%;
+		padding-left: 30px;  /* space for the image */
+		padding-top: 0px;  /* space for the image */
+		padding-bottom: 10px;  /* space for the image */
+		border: 0px;
+	}
+
+
+	#row li.two {
+		background-image: url('/images/debt/step2.png');
+	}
+
+	#row li.three {
+		background-image: url('/images/debt/step3.png');
+	}
+
+
+
+
+
+	.pageButtonWrapper {
+		padding: 25px 0px 16px 0px;
+		text-align: left;
+		margin: 0px;
+
+	}
+
+
+	.pageButton {
+		display: block;
+		text-align: center;
+		font-family: 'montserratregular';
+		font-size: 28px;
+		line-height: 28px;
+		box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+		color: #fff;
+		margin: 0px auto;
+		border: 2px solid #fff;
+		text-decoration: none;
+		padding: 16px 20px 14px 20px;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-webkit-transition: background-color 400ms ease-out;
+		-moz-transition: background-color 400ms ease-out;
+		transition: background-color 400ms ease-out;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9dd53a+0,7cbc0a+100 */
+		background: #9dd53a; /* Old browsers */
+		background: -moz-linear-gradient(top,  #9dd53a 0%, #7cbc0a 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #9dd53a 0%,#7cbc0a 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #9dd53a 0%,#7cbc0a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+		border-radius: 9px;
+		text-decoration: none;
+	}
+
+	.pageButton:hover {
+		color: #fff;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7cbc0a+0,9dd53a+100 */
+		background: #7cbc0a; /* Old browsers */
+		background: -moz-linear-gradient(top,  #7cbc0a 0%, #9dd53a 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #7cbc0a 0%,#9dd53a 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #7cbc0a 0%,#9dd53a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbc0a', endColorstr='#9dd53a',GradientType=0 ); /* IE6-9 */
+
+	}
+
+
+
+
+	/* --------------------------------- ROW - GREY ------------------------------------ */
+
+	#row.grey {
+		position: relative;
+		padding: 24px 0px 24px 0px;
+		font-size: 14px;
+		color: #29313a;
+		background: #f2f3f3;
+	}
+
+	#row.lightGrey {
+		position: relative;
+		padding: 44px 0px 0px 0px;
+		font-size: 14px;
+		color: #29313a;
+		background: #fafafa;
+	}
+
+
+	#row.lightGrey h1 {
+		display; block;
+		font-family: 'montserratlight';
+		font-size: 36px;
+		text-align: left;
+		letter-spacing: 0px;
+		color: #4e4e4e;
+		margin: 0px 0px 0px 0px;
+		border-bottom: 0px;
+		padding: 50px 0px 0px 0px;
+	}
+
+
+	.instantBadge {
+		position: absolute;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		margin: -66px 0px 0px 780px;
+
+	}
+
+
+	#row.greyBlue {
+		position: relative;
+		padding: 24px 0px 24px 0px;
+		font-size: 14px;
+		color: #29313a;
+		background: #dcf1ff;
+	}
+
+
+
+
+
+
+
+
+
+	#row.blue {
+		position: relative;
+		padding: 24px 0px 24px 0px;
+		font-size: 14px;
+		color: #fff;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3f86d0+0,1e6ab9+100 */
+		background: #3f86d0; /* Old browsers */
+		background: -moz-linear-gradient(top,  #3f86d0 0%, #1e6ab9 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #3f86d0 0%,#1e6ab9 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #3f86d0 0%,#1e6ab9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f86d0', endColorstr='#1e6ab9',GradientType=0 ); /* IE6-9 */
+	}
+
+
+	#row.blue h1 {
+		display; block;
+		font-family: 'montserratlight';
+		font-size: 36px;
+		text-align: center;
+		letter-spacing: 0px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border-bottom: 0px;
+		padding: 10px 0px 30px 0px;
+	}
+
+
+
+
+
+	#row .col {
+
+		width: 280px;
+		margin: 0px auto;
+		padding: 0px 0px 10px 0px;
+		text-align: center;
+		font-family: 'montserratlight';
+		font-size: 14px;
+		color: #fff;
+		box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+	}
+
+	#row .col h1 {
+		display; block;
+		font-family: 'montserratlight';
+		font-size: 18px;
+		letter-spacing: 0px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 10px 0px 10px 0px;
+	}
+
+
+
+	#row .col50 {
+		float: left;
+		width: 480px;
+		padding: 0px 30px 0px 0px;
+		text-align: left;
+		font-family: 'montserratlight';
+		font-size: 18px;
+		color: #1a2d2e;
+		box-sizing: border-box; /* REMOVES PADDING WITH 100% WiDTHS */
+	}
+
+
+	#row.grey ul{
+		font-family: 'montserratlight';
+		font-size: 18px;
+		color: #29313a;
+		list-style: none;
+		padding: 0px 0px 0px 0px;
+		margin: 0px;
+		border: 0px;
+
+	}
+
+	#row.grey li {
+		text-align: left;
+		background-image: url('/images/debt/tick2.png');
+		background-repeat: no-repeat;
+		background-position: 0% 0%;
+		padding-left: 30px;  /* space for the image */
+		padding-top: 0px;  /* space for the image */
+		padding-bottom: 12px;  /* space for the image */
+		border: 0px;
+	}
+
+
+
+
+	#dmPlanPanel {
+
+		display: block;
+		background-color: #fff;
+		font-size: 18px;
+		color: #444444;
+		-moz-border-radius: 9px;
+		-webkit-border-radius: 9px;
+		border-radius: 9px;
+		border: 1px solid #d7d7d7;
+		padding: 20px;
+	}
+
+	#dmPlanPanel img {
+		padding: 0px 13px 0px 0px;
+		margin-top: -3px;
+	}
+
+
+	#dmPlanPanel h1 {
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		font-weight: 700;
+		color: #444444;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 20px 0px;
+
+	}
+
+	#dmPlanPanel .total {
+		color: #1e6ab9;
+		font-size: 20px;
+		font-weight: 700;
+		margin: 8px 0px 0px 0px;
+		border-top: 1px solid #a6a6a6;
+		border-bottom: 1px solid #a6a6a6;
+		padding: 3px 0px 1px 0px;
+
+	}
+
+	#dmPlanPanel .total2 {
+		color: #3eaa14;
+		font-size: 20px;
+		font-weight: 700;
+		margin: 8px 0px 0px 0px;
+		border-top: 1px solid #a6a6a6;
+		border-bottom: 1px solid #a6a6a6;
+		padding: 3px 0px 1px 0px;
+
+	}
+
+	.arrowBg {
+		background-image: url('/images/debt/blue-arrow2.png');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* --------------------------------- THANKYOU ROW ------------------------------------ */
+
+
+	#thankyouRow {
+		/* padding: 48px; */
+		text-align: center;
+		font-size: 16px;
+		color: #fff;
+		background: #3c84ce;
+	}
+
+
+	#thankyouRow h1 {
+		font-size: 35px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 10px 0px;
+	}
+
+	#thankyouRow h2 {
+		font-size: 23px;
+		color: #fff;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+
+
+
+
+	#leftCol {
+		float: left;
+		width: 600px;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#rightCol {
+		float: right;
+		width: 340px;
+		text-align: center;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#rightCol h2 {
+		font-size: 18px;
+		color: #3eaa14;
+		text-align: center;
+		margin: 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#rightCol ul{
+		list-style: none;
+		background: #fff;
+		padding: 12px;
+		margin: 0px auto 10px;
+		border: 0px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	#rightCol li {
+		text-align: left;
+		color: #232830;
+		background-image: url('/images/debt/tick2.png');
+		background-repeat: no-repeat;
+		background-position: 0% 40%;
+		padding-left: 28px;  /* space for the image */
+		padding-top: 10px;  /* space for the image */
+		padding-bottom: 10px;  /* space for the image */
+		border: 0px;
+	}
+
+
+
+	.companyLogo {
+
+		text-align: center;
+		width: 280px;
+		margin: 0px auto 30px;
+		border: 1px solid #909090;
+		padding: 20px;
+	}
+
+
+	blockquote {
+		background: #d8eaff;
+		border-left: 10px solid #3eaa14;
+		margin: 1.5em 0px;
+		padding: 1em 20px;
+		quotes: "\201C""\201D""\2018""\2019";
+	}
+	blockquote:before {
+		color: #5f6a76;
+		content: open-quote;
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+
+	blockquote p {
+		display: inline;
+
+	}
+
+	/* --------------------------------- FOOTER AREA ------------------------------------ */
+
+
+
+	#footer {
+		width: 100%;
+		margin: 0px 0px 0px 0px;
+		border: 0px;
+		padding: 30px 0px 30px 0px;
+		background: #e6e7e8;
+		text-align: left;
+		color: #626262;
+		font-size: 14px;
+
+	}
+
+
+
+
+	#complaints h1 {
+		font-family: 'montserratlight';
+		font-size: 32px;
+		color: #23b3f0;
+		letter-spacing: -1px;
+		margin: 0px 0px 8px 0px;
+		border: 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#footer h2 {
+		font-family: 'montserratlight';
+		font-size: 26px;
+		line-height: 33px;
+		font-weight: 400;
+		color: #333333;
+		margin: 0px 0px 10px 0px;
+		padding: 0px 0px 2px 0px;
+	}
+
+
+	#footer h3 {
+		font-family: 'montserratlight';
+		font-size: 22px;
+		color: #333333;
+		margin: 0px 0px 10px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+
+
+
+
+
+
+
+
+
+	#footer .last {
+		margin-right: 3px
+
+	}
+
+	#footer a 	      {  font-weight: bold; text-decoration: none; color: #4b85be; }
+	#footer a:active      {  color: #00aff0; text-decoration: underline;  }
+	#footer a:hover	      {  color: #00aff0; text-decoration: none;  }
+
+
+
+	a 	      {  font-weight: bold; text-decoration: underline; color: #1d93b3; }
+	a:active      {  color: #1d93b3; text-decoration: underline;  }
+	a:hover	      {  color: #1d93b3; text-decoration: none;  }
+
+
+	.field-validation-error{
+		font-size: 16px;
+		font-weight: bold;
+		color: #FF0000;
+		padding: 8px 0px 0px 0px;
+	}
+
+	.hidden{
+		display: none;
+	}
+
+	.field-validation-focus{
+		border: 			2px solid #FF0000;
+		border-radius: 		7px;
+		border-color: 		#9ecaed;
+		box-shadow:			0 0 10px #FF0000;
+		outline: 			none;
+	}
+}
