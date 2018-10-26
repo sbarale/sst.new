@@ -54,3 +54,28 @@ Route::post( '/remodeling/home-warrenty/{id}', 'Offers\HomeWarrentyController@po
 
 Route::get( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@showForm' );
 Route::post( '/remodeling/tax-settlement/{id}', 'Offers\TaxSettlementController@postForm' );
+
+Route::get( '/remodeling/solar-energy-choose/', 'Offers\SolarEnergyController@showList' );
+
+Route::get( '/remodeling/solar-energy/{id}/{location}', 'Offers\SolarEnergyController@showForm' );
+Route::post( '/remodeling/solar-energy/{id}/{location}', 'Offers\SolarEnergyController@postForm' );
+
+Route::post( '/get-state-providers/', 'Offers\SolarEnergyController@getProviders' );
+
+Route::get( '/remodeling/debt-choose/', 'Offers\DebtController@showList' );
+
+Route::get( '/remodeling/debt/{id}/{location}', 'Offers\DebtController@showForm' );
+Route::post( '/remodeling/debt/{id}/{location}', 'Offers\DebtController@postForm' );
+
+Route::get( '/remodeling/auto-warranty/{id}', 'Offers\AutoWarrantyController@showForm' );
+Route::post( '/remodeling/auto-warranty/{id}', 'Offers\AutoWarrantyController@postForm' );
+
+Route::get( '/remodeling/insurance-presell/', 'Offers\InsuranceController@showPresell' );
+
+Route::get( '/remodeling/insurance/{id}', 'Offers\InsuranceController@showForm' );
+Route::post( '/remodeling/insurance/{id}', 'Offers\InsuranceController@postForm' );
+
+Route::get( '/remodeling/medicare-presell/', 'Offers\MedicareController@showPresell' );
+
+Route::get( '/remodeling/medicare/{id}', 'Offers\MedicareController@showForm' );
+Route::post( '/remodeling/medicare/{id}', 'Offers\MedicareController@postForm' );
