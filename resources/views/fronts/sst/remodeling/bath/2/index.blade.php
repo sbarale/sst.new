@@ -198,7 +198,7 @@
     <div style="text-align: center;" class="center-block whitebg">
         <img src="/images/bath/2/SecureSeal.png"/>
     </div>
-    <div style="padding-bottom: 10px; padding-top: 10px; background-color: #f2f2f2; color:#999999;">
+    <div style="padding-bottom: 10px; padding-top: 10px;" class="whitebg">
         <strong></strong></br>
     </div>
 
