@@ -1,4 +1,4 @@
-@servers(['web' => 'root@smartsavings.today'])
+@servers(['web' => 'root@smartsavings.today','localhost' => '127.0.0.1'])
 
 @setup
 $project_name = 'Smart Savings Today';
@@ -40,6 +40,7 @@ php artisan cache:clear
 @endtask
 
 @macro('update')
+version
 put_app_down
 pull_latest_changes
 install_dependencies
@@ -50,3 +51,21 @@ put_app_up
 @slack($slack_hook, $slack_channel, "Envoy task $task ran on <$project_url|[$project_name]>")
 @endafter
 
+@task('version', ['on' => 'localhost'])
+echo "-CURRENT- branch pushed to live\n"
+
+if [ `git status --porcelain |wc -l` -ne 0 ]
+then
+echo "\nUncommited changes exist.\nPlease commit first.\n";
+exit 1
+fi
+bumpversion patch
+REVISION=`git rev-parse HEAD`
+echo ${REVISION:0:9} > REVISION
+git add REVISION
+npm run production
+git add .
+git ci -am"Updated Revision and packed js code"
+git push
+
+@endtask
