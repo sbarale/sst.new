@@ -107,21 +107,6 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/home-warrenty/1',
-                'title' => 'Home Warrenty (US only)',
-                'desc'  => 'Find a Home Warrenty specialist from our network.',
-                'img' => 'images/chw.png'
-            ] )
-
-            @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
-                'title' => 'Life-settlement (US only)',
-                'desc'  => 'Find a life-settlement specialist from our network',
-                'img' => 'images/ins.png'
-            ] )
-        </div>
-        <div class="row">
-            @include( 'fronts.sst.bullets.bullet' ,[
                 'href'  => '/remodeling/roof/1',
                 'title' => 'Roof replacement',
                 'desc'  => 'Find a roof specialist from our network.',
@@ -134,6 +119,21 @@
                 'desc'  => 'Find a window specialist from our network.',
                 'img' => 'images/window.png'
             ] )
+        </div>
+        <div class="row">
+            @include( 'fronts.sst.bullets.bullet' ,[
+                'href'  => '/remodeling/home-warrenty/1',
+                'title' => 'Home Warrenty (US only)',
+                'desc'  => 'Find a Home Warrenty specialist from our network.',
+                'img' => 'images/chw.png'
+            ] )
+
+            <!--@include( 'fronts.sst.bullets.bullet' ,[
+                'href'  => '',
+                'title' => 'Life-settlement (US only)',
+                'desc'  => 'Find a life-settlement specialist from our network',
+                'img' => 'images/ins.png'
+            ] )-->
         </div>
     </div>
     <br><br>
