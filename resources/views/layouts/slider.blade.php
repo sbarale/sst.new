@@ -45,7 +45,7 @@
     @show
 </head>
 <body class="graybg">
-
+@include('fronts.sst._common.debugbar')
 <header class="navbar navbar-static-top" id="top" role="banner" >
     <div class="container">
         <div class="row">
@@ -111,36 +111,6 @@
         <img src="https://api.trustedform.com/ns.gif" />
     </noscript>
     <!--  end leadactiveprospect dot com -->
-
-    <!--Leadid script leadid dot com-->
-    <script id="LeadiDscript" type="text/javascript">
-        // <!--
-        (function () {
-            var s = document.createElement('script');
-            s.id = 'LeadiDscript_campaign';
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = '//create.lidstatic.com/campaign/14825c91-1860-c42b-410e-c8836497e113.js?snippet_version=2';
-            var LeadiDscript = document.getElementById('LeadiDscript');
-            LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-        })();
-        setInterval(function(){
-            if(!$('#leadid_token').val()) {
-                (function () {
-                    var s = document.createElement('script');
-                    s.id = 'LeadiDscript_campaign';
-                    s.type = 'text/javascript';
-                    s.async = true;
-                    s.src = '//create.lidstatic.com/campaign/14825c91-1860-c42b-410e-c8836497e113.js?snippet_version=2';
-                    var LeadiDscript = document.getElementById('LeadiDscript');
-                    LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-                })();
-            }
-        }, 10000);
-        // -->
-    </script>
-    <noscript><img src='//create.leadid.com/noscript.gif?lac=f8085cd5-d5be-4d6d-353f-3c8dcc6fc738&lck=14825c91-1860-c42b-410e-c8836497e113&snippet_version=2' /></noscript>
-    <!--end Leadid script leadid dot com-->
 @show
 
 </body>

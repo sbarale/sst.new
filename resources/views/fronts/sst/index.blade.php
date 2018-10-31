@@ -1,4 +1,4 @@
-@extends('fronts.sst.layout')
+@extends('layouts.master')
 @section('logo','images/sst-landscape.png')
 @section('content')
     <div class="row secondarybg whitebg">

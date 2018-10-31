@@ -1,10 +1,10 @@
-@extends('fronts.sst.remodeling.thankyou-layout')
+@extends('layouts.thankyou')
 @section('title','Thank You!')
 @section ('content')
     <div class="quiz_form thankyou-inner">
         <h2>Thank You {{$fname}} {{$lname}}</h2>
         <h3><img src='/images/bath/2/compleet.png'>Step 1 Complete</h3>
-        <h3>My name is Ace with Bath Wraps, I am your virtual assistant here to help you get connected with a local bath wraps dealer for your FREE in home estimate, i'll call you from 310-409-1196 in a moment to connect you with a scheduling agent, please answer.</h3></br>
+        <h3>We received your quote request and have selected 1 seller to connect you with based on the info you shared.</h3></br>
 
         @if(!empty($urlupsell))
             <h2 style="color:#fff; background-color: #3b5998; padding: 5px;">Important Notice</h2>

@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.thankyou-layout')
+@extends('layouts.thankyou')
 @section('title','Danke!')
 @section ('content')
     <div class="quiz_form thankyou-inner">

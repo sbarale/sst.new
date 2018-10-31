@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.slider-layout')
+@extends('layouts.slider')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/tub/bg1.jpg')
 @section('small-bg-img','/images/tub/bg1.jpg')

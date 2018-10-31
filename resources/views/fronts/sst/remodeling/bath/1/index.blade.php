@@ -1,4 +1,4 @@
-@extends('fronts.sst.layout')
+@extends('layouts.master')
 @section('logo','/images/sst-landscape.png')
 @section('logo-section','/images/bat.png')
 @section('head')
@@ -26,14 +26,7 @@
 
                     <div id="form_box">
 
-                        <input type="hidden" name="ckm_offer_id" value="945">
                         <input type="hidden" name="step" value="1">
-                        <input type="hidden" name="aid2" value="">
-                        <input type="hidden" name="oid2" value="">
-                        <input type="hidden" name="s1" value="">
-                        <input type="hidden" name="pubid_1" value="">
-
-                        <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
                         <div id="step1" class="formbg">
                             <div class="start">Get Pricing and Availability for:</div>
                             <table id="form_table">
@@ -43,12 +36,16 @@
                                         <input id="city" name="city" type="hidden" value=""/>
                                         <input id="state" name="state" type="hidden" value=""/>
                                         <input type="hidden" name="_submit" value="1"/>
-                                        <input type="text" name="zip_code" id="zip" value="" class="style1 valid-required" maxlength="5" style="text-align:center;width:230px;" placeholder="Enter Your Zip Code">
+                                        <input type="text" name="zip_code" id="zip" value=""
+                                               class="style1 valid-required" maxlength="5"
+                                               style="text-align:center;width:230px;" placeholder="Enter Your Zip Code">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td align="center">
-                                        <a href="#" id="btn_continue"><img src="/assets/remodeling/bath/images/getpricing.png" alt="Get Pricing"></a>
+                                        <a href="#" id="btn_continue"><img
+                                                    src="/assets/remodeling/bath/images/getpricing.png"
+                                                    alt="Get Pricing"></a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -60,7 +57,9 @@
                                 <tbody>
                                 <tr>
                                     <td align="center">
-                                        <input type="text" name="address" id="address" value="" class="style1 valid-required" style="text-align:center;width:230px;" placeholder="Street Address">
+                                        <input type="text" name="address" id="address" value=""
+                                               class="style1 valid-required" style="text-align:center;width:230px;"
+                                               placeholder="Street Address">
                                     </td>
                                 </tr>
                                 <tr>
@@ -79,27 +78,40 @@
                                     <tbody>
                                     <tr>
                                         <td>
-                                            <input type="text" name="first_name" id="first_name" value="" placeholder="First Name" class="style1">
+                                            <input type="text" name="first_name" id="first_name" value=""
+                                                   placeholder="First Name" class="style1">
                                         </td>
                                         <td>
-                                            <input type="text" name="last_name" id="last_name" value="" placeholder="Last Name" class="style1">
+                                            <input type="text" name="last_name" id="last_name" value=""
+                                                   placeholder="Last Name" class="style1">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <input type="text" name="phone_home" id="phone_home" value="" placeholder="Phone Number" class="style1">
+                                            <input type="text" name="phone_home" id="phone_home" value=""
+                                                   placeholder="Phone Number" class="style1">
                                         </td>
                                         <td>
-                                            <input type="text" name="email_address" id="email_address" value="" placeholder="Email Address" class="style1">
+                                            <input type="text" name="email_address" id="email_address" value=""
+                                                   placeholder="Email Address" class="style1">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align="center" colspan="2">
                                             <input type="submit" alt="Submit" id="btn_submit" value="Submit">
                                             <p class="disclaimer tcpa_disclaimer">
-                                                <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting this request for information, I hereby provide my signature, expressly consenting to receive information by email, auto-dialer and/or pre-recorded telephone calls, and/or SMS messages from or on behalf of smartsavings.today and its
-                                                    <a href="#" style="font-style: italic">fulfillment partners</a> and may agree to receive other
-                                                    <a href="#" style="font-style: italic">offers</a> on my telephone number I provided above, including my wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a condition of purchase and that I may revoke my consent at any time.</label>
+                                                <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting
+                                                    this request for information, I hereby provide my signature,
+                                                    expressly consenting to receive information by email, auto-dialer
+                                                    and/or pre-recorded telephone calls, and/or SMS messages from or on
+                                                    behalf of smartsavings.today and its
+                                                    <a href="#" style="font-style: italic">fulfillment partners</a> and
+                                                    may agree to receive other
+                                                    <a href="#" style="font-style: italic">offers</a> on my telephone
+                                                    number I provided above, including my wireless number, even if I am
+                                                    on a State or Federal Do-Not-Call list. I understand consent is not
+                                                    a condition of purchase and that I may revoke my consent at any
+                                                    time.</label>
                                             </p>
 
                                         </td>
@@ -109,10 +121,14 @@
                                 </table>
                             </div>
                             @include('fronts.sst._common.hidden_fields')
+                            @include('fronts.sst._common.universal_leadid')
 
                         </div><!-- laststepbox -->
                         <div class="clear"></div>
-                        <input type="hidden" name="xxTrustedFormToken" id="xxTrustedFormToken_0" value="https://cert.trustedform.com/ca37494a4dc2b8733b5423e83d604d23e533dc90"><input type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0" value="https://cert.trustedform.com/ca37494a4dc2b8733b5423e83d604d23e533dc90">
+                        <input type="hidden" name="xxTrustedFormToken" id="xxTrustedFormToken_0"
+                               value="https://cert.trustedform.com/ca37494a4dc2b8733b5423e83d604d23e533dc90"><input
+                                type="hidden" name="xxTrustedFormCertUrl" id="xxTrustedFormCertUrl_0"
+                                value="https://cert.trustedform.com/ca37494a4dc2b8733b5423e83d604d23e533dc90">
                     </div>
                     <div class="fullwrapper" id="description">
                         <ul class="bullets">
@@ -122,7 +138,8 @@
                             </li>
                             <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
                             </li>
-                            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
+                            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or
+                                crack.
                             </li>
                             <li> High-quality products. Quick, expert installation. Outstanding warranty.
                             </li>
@@ -137,7 +154,8 @@
     </div>
     </form>
     <div id="footer">
-        <p id="tub_disclaimer" style="font-size:12px;text-align:center;">* Pictures shown are for illustrative purposes only. Models available may vary from those displayed in this advertisement.</p>
+        <p id="tub_disclaimer" style="font-size:12px;text-align:center;">* Pictures shown are for illustrative purposes
+            only. Models available may vary from those displayed in this advertisement.</p>
     </div>
 
     <script>
@@ -164,48 +182,48 @@
             var errors = [];
             error_flag = false;
 
-            if(step == 1) {
-                if(jQuery("#zip").val() == '') {
+            if (step == 1) {
+                if (jQuery("#zip").val() == '') {
                     jQuery("#zip").addClass("error");
                     error_flag = true;
                 }
             }
-            if(step == 2) {
-                if(jQuery("#address").val() == "") {
+            if (step == 2) {
+                if (jQuery("#address").val() == "") {
                     jQuery("#address").addClass("error");
                     error_flag = true;
                 }
             }
-            if(step == 3) {
-                if(jQuery("#first_name").val() == "") {
+            if (step == 3) {
+                if (jQuery("#first_name").val() == "") {
                     jQuery("#first_name").addClass("error");
                     error_flag = true;
                 }
-                if(jQuery("#last_name").val() == '') {
+                if (jQuery("#last_name").val() == '') {
                     jQuery("#last_name").addClass("error");
                     error_flag = true;
                 }
-                if(jQuery("#email_address").val() == "") {
+                if (jQuery("#email_address").val() == "") {
                     jQuery("#email_address").addClass("error");
                     error_flag = true;
 
                 }
 
                 var valid_mail = validateEmail(jQuery("#email_address").val());
-                if(valid_mail == false ){
+                if (valid_mail == false) {
                     jQuery("#email_address").addClass("error");
                     error_flag = true;
                 }
 
 
-                if(jQuery("#phone_home").val() == "") {
+                if (jQuery("#phone_home").val() == "") {
                     jQuery("#phone_home").addClass("error");
                     error_flag = true;
                 }
                 else {
                     var string = jQuery("#phone_home").val().replace(/[^\d]/g, ''); // Removes anything not in [0-9]
 
-                    if(string.length != 10) {
+                    if (string.length != 10) {
                         jQuery("#phone_home").addClass("error");
                         error_flag = true;
                     }
@@ -215,13 +233,13 @@
             return error_flag;
         }
 
-        jQuery(document).ready(function() {
+        jQuery(document).ready(function () {
 
             jQuery("#phone_home").mask("999-999-9999");
 
-            jQuery("#btn_continue").click(function(){
+            jQuery("#btn_continue").click(function () {
                 event.preventDefault();
-                if(!hasErrors(1)) {
+                if (!hasErrors(1)) {
                     // go to step 2
                     jQuery("#step").val("2");
                     jQuery("#step1").hide();
@@ -234,23 +252,23 @@
                 }
             });
 
-            jQuery("#btn_continue2").click(function(){
+            jQuery("#btn_continue2").click(function () {
                 event.preventDefault();
-                if(!hasErrors(2)) {
+                if (!hasErrors(2)) {
                     // go to step 3
                     jQuery("#step").val("3");
                     jQuery("#step2").hide();
                     jQuery("#step3").show();
                     jQuery("#step3").removeClass('hide');
-                    jQuery("#main").css({ 'background-image': 'none' });
+                    jQuery("#main").css({'background-image': 'none'});
                 }
                 else {
                     alert("Please fill out the required fields.");
                 }
             });
-            jQuery("#btn_submit").click(function(){
+            jQuery("#btn_submit").click(function () {
                 console.log('submit clicked')
-                if(!hasErrors(3)) {
+                if (!hasErrors(3)) {
                     jQuery('#ckm_form')[0].submit();
                     return true;
                 }

@@ -21,6 +21,9 @@
     @show
 </head>
 <body class="graybg">
+@include('fronts.sst._common.debugbar')
+
+{{ $response->track() }}
 
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
@@ -31,7 +34,8 @@
             <div class="col-sm-3 col-xs-12">
                 <div class="wrapper hidden-xs" style="color:gray; padding-top: 10px">
                     <div class="counter col-xs-3">
-                        <h3 class="timer count-title" style="margin-top:-10px" id="count-number" data-to="98870" data-speed="1500"></h3>
+                        <h3 class="timer count-title" style="margin-top:-10px" id="count-number" data-to="98870"
+                            data-speed="1500"></h3>
                     </div>
                 </div>
             </div>

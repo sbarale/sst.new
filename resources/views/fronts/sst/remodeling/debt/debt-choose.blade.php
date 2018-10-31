@@ -1,4 +1,4 @@
-@extends('fronts.sst.layout')
+@extends('layouts.master')
 @section('logo','/images/sst-landscape.png')
 @section('content')
     <div class="" id="offers" style="margin-top: 20px;">

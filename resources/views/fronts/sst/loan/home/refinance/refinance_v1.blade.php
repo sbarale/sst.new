@@ -56,7 +56,7 @@ if ( isset( $st_t_val ) ) {
 
 }
 ?>
-@extends('fronts.sst.layout')
+@extends('layouts.master')
 @section('logo','images/sst-landscape.png')
 @section('logo-section','images/mortgage-refinance.png')
 @section('content')

@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.slider-layout')
+@extends('layouts.slider')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/bath/2/background_2.jpg')
 @section('small-bg-img','/images/bath/2/background_1.jpg')
@@ -234,6 +234,8 @@
                 </div>
             </div>
             @include('fronts.sst._common.hidden_fields')
+            @include('fronts.sst._common.universal_leadid')
+
         </form>
 
         <div class="bottom-bullets-parent">

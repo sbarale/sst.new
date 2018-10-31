@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.new-slider-layout')
+@extends('layouts.slider-aqua')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/bath/big-bg-img.jpg')
 @section('header-middle-img','/images/aquatic-logo.png')
@@ -199,6 +199,8 @@
                 </div>
             </div>
             @include('fronts.sst._common.hidden_fields')
+            @include('fronts.sst._common.universal_leadid')
+
         </form>
 
         <div class="bottom-bullets-parent">

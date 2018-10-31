@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.thankyou-layout')
+@extends('layouts.thankyou')
 @section('title','Hartelijk bedankt erge uhgiughiuh voor uw offerte aanvraag.')
 @section ('content')
     <div class="quiz_form thankyou-inner">

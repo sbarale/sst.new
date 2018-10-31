@@ -54,7 +54,8 @@ class SolarEnergyController extends LeadspediaController {
             'fname'     => $this->post_data['first_name'],
             'lname'     => $this->post_data['last_name'],
             'urlupsell' => $this->post_data['urlupsell'],
-        ] );
+            'response'  => $this->response,
+        ])->with($this->data); // <<--- VERY IMPORTANT SINCE IT CONTROLS BEHAVIOR OF THE PAGE
     }
 
     public function getProviders(){
