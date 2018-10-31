@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.empty-layout')
+@extends('layouts.empty')
 @section('title','Complete Car Warranty')
 @section('header-middle-img','/images/ins.png')
 @section('head')

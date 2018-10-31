@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.empty-layout')
+@extends('layouts.empty')
 @section('title','Take the Quiz to See if you Qualify')
 @section('header-middle-img','/images/debt.png')
 @section('head')
