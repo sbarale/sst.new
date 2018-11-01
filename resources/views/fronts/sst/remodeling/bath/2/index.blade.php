@@ -7,22 +7,24 @@
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     <style>
-        .btn-page2, .btn-page3{
-            font-size:28px!important;
-            padding: 10px 56px!important;
+        .btn-page2, .btn-page3 {
+            font-size: 28px !important;
+            padding: 10px 56px !important;
             margin-top: 20px;
         }
-        .btn-page1{
+
+        .btn-page1 {
             max-width: 250px;
             width: 100%;
         }
-        @media screen and (max-width: 480px){
-            .btn-page1{
-                margin: 3px!important;
-                margin-bottom: 10px!important;
+
+        @media screen and (max-width: 480px) {
+            .btn-page1 {
+                margin: 3px !important;
+                margin-bottom: 10px !important;
             }
 
-            .btn-page1 img{
+            .btn-page1 img {
                 width: 80%;
             }
         }
@@ -90,14 +92,17 @@
 @section('content')
     <div class="secondarybg whitebg">
 
-        <form name="apply_form" action="/remodeling/bath/2" id="apply_form" class="form-horizontal quiz_form" method="POST">
+        <form name="apply_form" action="/remodeling/bath/2" id="apply_form" class="form-horizontal quiz_form"
+              method="POST">
             {{ csrf_field() }}
             <h1 class="header" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
             <h3>Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
-            <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready To Send</h1>
+            <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready
+                To Send</h1>
             <input type="hidden" name="_submit" value="1"/>
             <div class="progress">
-                <div class="progress-bar progress-bar-primary form-progress-bar" role="progressbar" style="width: 0%"></div>
+                <div class="progress-bar progress-bar-primary form-progress-bar" role="progressbar"
+                     style="width: 0%"></div>
             </div>
 
             <div id="flow-slider-container" class="slider-container">
@@ -114,7 +119,11 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
-                                <input type="text" id="zip_code" name="zip_code" class="form-control input-lg" maxlength="5" placeholder="ENTER YOUR ZIP CODE" data-parsley-type="number" data-parsley-length="[5, 5]" required data-parsley-error-message="Please provide your zip code." data-parsley-group="block1" autocomplete="somevarystrangevalue">
+                                <input type="text" id="zip_code" name="zip_code" class="form-control input-lg"
+                                       maxlength="5" placeholder="ENTER YOUR ZIP CODE" data-parsley-type="number"
+                                       data-parsley-length="[5, 5]" required
+                                       data-parsley-error-message="Please provide your zip code."
+                                       data-parsley-group="block1" autocomplete="somevarystrangevalue">
                             </div>
                         </div>
                         <div class="row">
@@ -137,8 +146,15 @@
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3">
                                 <input type="hidden" id="address" name="address">
-                                <input type="text" id="address_mask" name="address_mask" class="form-control input-lg" required data-parsley-usaddress="1" data-parsley-error-message="Please provide your street number at the beginning" data-parsley-group="block2">
-                                <input type="hidden" pattern="[0-9]*" id="zip" name="zip" onChange="document.getElementById('zip2').value = this.value" class="form-control input-lg" data-parsley-error-message="Please enter a valid zip" data-parsley-group="block2" placeholder="Enter Your Zip" maxlength="5"/>
+                                <input type="text" id="address_mask" name="address_mask" class="form-control input-lg"
+                                       required data-parsley-usaddress="1"
+                                       data-parsley-error-message="Please provide your street number at the beginning"
+                                       data-parsley-group="block2">
+                                <input type="hidden" pattern="[0-9]*" id="zip" name="zip"
+                                       onChange="document.getElementById('zip2').value = this.value"
+                                       class="form-control input-lg"
+                                       data-parsley-error-message="Please enter a valid zip" data-parsley-group="block2"
+                                       placeholder="Enter Your Zip" maxlength="5"/>
                             </div>
                         </div>
                         <div class="row">
@@ -163,35 +179,52 @@
                         <div class="row">
                             <div class="col-sm-6 col-xs-6">
                                 First Name
-                                <input type="text" id="first_name" name="first_name" class="form-control input-lg" required data-parsley-error-message="Please enter your first name" data-parsley-group="block3" placeholder="First Name" autocomplete="somevarystrangevalue2"/>
+                                <input type="text" id="first_name" name="first_name" class="form-control input-lg"
+                                       required data-parsley-error-message="Please enter your first name"
+                                       data-parsley-group="block3" placeholder="First Name"
+                                       autocomplete="somevarystrangevalue2"/>
                             </div>
                             <div class="col-sm-6 col-xs-6">
                                 Last Name
-                                <input type="text" id="last_name" name="last_name" class="form-control input-lg" required data-parsley-error-message="Please enter your last name" data-parsley-group="block3" placeholder="Last Name" autocomplete="somevarystrangevalue3"/>
+                                <input type="text" id="last_name" name="last_name" class="form-control input-lg"
+                                       required data-parsley-error-message="Please enter your last name"
+                                       data-parsley-group="block3" placeholder="Last Name"
+                                       autocomplete="somevarystrangevalue3"/>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-xs-12">
                                 Email
-                                <input type="email" id="email" name="email_address" class="form-control input-lg" required data-parsley-error-message="Please enter a valid email" data-parsley-group="block3" placeholder="Enter Your Email" autocomplete="somevarystrangevalue4"/>
+                                <input type="email" id="email" name="email_address" class="form-control input-lg"
+                                       required data-parsley-error-message="Please enter a valid email"
+                                       data-parsley-group="block3" placeholder="Enter Your Email"
+                                       autocomplete="somevarystrangevalue4"/>
                             </div>
                             <div class="col-sm-6 col-xs-12">
                                 Phone
-                                <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
+                                <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required
+                                       data-parsley-usphone="1"
+                                       data-parsley-error-message="Please enter a valid phone with area code"
+                                       data-parsley-group="block3" data-parsley-minlength="10"
+                                       data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)"
+                                       autocomplete="somevarystrangevalue5"/>
                             </div>
                         </div>
                         <div class="row">
 
                             <div class="col-sm-12 col-md-12">
-                                <input type="text" id="address2" name="address2" class="form-control input-lg" style="display: none;"/>
+                                <input type="text" id="address2" name="address2" class="form-control input-lg"
+                                       style="display: none;"/>
                             </div>
                             <div class="col-xs-6">
                                 <!--                                         ZIP -->
-                                <input type="text" id="zip2" name="zip2" class="form-control input-lg" readonly style="display: none;">
+                                <input type="text" id="zip2" name="zip2" class="form-control input-lg" readonly
+                                       style="display: none;">
                             </div>
                             <div class="col-xs-6 visible-sm visible-xs">
                                 <!--                                         State -->
-                                <input type="text" id="state" name="state" class="form-control input-lg" readonly style="display: none;">
+                                <input type="text" id="state" name="state" class="form-control input-lg" readonly
+                                       style="display: none;">
                             </div>
 
                         </div>
@@ -206,7 +239,15 @@
                                     <div id="tcpa">
                                         <input type="hidden" id="leadid_tcpa_disclosure"/>
                                         <label for="leadid_tcpa_disclosure">
-                                            By submitting this request for information, I hereby provide my signature, expressly consenting to receive information by email, auto-dialer and/or pre-recorded telephone calls, and/or SMS messages from or on behalf of smartsavings.today and its fulfillment partners and may agree to receive other offers on my telephone number I provided above, including my wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a condition of purchase and that I may revoke my consent at any time. If you do not expressly consent for up to 4 companies to contact you, you can call (888) 537-9247 to complete your request with 1 company.
+                                            By submitting this request for information, I hereby provide my signature,
+                                            expressly consenting to receive information by email, auto-dialer and/or
+                                            pre-recorded telephone calls, and/or SMS messages from or on behalf of
+                                            smartsavings.today and its fulfillment partners and may agree to receive
+                                            other offers on my telephone number I provided above, including my wireless
+                                            number, even if I am on a State or Federal Do-Not-Call list. I understand
+                                            consent is not a condition of purchase and that I may revoke my consent at
+                                            any time. If you do not expressly consent for up to 4 companies to contact
+                                            you, you can call (888) 537-9247 to complete your request with 1 company.
                                         </label>
                                     </div>
 
@@ -271,7 +312,7 @@
             var state_provider = '';
             var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address_mask'), {
                 types: ['address'],
-                componentRestrictions: { country: "us" },
+                componentRestrictions: {country: "us"},
             });
             autocomplete.addListener('place_changed', function () {
                 var place = autocomplete.getPlace();
@@ -302,9 +343,9 @@
                         }
                     }
                     if (street_number && route) {
-                        $('#address').val(street_number + ' ' + route);
+                        $('#address2').val(street_number + ' ' + route);
                         console.log('yes street_number +route');
-                        $('#address2').val(place.formatted_address);
+                        $('#address').val(place.formatted_address);
                     }
                     else {
                         console.log('NO street_number +route');
@@ -339,6 +380,7 @@
 
         $(function () {
             $("#phone").mask("999-999-9999");
+
             function commafy(num) {
                 var str = num.toString().split('.');
                 if (str[0].length >= 5) {
@@ -375,7 +417,7 @@
 
                 if ($('#apply_form').parsley().validate('block1') === true) {
                     $('#roof_type_val').val($(this).val());
-                    $('.form-progress-bar').css({ 'width': '33.33%' });
+                    $('.form-progress-bar').css({'width': '33.33%'});
 
                     slider_data.move('#address_slide');
                 }
@@ -392,7 +434,7 @@
                     $("#research_headline").show();
 
 
-                    $('.form-progress-bar').css({ 'width': '66.66%' });
+                    $('.form-progress-bar').css({'width': '66.66%'});
 
 
                     slider_data.move('#name_slide');
@@ -408,7 +450,7 @@
                 e.stopPropagation();
 
                 if ($('#apply_form').parsley().validate('block3') === true) {
-                    $('.form-progress-bar').css({ 'width': '100%' });
+                    $('.form-progress-bar').css({'width': '100%'});
                     slider_data.move('#thankyou_slide');
                     $("#survey_headline").hide();
                     $("#animated6").hide();

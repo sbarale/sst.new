@@ -6,7 +6,7 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class BathwrapsTest extends DuskTestCase
+class BathwrapsOneTest extends DuskTestCase
 {
 
     public function testPageLoads()
@@ -51,8 +51,7 @@ class BathwrapsTest extends DuskTestCase
                     ->assertSee('8188888888')
                     ->assertSee('ss@ss.com')
                     ->assertSee('160 W Camino Real, #608')
-                    ->assertSee('33432')
-                    ->assertDontSee('91361');
+                    ->assertSee('91361'); // <-- In the good forms, this should be replaced by google's autocomplete to the correct one
 
         });
     }

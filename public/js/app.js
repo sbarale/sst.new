@@ -76877,6 +76877,7 @@ $(function () {
 /***/ (function(module, exports) {
 
 function initAutocomplete() {
+    console.log('loading geo autocomplete');
     var state_provider = '';
     var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address_mask'), {
         types: ['address'],
@@ -76912,16 +76913,10 @@ function initAutocomplete() {
             $('#address_mask').val(place.formatted_address);
             $('#address').val(place.formatted_address);
             $('#zip_code').val(zip);
-
+            $('#city').val(city);
+            $('#state').val(state);
             console.log(place.formatted_address);
         }
-        // $('#city').val(city);
-        // $('#state').val(state);
-        // $("#country").text('in ' + state_full);
-        //
-        // if (!zip.length) {
-        //     $('#zip_code').attr('type', 'text');
-        // }
     });
 }
 

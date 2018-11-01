@@ -1,8 +1,9 @@
 function initAutocomplete() {
+    console.log('loading geo autocomplete');
     var state_provider = '';
     var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address_mask'), {
         types: ['address'],
-        componentRestrictions: { country: "us" },
+        componentRestrictions: {country: "us"},
     });
     autocomplete.addListener('place_changed', function () {
         var place = autocomplete.getPlace();
@@ -34,16 +35,10 @@ function initAutocomplete() {
             $('#address_mask').val(place.formatted_address);
             $('#address').val(place.formatted_address);
             $('#zip_code').val(zip);
-
+            $('#city').val(city);
+            $('#state').val(state);
             console.log(place.formatted_address);
 
         }
-        // $('#city').val(city);
-        // $('#state').val(state);
-        // $("#country").text('in ' + state_full);
-        //
-        // if (!zip.length) {
-        //     $('#zip_code').attr('type', 'text');
-        // }
     });
 }
