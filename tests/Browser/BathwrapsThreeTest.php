@@ -6,17 +6,18 @@ use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class BathwrapsTwoTest extends DuskTestCase
+class BathwrapsThreeTest extends DuskTestCase
 {
+
 
     public function testFormWorks()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/remodeling/bath/2?debug=1&rid=123123')
+            $browser->visit('/remodeling/bath/3?debug=1&rid=123123')
                     ->assertSee('DEBUG MODE ON')
                     ->assertDontSee('Please enter the street address of the home')
                     ->type('zip_code', '91361')
-                    ->press('Next')
+                    ->press('NEXT')
                     ->waitFor('#address_slide')
                     ->assertSee('Please enter the street address of the home')
                     ->type('address_mask', '160 W Camino Real')
@@ -27,7 +28,7 @@ class BathwrapsTwoTest extends DuskTestCase
                     ->pause(2000)
                     ->click('.btn-page2')
                     ->pause(2000)
-                    ->assertSee('Please Fill Out Information Below so You Can Receive Your Results')
+                    ->assertSee('Please Fill Out Information Below So You Can Receive Your Results')
                     ->type('first_name', 'Sebas')
                     ->click('#last_name')
                     ->type('last_name', 'Inar')
@@ -43,7 +44,7 @@ class BathwrapsTwoTest extends DuskTestCase
                   ->assertInputValue('lp_campaign_key', 'fxYHVwbMWT4t2By6mpn8')
                   ->assertInputValue('lp_request_id', '123123')
                   ->assertInputValue('ip_address', '127.0.0.1')
-                  ->assertInputValue('landing_page_url', '/remodeling/bath/2')
+                  ->assertInputValue('landing_page_url', '/remodeling/bath/3')
                   ->assertInputValueIsNot('universal_leadid', '')
                   ->assertInputValue('email_address', 'ss@ss.com')
                   ->assertInputValue('first_name', 'Sebas')

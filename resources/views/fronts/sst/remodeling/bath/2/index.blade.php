@@ -357,7 +357,7 @@
 
                     }
                 }
-                $('#zip, #zip2').val(zip);
+                $('#zip, #zip_code').val(zip);
                 $('#city').val(city);
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
@@ -379,7 +379,7 @@
 
 
         $(function () {
-            $("#phone").mask("999-999-9999");
+            $("#phone").mask("(999) 999-9999",{ autoclear: false });
 
             function commafy(num) {
                 var str = num.toString().split('.');

@@ -113,9 +113,10 @@ abstract class LeadspediaController extends BaseController
             } else {
                 $this->response = new OfferSender($offer_url);
             }
-            $first_name      = Request::input('first_name', '');
-            $last_name       = Request::input('last_name', '');
-            $phone           = preg_replace("#[[:punct:]]#", "", Input::post('phone_home', ''));
+            $first_name = Request::input('first_name', '');
+            $last_name  = Request::input('last_name', '');
+//            $phone           = preg_replace("#[[:punct:]]#", "", Input::post('phone_home', ''));
+            $phone           = Input::post('phone_home', '');
             $adid            = Input::post('adid', false);
             $kwid            = Input::post('kwid', false);
             $click_id        = Input::post('click_id', false);
@@ -162,9 +163,11 @@ abstract class LeadspediaController extends BaseController
                 $this->result = $this->response->postLeads($this->post_data, false);
 
             } else {
-                echo "<pre>";
-                print_r($this->data);
-                print_r($this->post_data);
+//                echo "<pre>";
+//                print_r($this->data);
+//                print_r($this->post_data);
+//                echo "</pre>";
+                echo view('layouts.debug', ['post' => $this->post_data, 'data' => $this->data]);
                 die();
             }
         }

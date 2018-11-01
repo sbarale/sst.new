@@ -137,7 +137,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div style="font-weight:bold;">
-                                    <h2>Your Personal Report Is Almost Ready To Send</h2>
+                                    <h2>Please Fill Out Information Below So You Can Receive Your Results</h2>
                                 </div>
                             </div>
                         </div>
@@ -288,9 +288,9 @@
                         }
                     }
                     if (street_number && route) {
-                        $('#address').val(street_number + ' ' + route);
+                        // $('#address').val(street_number + ' ' + route);
                         console.log('yes street_number +route');
-                        $('#address2').val(place.formatted_address);
+                        $('#address').val(place.formatted_address);
                     }
                     else {
                         console.log('NO street_number +route');
@@ -302,7 +302,7 @@
 
                     }
                 }
-                $('#zip, #zip2').val(zip);
+                $('#zip, #zip_code').val(zip);
                 $('#city').val(city);
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
@@ -324,7 +324,7 @@
 
 
         $(function () {
-            $("#phone").mask("999-999-9999");
+            $("#phone").mask("(999) 999-9999");
 
             $('#apply_form').parsley();
 

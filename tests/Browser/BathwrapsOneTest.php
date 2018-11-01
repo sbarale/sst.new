@@ -9,22 +9,6 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 class BathwrapsOneTest extends DuskTestCase
 {
 
-    public function testPageLoads()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/remodeling/bath/1')
-                    ->assertSee('1 DAY Bathroom Remodels');
-        });
-    }
-
-    public function testDebugWorks()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->visit('/remodeling/bath/1?debug=1')
-                    ->assertSee('DEBUG MODE ON');
-        });
-    }
-
     public function testFormWorks()
     {
         $this->browse(function (Browser $browser) {
