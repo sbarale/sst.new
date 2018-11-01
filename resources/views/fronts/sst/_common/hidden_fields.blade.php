@@ -8,3 +8,4 @@
 <input type="hidden" id="debug" name="debug" value="{{$debug}}">
 <input type="hidden" id="dev" name="dev" value="{{$dev}}">
 <input type="hidden" id="is_test" name="is_test" value="{{$test}}">
+{{ csrf_field() }}

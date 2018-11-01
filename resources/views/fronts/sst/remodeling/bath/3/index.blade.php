@@ -72,7 +72,6 @@
     <div class="secondarybg">
 
         <form name="apply_form" action="/remodeling/bath/3" id="apply_form" class="form-horizontal quiz_form" method="POST">
-            {{ csrf_field() }}
             <h1 class="header purple-h1" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
             <h3 class="black-h3">Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
             <input type="hidden" name="_submit" value="1"/>
@@ -115,7 +114,7 @@
                         </div>
                         <div class="slider-slide-white-container">
                             <div class="row">
-                                <div class="col-md-6 col-md-offset-3">
+                                <div class="col-md-10 col-md-offset-1">
                                     <input type="hidden" id="address" name="address">
                                     <input type="text" id="address_mask" name="address_mask" class="form-control input-lg" required data-parsley-usaddress="1" data-parsley-error-message="Please provide your street number at the beginning" data-parsley-group="block2">
                                     <input type="hidden" pattern="[0-9]*" id="zip" name="zip" onChange="document.getElementById('zip2').value = this.value" class="form-control input-lg" data-parsley-error-message="Please enter a valid zip" data-parsley-group="block2" placeholder="Enter Your Zip" maxlength="5"/>

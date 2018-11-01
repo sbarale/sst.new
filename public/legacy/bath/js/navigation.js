@@ -12,8 +12,7 @@ $(function () {
         var atTheEnd = index >= $sections.length - 1;
         $('.form-navigation .next').toggle(!atTheEnd);
         $('.form-navigation [type=submit]').toggle(atTheEnd);
-        dataLayer.push({ 'event': 'step_' + (index + 1) });
-
+        dataLayer.push({'event': 'step_' + (index + 1)});
     }
 
     function curIndex() {

@@ -76814,6 +76814,7 @@ $(document).ready(function () {
 /***/ (function(module, exports) {
 
 $(function () {
+    var dataLayer = dataLayer || [];
     var $sections = $('.form-section');
 
     function navigateTo(index) {
@@ -76824,6 +76825,7 @@ $(function () {
         var atTheEnd = index >= $sections.length - 1;
         $('.form-navigation .next').toggle(!atTheEnd);
         $('.form-navigation [type=submit]').toggle(atTheEnd);
+        dataLayer.push({ 'event': 'step_' + (index + 1) });
     }
 
     function curIndex() {

@@ -94,7 +94,6 @@
 
         <form name="apply_form" action="/remodeling/bath/2" id="apply_form" class="form-horizontal quiz_form"
               method="POST">
-            {{ csrf_field() }}
             <h1 class="header" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
             <h3>Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
             <h1 class="header" id="receive_info_headline" style="display: none;  ">Your Personal Report Is Almost Ready

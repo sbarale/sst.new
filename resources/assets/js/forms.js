@@ -1,5 +1,6 @@
 $(function () {
-    var $sections = $('.form-section');
+    let dataLayer = dataLayer || [];
+    let $sections = $('.form-section');
 
     function navigateTo(index) {
         // Mark the current section with the class 'current'
@@ -12,6 +13,7 @@ $(function () {
         var atTheEnd = index >= $sections.length - 1;
         $('.form-navigation .next').toggle(!atTheEnd);
         $('.form-navigation [type=submit]').toggle(atTheEnd);
+        dataLayer.push({'event': 'step_' + (index + 1)});
     }
 
     function curIndex() {
@@ -20,21 +22,21 @@ $(function () {
     }
 
     // Previous button is easy, just go back
-    $('.form-navigation .previous').click(function() {
+    $('.form-navigation .previous').click(function () {
         navigateTo(curIndex() - 1);
     });
 
     // Next button goes forward iff current block validates
-    $('.form-navigation .next').click(function() {
+    $('.form-navigation .next').click(function () {
         $('.demo-form').parsley().whenValidate({
             group: 'block-' + curIndex()
-        }).done(function() {
+        }).done(function () {
             navigateTo(curIndex() + 1);
         });
     });
 
     // Prepare sections by setting the `data-parsley-group` attribute to 'block-0', 'block-1', etc.
-    $sections.each(function(index, section) {
+    $sections.each(function (index, section) {
         $(section).find(':input').attr('data-parsley-group', 'block-' + index);
     });
     navigateTo(0); // Start at the beginning
