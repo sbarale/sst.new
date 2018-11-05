@@ -1,0 +1,8 @@
+[
+    {
+        "level": "WARNING",
+        "message": "https:\/\/connect.facebook.net\/en_US\/fbevents.js 24:14549 \"[Facebook Pixel] - Duplicate Pixel ID: 210251666509998.\"",
+        "source": "console-api",
+        "timestamp": 1541082178013
+    }
+]

@@ -8,8 +8,8 @@ use App\Http\Controllers\LeadspediaController;
 class TubController extends LeadspediaController {
 	// Populate here the credentials for the given campaign/offer
 	protected $offer_credentials = [
-		'campaign_id'  => '5b6313889dc73',
-		'campaign_key' => 'fxYHVwbMWT4t2By6mpn8',
+		'campaign_id'  => '5bd74cb2df487',
+		'campaign_key' => 'bTP2ZY6jLhJVRqGwHXpD',
 	];
 
 	public function showForm( $id = 1 ) {

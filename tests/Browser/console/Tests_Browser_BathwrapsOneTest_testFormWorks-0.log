@@ -1,0 +1,14 @@
+[
+    {
+        "level": "WARNING",
+        "message": "https:\/\/connect.facebook.net\/en_US\/fbevents.js 24:14549 \"[Facebook Pixel] - Duplicate Pixel ID: 210251666509998.\"",
+        "source": "console-api",
+        "timestamp": 1541082156262
+    },
+    {
+        "level": "SEVERE",
+        "message": "https:\/\/dev.visualwebsiteoptimizer.com\/analysis\/worker-68f4c079a93008e8e04f81f6476e5cc4.js - Failed to load resource: net::ERR_CONNECTION_CLOSED",
+        "source": "network",
+        "timestamp": 1541082160310
+    }
+]
