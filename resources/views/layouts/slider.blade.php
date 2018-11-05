@@ -47,8 +47,12 @@
                     background-size: cover;
                 }
             }
+            body{
+                background-image: url(@yield('big-bg-img','/images/bath/2/background_2.jpg'));
+                -webkit-background-size: cover;
+                background-size: cover;
+            }
         </style>
-
     @show
 
     @section('scripts')
