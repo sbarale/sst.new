@@ -155,7 +155,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
 
 
                 <h2>Hi <?php echo $first_name ?>, My name is Ace with Bath Wraps! </h2>
-                <h3>I am your virtual assistant here to help you get connected with a local bath wraps dealer for your FREE in home estimate, ill call you from 310-409-1196 in a moment to connect you with a scheduling agent, please make sure to answer!</h3>
+                <h3>We received your quote request and have selected 1 seller to connect you with based on the info you shared.</h3></br>
                 <br>
 				<?php //$offer->showPixel(); ?>
 				<?php $offer->track(); ?>

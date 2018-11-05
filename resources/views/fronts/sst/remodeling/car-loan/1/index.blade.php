@@ -1,4 +1,4 @@
-@extends('fronts.sst.remodeling.slider-layout')
+@extends('layouts.slider')
 @section('title','Take the Quiz to See if you Qualify')
 @section('big-bg-img','/images/gray-bg-px.jpg')
 @section('small-bg-img','/images/gray-bg-px.jpg')
@@ -7,7 +7,7 @@
     @parent
     <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     <style>
-        .btn-page2, .btn-page3, .btn-page6, .btn-page5{
+        .btn-page2, .btn-page3, .btn-page6, .btn-page5, .btn-page4{
             font-size:28px!important;
             padding: 10px 56px!important;
             margin-top: 20px;

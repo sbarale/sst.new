@@ -1,4 +1,4 @@
-@extends('fronts.sst.layout')
+@extends('layouts.master')
 @section('logo','images/sst-landscape.png')
 @section('content')
     <div class="row secondarybg whitebg">
@@ -47,7 +47,7 @@
         <div class="row">
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/solar-energy-choose/',
                 'title' => 'Solar Energy',
                 'desc'  => 'Find a solar specialist from our network and start saving money on your energy bills.',
                 'img' => 'images/solar-1.png'
@@ -62,14 +62,14 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/auto-warranty/1',
                 'title' => 'Auto Warranty (US only)',
                 'desc'  => 'Comparing Auto Warranty offers.',
                 'img' => 'images/car-loan.png'
             ] )
 
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/debt-choose/',
                 'title' => 'Debt Settlement ( US and UK only )',
                 'desc'  => 'Be it refinance or new car purchase, it pays to shop around.',
                 'img' => 'images/debt.png'
@@ -77,7 +77,7 @@
         </div>
         <div class="row">
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/insurance-presell/',
                 'title' => 'Insurance (UK only)',
                 'desc'  => 'Find an insurance specialist from our network.',
                 'img' => 'images/ins.png'
@@ -91,27 +91,18 @@
             ] )
         </div>
         <div class="row">
-
             @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '',
+                'href'  => '/remodeling/medicare-presell/',
                 'title' => 'Medicare Supplemental Plans (US only)',
                 'desc'  => 'Find a Medicare specialist from our network.',
                 'img' => 'images/ins.png'
             ] )
-        </div>
-        <div class="row">
+
             @include( 'fronts.sst.bullets.bullet' ,[
                 'href'  => '/remodeling/bath/1',
                 'title' => 'Bathroom Remodels (US only)',
                 'desc'  => 'Find a Bathroom Remodels specialist from our network.',
                 'img' => 'images/bat.png'
-            ] )
-
-            @include( 'fronts.sst.bullets.bullet' ,[
-                'href'  => '/remodeling/home-warrenty/1',
-                'title' => 'Home Warrenty (US only)',
-                'desc'  => 'Find a Home Warrenty specialist from our network.',
-                'img' => 'images/chw.png'
             ] )
         </div>
         <div class="row">
@@ -128,6 +119,21 @@
                 'desc'  => 'Find a window specialist from our network.',
                 'img' => 'images/window.png'
             ] )
+        </div>
+        <div class="row">
+            @include( 'fronts.sst.bullets.bullet' ,[
+                'href'  => '/remodeling/home-warrenty/1',
+                'title' => 'Home Warrenty (US only)',
+                'desc'  => 'Find a Home Warrenty specialist from our network.',
+                'img' => 'images/chw.png'
+            ] )
+
+            <!--@include( 'fronts.sst.bullets.bullet' ,[
+                'href'  => '',
+                'title' => 'Life-settlement (US only)',
+                'desc'  => 'Find a life-settlement specialist from our network',
+                'img' => 'images/ins.png'
+            ] )-->
         </div>
     </div>
     <br><br>

@@ -245,7 +245,7 @@
         window.Parsley.addValidator('google', {
             validateString: function (value) {
                 return value === $('#address').val();
-            },
+                },
             messages: {
                 en: 'Address is required',
             }

@@ -13,4 +13,5 @@ npm-debug.log
 yarn-error.log
 .env
 .phpunit.result.cache
-
+.env.local
+.env.dusk.local
