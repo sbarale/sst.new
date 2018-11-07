@@ -18,7 +18,7 @@ class TubController extends LeadspediaController {
 
 	public function postForm( $id = 1, $custom_fields = [] ) {
         $custom_fields = [
-			'alt_phone' => preg_replace( "#[[:punct:]]#", "", Input::post( 'alt_phone', '' ) ),
+//			'phone' => preg_replace( "#[[:punct:]]#", "", Input::post( 'alt_phone', '' ) ),
 			'city'      => Input::post( 'city', '' ),
 			'state'     => Input::post( 'state', '' ),
 		];

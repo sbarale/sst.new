@@ -174,9 +174,11 @@
                                 <input type="tel" id="phone" name="phone_home" class="form-control input-lg" required data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue4"/>
                             </div>
                             <div class="col-sm-6 col-xs-12">
-                                Alt Phone Number
-                                <input type="tel" id="alt_phone" name="alt_phone" class="form-control input-lg" data-parsley-usphone="1" data-parsley-error-message="Please enter a valid phone with area code" data-parsley-group="block3" data-parsley-minlength="10" data-parsley-maxlength="14" placeholder="Enter Your Phone (With Area Code)" autocomplete="somevarystrangevalue5"/>
-                            </div>
+                                Email
+                                <input type="email" id="email" name="email_address" class="form-control input-lg"
+                                       required data-parsley-error-message="Please enter a valid email"
+                                       data-parsley-group="block3" placeholder="Enter Your Email"
+                                       autocomplete="somevarystrangevalue4"/>                            </div>
                         </div>
                         <div class="row">
 
@@ -258,7 +260,7 @@
             var state_provider = '';
             var autocomplete = new google.maps.places.Autocomplete(document.getElementById('address_mask'), {
                 types: ['address'],
-                componentRestrictions: { country: "us" },
+                componentRestrictions: {country: "us"},
             });
             autocomplete.addListener('place_changed', function () {
                 var place = autocomplete.getPlace();
@@ -289,9 +291,9 @@
                         }
                     }
                     if (street_number && route) {
-                        $('#address').val(street_number + ' ' + route);
+                        $('#address2').val(street_number + ' ' + route);
                         console.log('yes street_number +route');
-                        $('#address2').val(place.formatted_address);
+                        $('#address').val(place.formatted_address);
                     }
                     else {
                         console.log('NO street_number +route');
@@ -303,12 +305,12 @@
 
                     }
                 }
-                $('#zip, #zip2').val(zip);
+                $('#zip, #zip_code').val(zip);
                 $('#city').val(city);
                 $('#state').val(state);
                 $("#country_name").text('in ' + state_full);
 
-                //$("#apply_form").attr("action", "/remodeling/tub/1?state=" + state); //Will set the state in thankyoupage
+                //$("#apply_form").attr("action", "/remodeling/bath/2?state=" + state); //Will set the state in thankyoupage
 
                 state_provider = state;
 
@@ -324,8 +326,7 @@
 
 
         $(function () {
-            $("#phone").mask("999-999-9999");
-            $("#alt_phone").mask("999-999-9999");
+            $("#phone").mask("(999) 999-9999",{ autoclear: false });
             function commafy(num) {
                 var str = num.toString().split('.');
                 if (str[0].length >= 5) {

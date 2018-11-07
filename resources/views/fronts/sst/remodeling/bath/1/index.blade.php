@@ -127,7 +127,6 @@
                             </div>
                         </div>
                         @include('fronts.sst._common.hidden_fields')
-                        @include('fronts.sst._common.universal_leadid')
                     </form>
                 </section>
                 <div class="row">

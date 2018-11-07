@@ -9,3 +9,4 @@
 <input type="hidden" id="dev" name="dev" value="{{$dev}}">
 <input type="hidden" id="is_test" name="is_test" value="{{$test}}">
 {{ csrf_field() }}
+@include('fronts.sst._common.universal_leadid')
