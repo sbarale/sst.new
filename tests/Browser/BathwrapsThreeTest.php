@@ -43,7 +43,6 @@ class BathwrapsThreeTest extends DuskTestCase
                 $b->assertInputValue('lp_campaign_id', '5b6313889dc73')
                   ->assertInputValue('lp_campaign_key', 'fxYHVwbMWT4t2By6mpn8')
                   ->assertInputValue('lp_request_id', '123123')
-                  ->assertInputValue('ip_address', '127.0.0.1')
                   ->assertInputValue('landing_page_url', '/remodeling/bath/3')
                   ->assertInputValueIsNot('universal_leadid', '')
                   ->assertInputValue('email_address', 'ss@ss.com')
@@ -54,6 +53,8 @@ class BathwrapsThreeTest extends DuskTestCase
                   ->assertInputValue('address', '160 W Camino Real, Boca Raton, FL 33432, USA')
                   ->assertInputValue('zip_code', '33432'); // <-- In the good forms, this should be replaced by google's autocomplete to the correct one
             });
+            $this->assertTrue(preg_match('/127\.0\.0\.0\.1|::1/', $browser->inputValue('ip_address')) === 1);
+
         });
     }
 }
