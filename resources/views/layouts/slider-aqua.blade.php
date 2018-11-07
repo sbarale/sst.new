@@ -33,6 +33,7 @@
 
     @section('scripts')
         @include('trackers.gtm')
+        @include('trackers.set_fbid_px')
     @show
 </head>
 <body class="graybg">

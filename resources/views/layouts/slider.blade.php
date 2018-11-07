@@ -11,33 +11,36 @@
 
 
         <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-        <link href='//fonts.googleapis.com/css?family=Merriweather:regular,700' rel='stylesheet' type='text/css' />
+        <link href='//fonts.googleapis.com/css?family=Merriweather:regular,700' rel='stylesheet' type='text/css'/>
         <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
         <script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css' />
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9xy8KF8H9Cu-Bui1nB5zHM860PlgkFFw&libraries=places,geometry"></script>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'/>
+        <script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9xy8KF8H9Cu-Bui1nB5zHM860PlgkFFw&libraries=places,geometry"></script>
         <link rel="stylesheet" href="/css/bootstrap-tagsinput.css" type="text/css">
 
         <script type="text/javascript" src="/js/jquery.maskedinput.min.js"></script>
-        <link href="/css/jquery.nouislider.css" rel="stylesheet" type='text/css' />
+        <link href="/css/jquery.nouislider.css" rel="stylesheet" type='text/css'/>
 
         <style>
             @media (max-width: 3199px) {
-                .img-bg{
+                .img-bg {
                     background-image: url(@yield('big-bg-img','/images/bath/2/background_2.jpg'));
                     -webkit-background-size: cover;
                     background-size: cover;
                 }
             }
+
             /* md */
             @media (max-width: 1199px) {
-                .img-bg{
+                .img-bg {
                     background-image: url(@yield('small-bg-img','/images/bath/2/background_1.jpg'));
                     -webkit-background-size: cover;
                     background-size: cover;
                 }
             }
-            body{
+
+            body {
                 background-image: url(@yield('big-bg-img','/images/bath/2/background_2.jpg'));
                 -webkit-background-size: cover;
                 background-size: cover;
@@ -47,11 +50,12 @@
 
     @section('scripts')
         @include('trackers.gtm')
+        @include('trackers.set_fbid_px')
     @show
 </head>
 <body class="graybg">
 @include('fronts.sst._common.debugbar')
-<header class="navbar navbar-static-top" id="top" role="banner" >
+<header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -62,7 +66,8 @@
                                 <a href="/"><img src="/images/sst-landscape.png" class=" img-responsive pull-left"/></a>
                             </div>
                             <div class="col-md-4 hidden-xs hidden-sm">
-                                <img src="@yield('header-middle-img','/images/gray-bg-px.jpg')" class="img-responsive center-block"/>
+                                <img src="@yield('header-middle-img','/images/gray-bg-px.jpg')"
+                                     class="img-responsive center-block"/>
                             </div>
                             <div class="col-md-4 hidden-xs">
                                 <img src="/images/secure2.png" class="img-responsive pull-right secure-img"/>
@@ -113,7 +118,7 @@
         )();
     </script>
     <noscript>
-        <img src="https://api.trustedform.com/ns.gif" />
+        <img src="https://api.trustedform.com/ns.gif"/>
     </noscript>
     <!--  end leadactiveprospect dot com -->
 

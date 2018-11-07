@@ -151,7 +151,6 @@ abstract class LeadspediaController extends BaseController
                 'kwid'             => $kwid,
                 'urlupsell'        => "",
                 'release'          => file_get_contents(public_path("VERSION.txt"))
-
             ];
 
             $this->post_data = array_merge($this->post_data, $custom_fields);
