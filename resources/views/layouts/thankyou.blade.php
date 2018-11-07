@@ -17,7 +17,7 @@
     @show
 
     @section('scripts')
-
+        @include('trackers.gtm')
     @show
 </head>
 <body class="graybg">
