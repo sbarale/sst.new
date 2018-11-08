@@ -79,6 +79,7 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
     <script>
         dataLayer = [];
         dataLayer.push({'fbid': "<?php echo isset($_GET['fbid']) ? $_GET['fbid'] : ''; ?>"});
+        dataLayer.push({'page': "thankyou"}); // This will fire a lead
     </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
