@@ -17,13 +17,15 @@
     @show
 
     @section('scripts')
+        @include('trackers.set_fbid_px')
+        <script>dataLayer.push({'page':'thankyou'});</script>
+        {{ $response->track() }}
         @include('trackers.gtm')
     @show
 </head>
 <body class="graybg">
 @include('fronts.sst._common.debugbar')
 
-{{ $response->track() }}
 
 <header class="navbar navbar-static-top" id="top" role="banner">
     <div class="container">

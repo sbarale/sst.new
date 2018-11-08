@@ -2,6 +2,7 @@
 <head>
     <script>
         dataLayer = [];
+        dataLayer.push({'fbid': "<?php echo isset($_GET['fbid']) ? $_GET['fbid'] : ''; ?>"});
     </script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -64,19 +65,27 @@
                     <img src="./files/main.jpg" class="img-responsive">
                 </div>
                 <div class="row">
-                    <p id="tub_disclaimer" style="font-size:12px;text-align:center;">* Pictures shown are for illustrative purposes only. Models available may vary from those displayed in this advertisement.</p>
+                    <p id="tub_disclaimer" style="font-size:12px;text-align:center;">* Pictures shown are for
+                        illustrative purposes only. Models available may vary from those displayed in this
+                        advertisement.</p>
 
                 </div>
             </div>
             <div class="col-md-5">
                 <section class="test-form">
-                    <form id="demo-form" action="thankyou.php?fbid=<?php echo isset( $_GET['fbid'] ) ? $_GET['fbid'] : ""; ?>" method="post" class="demo-form js-floating-labels" data-parsley-validate data-parsley-errors-messages-disabled>
+                    <form id="demo-form"
+                          action="thankyou.php?fbid=<?php echo isset($_GET['fbid']) ? $_GET['fbid'] : ""; ?>"
+                          method="post" class="demo-form js-floating-labels" data-parsley-validate
+                          data-parsley-errors-messages-disabled>
                         <input type="hidden" id="address" name="address" value="" data-parsley-required>
-                        <input type="hidden" id="debug" name="debug" value="<?php echo isset( $_GET['debug'] ) ? $_GET['debug'] : 0; ?>">
-                        <input type="hidden" id="is_test" name="is_test" value="<?php echo isset( $_GET['test'] ) ? $_GET['test'] : 0; ?>">
+                        <input type="hidden" id="debug" name="debug"
+                               value="<?php echo isset($_GET['debug']) ? $_GET['debug'] : 0; ?>">
+                        <input type="hidden" id="is_test" name="is_test"
+                               value="<?php echo isset($_GET['test']) ? $_GET['test'] : 0; ?>">
                         <!--                        <input type="hidden" id="state" name="state" value="">-->
                         <input type="hidden" name="_submit" value="1"/>
-                        <input type="hidden" name="lp_request_id" value="<?php echo isset( $_GET['rid'] ) ? $_GET['rid'] : ''; ?>"/>
+                        <input type="hidden" name="lp_request_id"
+                               value="<?php echo isset($_GET['rid']) ? $_GET['rid'] : ''; ?>"/>
                         <input id="leadid_token" name="universal_leadid" type="hidden" value=""/>
 
                         <div class="well well-lg">
@@ -88,7 +97,10 @@
                                 <div class="row field">
                                     <div class="form-group">
                                         <label for="zip_code" class="floating">Zip Code<span class="floating-desc">: Enter 5-digit zip code</span></label>
-                                        <input pattern="^\d{5,6}(?:[-\s]\d{4})?$" autocomplete="billing postal-code" class="form-control" type="text" id="zip_code" name="zip_code" data-parsley-required data-parsley-type="digits" data-parsley-length="[5, 5]" placeholder="ENTER YOUR ZIP CODE"/>
+                                        <input pattern="^\d{5,6}(?:[-\s]\d{4})?$" autocomplete="billing postal-code"
+                                               class="form-control" type="text" id="zip_code" name="zip_code"
+                                               data-parsley-required data-parsley-type="digits"
+                                               data-parsley-length="[5, 5]" placeholder="ENTER YOUR ZIP CODE"/>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +112,9 @@
                                 <div class="row field">
                                     <div class="form-group">
                                         <label for="address_mask" class="floating">Address<span class="floating-desc">: Required field</span></label>
-                                        <input autocomplete="billing address" class="form-control" type="text" id="address_mask" name="address_mask" data-parsley-required data-parsley-google placeholder="ENTER YOUR ADDRESS"/>
+                                        <input autocomplete="billing address" class="form-control" type="text"
+                                               id="address_mask" name="address_mask" data-parsley-required
+                                               data-parsley-google placeholder="ENTER YOUR ADDRESS"/>
                                     </div>
                                 </div>
                             </div>
@@ -112,22 +126,29 @@
                                 <div class="row field">
                                     <div class="form-group col-md-6">
                                         <label for="first_name" class="floating">First Name<span class="floating-desc">: Required</span></label>
-                                        <input autocomplete="fname" class="form-control" id="first_name" name="first_name" data-trigger="change" data-parsley-required placeholder="FIRST NAME">
+                                        <input autocomplete="fname" class="form-control" id="first_name"
+                                               name="first_name" data-trigger="change" data-parsley-required
+                                               placeholder="FIRST NAME">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="last_name" class="floating">Last Name<span class="floating-desc">: Required</span></label>
-                                        <input autocomplete="lname" class="form-control" id="last_name" name="last_name" data-trigger="change" data-parsley-required placeholder="LAST NAME">
+                                        <input autocomplete="lname" class="form-control" id="last_name" name="last_name"
+                                               data-trigger="change" data-parsley-required placeholder="LAST NAME">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="email_address" class="floating">Email<span class="floating-desc">: Required</span></label>
-                                        <input autocomplete="email" class="form-control" id="email_address" name="email_address" data-trigger="change" data-parsley-required data-parsley-type="email" placeholder="EMAIL">
+                                        <input autocomplete="email" class="form-control" id="email_address"
+                                               name="email_address" data-trigger="change" data-parsley-required
+                                               data-parsley-type="email" placeholder="EMAIL">
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label for="phone_home" class="floating">Phone<span class="floating-desc">: (10 digits only)</span></label>
-                                        <input autocomplete="tel" class="form-control" id="phone_home" name="phone_home" data-trigger="change" data-parsley-required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" placeholder="PHONE">
+                                        <input autocomplete="tel" class="form-control" id="phone_home" name="phone_home"
+                                               data-trigger="change" data-parsley-required
+                                               data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" placeholder="PHONE">
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +173,8 @@
                             </li>
                             <li> Added safety features: low step options, safety bars, no slip flooring, seat options.
                             </li>
-                            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or crack.
+                            <li> BathWraps products are a breeze to maintain and will never stain, chip, mildew, or
+                                crack.
                             </li>
                             <li> High-quality products. Quick, expert installation. Outstanding warranty.
                             </li>
@@ -165,9 +187,13 @@
     </div>
     <div id="footer" class="row">
         <p class="disclaimer tcpa_disclaimer">
-            <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting this request for information, I hereby provide my signature, expressly consenting to receive information by email, auto-dialer and/or pre-recorded telephone calls, and/or SMS messages from or on behalf of smartsavings.today and its
+            <label><input type="hidden" id="leadid_tcpa_disclosure">By submitting this request for information, I hereby
+                provide my signature, expressly consenting to receive information by email, auto-dialer and/or
+                pre-recorded telephone calls, and/or SMS messages from or on behalf of smartsavings.today and its
                 <a href="#" style="font-style: italic">fulfillment partners</a> and may agree to receive other
-                <a href="#" style="font-style: italic">offers</a> on my telephone number I provided above, including my wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a condition of purchase and that I may revoke my consent at any time.</label>
+                <a href="#" style="font-style: italic">offers</a> on my telephone number I provided above, including my
+                wireless number, even if I am on a State or Federal Do-Not-Call list. I understand consent is not a
+                condition of purchase and that I may revoke my consent at any time.</label>
         </p>
         <p>© 2018 smartsavings.today |
             <a href="https://smartsavings.today/privacy.html" style="">Privacy Policy</a> |
@@ -178,7 +204,8 @@
 <script src="js/navigation.js"></script>
 <script src="js/floating_labels.js"></script>
 <script src="js/address_autocomplete.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9xy8KF8H9Cu-Bui1nB5zHM860PlgkFFw&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9xy8KF8H9Cu-Bui1nB5zHM860PlgkFFw&libraries=places&callback=initAutocomplete"
+        async defer></script>
 <script id="LeadiDscript" type="text/javascript">
     // <!--
     (function () {
@@ -225,13 +252,14 @@
 <noscript>
     <img src="https://api.trustedform.com/ns.gif"/>
 </noscript>
-<div id="LeadiD-wrapper-element" class=" LeadiD-ignore-mutation" style="width: 1px; height: 1px; overflow: hidden; position: fixed; left: -1px; top: 0px;">
+<div id="LeadiD-wrapper-element" class=" LeadiD-ignore-mutation"
+     style="width: 1px; height: 1px; overflow: hidden; position: fixed; left: -1px; top: 0px;">
     <iframe class=" LeadiD-ignore-element LeadiD-ignore-mutation" src="./files/iframe.html"></iframe>
 </div>
 <script>
     $(document).ready(function () {
-        $('#zip_code').mask('99999', { autoclear: false });
-        $('#phone_home').mask('(999) 999-9999', { autoclear: false });
+        $('#zip_code').mask('99999', {autoclear: false});
+        $('#phone_home').mask('(999) 999-9999', {autoclear: false});
 
         // $('#address_mask').parsley().on('field:validate', function (e) {
         //     // In here, `this` is the parlsey instance of #some-input
@@ -245,7 +273,7 @@
         window.Parsley.addValidator('google', {
             validateString: function (value) {
                 return value === $('#address').val();
-                },
+            },
             messages: {
                 en: 'Address is required',
             }

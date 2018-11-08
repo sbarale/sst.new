@@ -20,8 +20,8 @@
 @include('fronts.sst._common.debugbar')
 <div id='app'></div>
 @section('scripts')
-    @include('trackers.gtm')
     @include('trackers.set_fbid_px')
+    @include('trackers.gtm')
 @show
 <div class="container">
     <div class="row">
