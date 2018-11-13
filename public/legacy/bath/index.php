@@ -63,7 +63,7 @@
             <div class="col-md-7">
                 <div class="row">
                     <?php
-                    if(isset($_GET['dark'])) {
+                    if (isset($_GET['kwid']) && $_GET['kwid'] == 2) {
                         echo '<img src="./files/darker.jpg" class="img-responsive">';
                     } else {
                         echo '<img src="./files/main.jpg" class="img-responsive">';
