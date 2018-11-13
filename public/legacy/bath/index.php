@@ -62,7 +62,13 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="row">
-                    <img src="./files/main.jpg" class="img-responsive">
+                    <?php
+                    if(isset($_GET['dark'])) {
+                        echo '<img src="./files/darker.jpg" class="img-responsive">';
+                    } else {
+                        echo '<img src="./files/main.jpg" class="img-responsive">';
+                    }
+                    ?>
                 </div>
                 <div class="row">
                     <p id="tub_disclaimer" style="font-size:12px;text-align:center;">* Pictures shown are for
