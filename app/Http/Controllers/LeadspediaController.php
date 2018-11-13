@@ -67,6 +67,12 @@ abstract class LeadspediaController extends BaseController
 
     public function __construct()
     {
+        /*
+         * Let's build some protection so in case the data is not defined
+         * correctly, bail out.
+         */
+
+        $this->verify();
         $adid             = Request::input('adid', false);
         $kwid             = Request::input('kwid', false);
         $fbid             = Request::input('fbid', false);
@@ -107,7 +113,6 @@ abstract class LeadspediaController extends BaseController
         }
         $campaign_id  = $this->offer_credentials['campaign_id'];
         $campaign_key = $this->offer_credentials['campaign_key'];
-        $offer_pixel  = $this->offer_credentials['pixel'];
         $offer_url    = 'http://track.geek3.io/post.do';
 
 
@@ -173,6 +178,16 @@ abstract class LeadspediaController extends BaseController
                 echo view('layouts.debug', ['post' => $this->post_data, 'data' => $this->data]);
                 die();
             }
+        }
+    }
+
+    protected function verify()
+    {
+        $ok = isset($this->offer_credentials['campaign_id']) &&
+            isset($this->offer_credentials['campaign_key']) &&
+            isset($this->offer_credentials['pixel']);
+        if (env('APP_ENV') == 'local' && !$ok) {
+            die('must set campaign_id, campaign_key and pixel for the offer');
         }
     }
 }
