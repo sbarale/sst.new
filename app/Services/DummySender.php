@@ -21,7 +21,7 @@ class DummySender
      * @var string
      */
     private $offer_url = '';
-
+    private $offer_pixel = '';
 
     /**
      * Prepared offer url w/ data attached.
@@ -55,6 +55,11 @@ class DummySender
     public function __construct($offer_url = '', $offer_pixel = null)
     {
         $this->offer_url = $offer_url;
+        if (is_null($offer_pixel)) {
+            die('Must pass the offer pixel');
+        } else {
+            $this->offer_pixel = $offer_pixel;
+        }
     }
 
 
