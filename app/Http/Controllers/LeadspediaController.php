@@ -113,14 +113,15 @@ abstract class LeadspediaController extends BaseController
         }
         $campaign_id  = $this->offer_credentials['campaign_id'];
         $campaign_key = $this->offer_credentials['campaign_key'];
+        $offer_px     = $this->offer_credentials['pixel'];
         $offer_url    = 'http://track.geek3.io/post.do';
 
 
         if (isset($_POST['_submit']) && $_POST['_submit'] == 1) {
             if ($this->dev_mode) {
-                $this->response = new DummySender($offer_url);
+                $this->response = new DummySender($offer_url, $offer_px);
             } else {
-                $this->response = new OfferSender($offer_url);
+                $this->response = new OfferSender($offer_url, $offer_px);
             }
             $first_name = Request::input('first_name', '');
             $last_name  = Request::input('last_name', '');
