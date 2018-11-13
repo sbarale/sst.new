@@ -52,7 +52,7 @@ class DummySender
      *
      * @param string $offer_url Offer URL
      */
-    public function __construct($offer_url = '')
+    public function __construct($offer_url = '', $offer_pixel = null)
     {
         $this->offer_url = $offer_url;
     }
