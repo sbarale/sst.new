@@ -48,7 +48,6 @@ put_app_up
 @endmacro
 
 @after
-{{--@slack($slack_hook, $slack_channel, "Envoy task $task ran on <$project_url|[$project_name]>")--}}
 @endafter
 
 @task('version', ['on' => 'localhost'])
