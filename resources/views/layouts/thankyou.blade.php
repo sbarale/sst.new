@@ -17,8 +17,11 @@
     @show
 
     @section('scripts')
+        <script>
+            window.dataLayer = window.dataLayer || [];
+        </script>
         @include('trackers.set_fbid_px')
-        <script>dataLayer.push({'page':'thankyou'});</script>
+        <script>dataLayer.push({'page': 'thankyou'});</script>
         {{ $response->track() }}
         @include('trackers.gtm')
     @show
