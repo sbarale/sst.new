@@ -10,6 +10,9 @@ class TubController extends LeadspediaController {
 	protected $offer_credentials = [
 		'campaign_id'  => '5bd74cb2df487',
 		'campaign_key' => 'bTP2ZY6jLhJVRqGwHXpD',
+        // This is the offer conversion pixel from Leadspedia.
+        // Get it from Leadspedia / Offers / Generate Conversion Pixel
+        'pixel'        => 'https://track.geek3.io/pixel.do?o=16&t=p'
 	];
 
 	public function showForm( $id = 1 ) {

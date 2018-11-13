@@ -102,8 +102,12 @@ abstract class LeadspediaController extends BaseController
         if (empty($this->offer_credentials)) {
             die('Must provide campaign_id and campaign_key');
         }
+        if (empty($this->offer_credentials['pixel'])) {
+            die('Must provide offer pixel for conversion tracking');
+        }
         $campaign_id  = $this->offer_credentials['campaign_id'];
         $campaign_key = $this->offer_credentials['campaign_key'];
+        $offer_pixel  = $this->offer_credentials['pixel'];
         $offer_url    = 'http://track.geek3.io/post.do';
 
 

@@ -154,8 +154,6 @@ if ( isset( $_POST['_submit'] ) && $_POST['_submit'] == 1 ) {
                 <!--
 				<a href="tel:8889981190" style="color: #fff; "> <div style="margin-bottom: 15px;" ><span style="font-size: 25px; background-color: red;  padding:10px;   border-radius: 15px;"> Call Now: (888) 998-1190</a></span></div>-->
                 <h3><img src='./img/compleet.png'>Step 1 Complete! </h3>
-
-
                 <h2>Hi <?php echo $first_name ?>, </h2>
                 <h3>We received your quote request and have selected 1 seller to connect you with based on the info you shared.</h3></br>
                 <br>

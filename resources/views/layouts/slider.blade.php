@@ -94,7 +94,6 @@
     @include('fronts.sst.footer')
 </div>
 @section('footer-scripts')
-    <script type='text/javascript' src='/js/jquery.nouislider.all.min.js'></script>
     <script type="text/javascript" src="/js/moment.min.js"></script>
     <script type="text/javascript" src="/js/parsley.min.js"></script>
     <script type="text/javascript" src="/js/formslider.js"></script>
