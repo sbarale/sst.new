@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-md-7">
                 <div class="row">
-                    @if(Input::get['kwid'] == 2)
+                    @if(isset($_GET['kwid']) && ($_GET['kwid'] == 2))
                         <img src="/legacy/bath/files/darker.jpg" class="img-responsive">
                     @else
                         <img src="/legacy/bath/files/main.jpg" class="img-responsive">
