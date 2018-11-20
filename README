@@ -1,0 +1,9 @@
+IMPORTANT:
+
+NEVER, EVER FTP content into the site.
+This is meant to be deployed using Envoy, by running
+
+
+envoy run update
+
+Like with any stable project, no changes should be made to running code by FTPing stuff in, always commit, test and deploy.
