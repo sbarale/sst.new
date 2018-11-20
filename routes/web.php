@@ -71,3 +71,6 @@ Route::get('/remodeling/medicare-presell/', 'Offers\MedicareController@showPrese
 
 Route::get('/remodeling/medicare/{id?}', 'Offers\MedicareController@showForm');
 Route::post('/remodeling/medicare/{id}', 'Offers\MedicareController@postForm');
+
+Route::get('/remodeling/jacuzzi/{id?}', 'Offers\JacuzziController@showForm');
+Route::post('/remodeling/jacuzzi/{id}', 'Offers\JacuzziController@postForm');
