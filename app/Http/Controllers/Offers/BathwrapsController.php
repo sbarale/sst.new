@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Offers;
 
 use App\Http\Controllers\LeadspediaController;
+use Illuminate\Support\Facades\Input;
 
 
 class BathwrapsController extends LeadspediaController
@@ -23,6 +24,9 @@ class BathwrapsController extends LeadspediaController
 
     public function postForm($id = 1, $custom_fields = [])
     {
+        $custom_fields = [
+            'ratio_credit'        => Input::post('credit_rate', ''),
+        ];
         /*
          * Call the parent class for functionality
          */
