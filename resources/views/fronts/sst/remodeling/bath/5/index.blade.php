@@ -17,9 +17,6 @@
             max-width: 250px;
             width: 100%;
         }
-        .btn-page4{
-            width: 100%;
-        }
 
         @media screen and (max-width: 480px) {
             .btn-page1 {
@@ -165,35 +162,6 @@
                             </div>
                         </div>
 
-                    </div>
-                    <!-- END STATE_QUESTION -->
-
-                    <!-- START STATE_QUESTION -->
-                    <div class="slider-slide" id="credit_rate_slide">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h2>
-                                    How do you rate your credit?
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="slider-slide-white-container">
-                            <div class="row">
-                                <input type="hidden" name="credit_rate" id="credit_rate" value="" />
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Excellent">Excellent</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Good">Good</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Fair">Fair</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Poor">Poor</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- END STATE_QUESTION -->
 
@@ -467,20 +435,12 @@
                     $('.form-progress-bar').css({'width': '66.66%'});
 
 
-                    slider_data.move('#credit_rate_slide');
+                    slider_data.move('#name_slide');
                     $("#survey_headline").hide();
                     $("#receive_info_headline").show();
 
                 }
 
-            });
-
-            $('.btn-page4').on('click', function (e) {
-                e.stopPropagation();
-                var newval = $(this).data('value');
-                $('#credit_rate').val(newval);
-                slider_data.move('#name_slide');
-                $("#survey_headline").hide();
             });
 
             $('.btn-page3').on('click', function (e) {

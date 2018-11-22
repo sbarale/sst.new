@@ -1,5 +1,5 @@
 <div class="row" style="padding-top:12px;">
-    <div class="summary_terms">
+    <div class="summary_terms" style="margin-left: auto; margin-right: auto;">
         <p style="text-align:center;color:#424242">
 
             <strong>Copyright 2018 | All Rights Reserved |

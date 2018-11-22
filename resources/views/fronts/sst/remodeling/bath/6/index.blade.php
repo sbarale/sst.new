@@ -6,11 +6,7 @@
     @parent
     <link href="/css/bath/3/main.css" rel="stylesheet" type='text/css'/>
     <style>
-        .btn-page4{
-            width: 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
-        }
+
     </style>
 
     <script type="text/javascript">
@@ -75,7 +71,7 @@
 @section('content')
     <div class="secondarybg">
 
-        <form name="apply_form" action="/remodeling/bath/4" id="apply_form" class="form-horizontal quiz_form" method="POST">
+        <form name="apply_form" action="/remodeling/bath/3" id="apply_form" class="form-horizontal quiz_form" method="POST">
             <h1 class="header purple-h1" id="survey_headline" style="text-transform: uppercase;">1 DAY Bathroom Remodels</h1>
             <h3 class="black-h3">Replace Your Old Shower with a Sleek, Sophisticated Upgrade in One Day</h3>
             <input type="hidden" name="_submit" value="1"/>
@@ -131,35 +127,6 @@
                             </div>
                         </div>
 
-                    </div>
-                    <!-- END STATE_QUESTION -->
-
-                    <!-- START STATE_QUESTION -->
-                    <div class="slider-slide" id="credit_rate_slide">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h2>
-                                    How do you rate your credit?
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="slider-slide-white-container">
-                            <div class="row">
-                                <input type="hidden" name="credit_rate" id="credit_rate" value="" />
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Excellent">Excellent</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Good">Good</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Fair">Fair</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-success btn-lg btn-page4" data-value="Poor">Poor</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <!-- END STATE_QUESTION -->
 
@@ -374,6 +341,7 @@
                 }
             });
 
+
             $('.btn-page1').on('click', function (e) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -388,18 +356,11 @@
             $('.btn-page2').on('click', function (e) {
                 e.stopPropagation();
                 if ($('#apply_form').parsley().validate('block2') === true) {
-                    slider_data.move('#credit_rate_slide');
+                    slider_data.move('#name_slide');
                     $("#survey_headline").hide();
+
                 }
 
-            });
-
-            $('.btn-page4').on('click', function (e) {
-                e.stopPropagation();
-                var newval = $(this).data('value');
-                $('#credit_rate').val(newval);
-                slider_data.move('#name_slide');
-                $("#survey_headline").hide();
             });
 
             $('.btn-page3').on('click', function (e) {

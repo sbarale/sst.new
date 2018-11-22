@@ -60,7 +60,7 @@
                         <div class="well well-lg">
                             <div class="form-section">
                                 <div class="row">
-                                    <div class="start">Step 1 of 3</div>
+                                    <div class="start">Step 1 of 4</div>
                                     <div class="steptitle">Get Pricing and Availability for:</div>
                                 </div>
                                 <div class="row field">
@@ -75,7 +75,7 @@
                             </div>
                             <div class="form-section">
                                 <div class="row">
-                                    <div class="start">Step 2 of 3</div>
+                                    <div class="start">Step 2 of 4</div>
                                     <div class="steptitle">Please enter the street address of the home.</div>
                                 </div>
                                 <div class="row field">
@@ -84,6 +84,29 @@
                                         <input autocomplete="billing address" class="form-control" type="text"
                                                id="address_mask" name="address_mask" data-parsley-required
                                                data-parsley-google placeholder="ENTER YOUR ADDRESS"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-section">
+                                <div class="row">
+                                    <div class="start">Step 3 of 4</div>
+                                    <div class="steptitle">How do you rate your credit?
+                                    </div>
+                                </div>
+                                <div class="row field">
+                                    <div class="form-group">
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Excellent"> Excellent
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Good"> Good
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Fair"> Fair
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Poor"> Poor
+                                        </label>
                                     </div>
                                 </div>
                             </div>

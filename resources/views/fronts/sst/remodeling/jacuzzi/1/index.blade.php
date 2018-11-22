@@ -66,10 +66,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars fa-fw"></i>
             </button>
-            <div class="collapse navbar-collapse text-uppercase" id="navbarToggler">
-                <ul class="navbar-nav ml-auto text-right">
-                    <li class="nav-item"><a class="nav-link" href="http://vwoads.com/path/out.php?g=2">Why Choose Us</a></li><li class="nav-item"><a class="nav-link" href="http://vwoads.com/path/out.php?g=3">Specials</a></li><li class="nav-item"><a class="nav-link" href="http://vwoads.com/path/out.php?g=4">Reviews</a></li><li class="nav-item"><a class="nav-link" href="http://vwoads.com/path/out.php?g=5">Contact Us</a></li> </ul>
-            </div>
+
             <div id="sticky_form_container" class="d-none d-lg-block" style="display: none !important;"><form id="sticky_form" action="https://testtesttest55.wufoo.com/forms/m1w1n1m116ljmsb/" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <div class="form-row">
@@ -379,13 +376,6 @@
                     </div>
                 </div>
                 <div class="row">
-                </div>
-            </div>
-            <div id="footer_right" class="d-none d-sm-block col-12 col-lg-4 offset-lg-2 col-xl-4 offset-xl-2">
-                <div class="footer_menu text-uppercase">
-                    <ul>
-                        <li class="main_item">Main Menu</li>
-                        <li class="menu_item"><a href="http://vwoads.com/path/out.php?g=1">Why Choose Us</a></li><li class="menu_item"><a href="http://vwoads.com/path/out.php?g=1">Specials</a></li><li class="menu_item"><a href="http://vwoads.com/path/out.php?g=1">Reviews</a></li><li class="menu_item"><a href="http://vwoads.com/path/out.php?g=1">Contact Us</a></li> </ul>
                 </div>
             </div>
         </div>
