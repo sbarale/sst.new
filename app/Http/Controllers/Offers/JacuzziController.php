@@ -16,7 +16,11 @@ class JacuzziController extends LeadspediaController {
     ];
 
     public function showForm( $id = 1 ) {
-        return view( "fronts.sst.remodeling.jacuzzi.$id.index", $this->data );
+        return view( "fronts.sst.remodeling.jacuzzi.$id.index", [
+            'campaign_id'  => '5bee6502249b5',
+            'campaign_key' => 'M9KdXpw7gqTRWxzct4CL',
+            'pixel'        => 'https://track.geek3.io/pixel.do?o=17&t=p',
+        ])->with($this->data);
     }
 
     public function postForm( $id = 1, $custom_fields = [] ) {

@@ -51,7 +51,7 @@
             <div class="col-md-5">
                 <section class="test-form">
                     <form id="demo-form"
-                          action="/remodeling/bath/1"
+                          action="/remodeling/bath/4"
                           method="post" class="demo-form js-floating-labels" data-parsley-validate
                           data-parsley-errors-messages-disabled>
                         <input type="hidden" id="address" name="address" value="" data-parsley-required>

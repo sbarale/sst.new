@@ -1,11 +1,11 @@
 @extends('layouts.empty')
-@section('title','Complete Car Warranty')
+@section('title','Jacuzzi')
 @section('header-middle-img','/images/ins.png')
 @section('head')
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Complete Car Warranty</title>
+    <title>Jacuzzi</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script type="text/javascript">
         // Minified version of isMobile included in the HTML since it's small
@@ -67,40 +67,7 @@
                 <i class="fas fa-bars fa-fw"></i>
             </button>
 
-            <div id="sticky_form_container" class="d-none d-lg-block" style="display: none !important;"><form id="sticky_form" action="https://testtesttest55.wufoo.com/forms/m1w1n1m116ljmsb/" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
-                    <div class="form-group">
-                        <div class="form-row">
-                            <div class="col">
-                                <label>First Name</label>
-                                <input type="text" class="form-control" name="Field1" placeholder="First Name" data-bvalidator="required">
-                            </div>
-                            <div class="col">
-                                <label>Last Name</label>
-                                <input type="text" class="form-control" name="Field2" placeholder="Last Name" data-bvalidator="required">
-                            </div>
-                            <div class="col">
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="Field3" placeholder="Email" data-bvalidator="required,email">
-                            </div>
-                            <div class="col">
-                                <label>Phone</label>
-                                <input type="tel" class="form-control phone_mask" name="Field4" placeholder="Phone" data-bvalidator="required,rangelength[10:14]" maxlength="14">
-                            </div>
-                            <div class="col">
-                                <label>ZIP Code</label>
-                                <input type="tel" class="form-control" name="Field5" placeholder="ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
-                            </div>
-                            <div class="col">
-                                <button type="submit" class="btn btn-success btn-block">Get a Free Quote</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-none">
-                        <input type="hidden" id="" class="form_referrer" name="Field7" value=""><input type="hidden" id="" class="form_source" name="Field6" value=""><input type="hidden" id="" class="" name="comment" value=""><input type="hidden" id="" class="" name="idstamp" value="4s7Ar7vsPkkIgFjlr694qPgiG6NK4/erVptkeBG0ZkY=">
-                    </div>
-                    @include('fronts.sst._common.hidden_fields')
-                </form>
-            </div>
+
         </nav>
     </div>
     <div id="hero" class="jumbotron jumbotron-fluid" style="background-image:url('/assets/remodeling/jacuzzi/img/hero.jpg')">
@@ -148,10 +115,32 @@
                             </div>
                         </div>
                     </div>
+                    <div class="formRow1Col">
+                        <label>What is your credit rating?</label>
+                    </div>
+                    <div class="row field">
+
+                        <div class="form-group">
+                            <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                <input type="radio" data-parsley-required name="credit_rate" value="Excellent"> Excellent
+                            </label>
+                            <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                <input type="radio" data-parsley-required name="credit_rate" value="Good"> Good
+                            </label>
+                            <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                <input type="radio" data-parsley-required name="credit_rate" value="Fair"> Fair
+                            </label>
+                            <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
+                                <input type="radio" data-parsley-required name="credit_rate" value="Poor"> Poor
+                            </label>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-success btn-block">Get a Free Quote Now!</button>
                     <div class="d-none"><input type="hidden" id="" class="form_referrer" name="Field7" value=""><input type="hidden" id="" class="form_source" name="Field6" value=""><input type="hidden" id="" class="" name="comment" value=""><input type="hidden" id="" class="" name="idstamp" value="4s7Ar7vsPkkIgFjlr694qPgiG6NK4/erVptkeBG0ZkY=">
                     </div>
                     @include('fronts.sst._common.hidden_fields')
+                    <input type="hidden" name="lp_campaign_id" value="{{$campaign_id}}">
+                    <input type="hidden" name="lp_campaign_key" value="{{$campaign_key}}">
                 </form>
             </div>
         </div>
@@ -358,9 +347,36 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-group" style="margin-bottom: 5px;">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label style="display: block; color: white;">What is your credit rating?</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row field">
+
+                                    <div class="form-group">
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Excellent"> Excellent
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Good"> Good
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Fair"> Fair
+                                        </label>
+                                        <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Poor"> Poor
+                                        </label>
+                                    </div>
+                                </div>
                                 <button type="submit" class="btn btn-success btn-block">Get a Free Quote Now!</button>
                                 <div class="d-none"><input type="hidden" id="" class="form_referrer" name="Field7" value=""><input type="hidden" id="" class="form_source" name="Field6" value=""><input type="hidden" id="" class="" name="comment" value=""><input type="hidden" id="" class="" name="idstamp" value="4s7Ar7vsPkkIgFjlr694qPgiG6NK4/erVptkeBG0ZkY=">
                                 </div>
+                                @include('fronts.sst._common.hidden_fields')
+                                <input type="hidden" name="lp_campaign_id" value="{{$campaign_id}}">
+                                <input type="hidden" name="lp_campaign_key" value="{{$campaign_key}}">
                             </form>
                         </div>
                     </div>
