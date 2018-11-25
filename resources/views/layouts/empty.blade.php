@@ -17,12 +17,13 @@
         <link href="/css/bath/2/main.css" rel="stylesheet" type='text/css'/>
     @show
 
-    @section('scripts')
-
-    @show
+        @section('scripts')
+            @include('trackers.set_fbid_px')
+            @include('trackers.gtm')
+        @show
 </head>
 <body class="graybg">
-
+@include('fronts.sst._common.debugbar')
 <header class="navbar navbar-static-top" id="top" role="banner" >
     <div class="container">
         <div class="row">
