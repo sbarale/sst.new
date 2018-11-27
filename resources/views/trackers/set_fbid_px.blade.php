@@ -1,5 +1,6 @@
 @if (isset($fbid) && !($fbid===false))
     <script>
+        dataLayer = window.dataLayer || [];
         dataLayer.push({'fbid': '{{$fbid}}'});
         console.log('fbid set');
     </script>
