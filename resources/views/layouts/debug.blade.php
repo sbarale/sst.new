@@ -65,9 +65,6 @@
                     case 'fbid':
                         $color = empty($input) ? 'red' : '';
                         break;
-                    case 'lp_request_id':
-                        $color = empty($input) ? 'red' : '';
-                        break;
                     default:
                         $color = '';
                 }
@@ -85,7 +82,17 @@
         <h6>(Data currently being sent to the server)</h6>
         <form name="form_data" id="posting" class="form-horizontal quiz_form">
             @foreach($post as $name => $input)
-                <div class="form-group row">
+                <?php
+                // Let's loook for mandatory data
+                switch ($name) {
+                    case 'lp_request_id':
+                        $color = empty($input) ? 'red' : '';
+                        break;
+                    default:
+                        $color = '';
+                }
+                ?>
+                <div class="form-group row"  style="background-color: {{$color}};">
                     <label for="{{$name}}" class="col-sm-2 col-form-label text-right">{{$name}}</label>
                     <div class="col-md-10">
                         <input class="form-control text-left" name="{{$name}}" value="{{$input}}">
