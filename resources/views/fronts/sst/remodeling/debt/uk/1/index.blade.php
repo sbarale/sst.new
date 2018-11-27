@@ -181,7 +181,7 @@
                         </div>
                             <div class="formPanel">
                                 <div class="formRow1Col">
-                                    <div class="title">What is your credit rating?</div>
+                                    <div class="title">How do you rate your credit?</div>
                                 </div>
 
                                 <div class="clear" style="height: 20px;"></div>

@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="formRow1Col">
-                        <label>What is your credit rating?</label>
+                        <label>How do you rate your credit?</label>
                     </div>
                     <div class="row field">
 
@@ -350,7 +350,7 @@
                                 <div class="form-group" style="margin-bottom: 5px;">
                                     <div class="form-row">
                                         <div class="col">
-                                            <label style="display: block; color: white;">What is your credit rating?</label>
+                                            <label style="display: block; color: white;">How do you rate your credit?</label>
                                         </div>
                                     </div>
                                 </div>
