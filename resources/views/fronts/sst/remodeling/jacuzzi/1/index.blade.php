@@ -60,7 +60,7 @@
             </div>
         </div>
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="http://vwoads.com/path/out.php?g=1">
+            <a class="navbar-brand" href="#">
                 <img src="/assets/remodeling/jacuzzi/img/logo.png" alt="Jacuzzi<sup>®</sup> Walk-In Baths Main Logo" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,21 +77,22 @@
                 <div class="hero_text">
                     <span class="hero_text_sl">Get</span> <span class="hero_text_rl highlight_color">$1,500</span> <span class="hero_text_sl">Off</span><br />
                     Your New Walk-In Tub Today! </div>
-                <a href="http://vwoads.com/path/out.php?g=6" class="d-inline-block d-md-none btn btn-success">Get a Free Quote Now!</a>
+                <a href="#" class="d-inline-block d-md-none btn btn-success">Get a Free Quote Now!</a>
             </div>
             <div id="hero_right" class="d-none d-md-block">
-                <form id="hero_form" action="https://sociusmarketing.wufoo.com/forms/" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
+                <form id="hero_form" action="/remodeling/jacuzzi/1" method="post">
+                    {{ csrf_field() }}
                     <div class="form_title text-center">Bathtubs from a Trusted Name</div>
                     <div class="form_subtitle text-center">Fill out the form below for more information about Jacuzzi<sup>®</sup> Walk-In Bathtubs.</div>
                     <div class="form-group">
                         <div class="form-row">
                             <div class="col">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" name="Field1" placeholder="Enter first name" data-bvalidator="required">
+                                <input type="text" class="form-control" name="first_name" placeholder="Enter first name" data-bvalidator="required">
                             </div>
                             <div class="col">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" name="Field2" placeholder="Enter last name" data-bvalidator="required">
+                                <input type="text" class="form-control" name="last_name" placeholder="Enter last name" data-bvalidator="required">
                             </div>
                         </div>
                     </div>
@@ -99,7 +100,7 @@
                         <div class="form-row">
                             <div class="col">
                                 <label>Email</label>
-                                <input type="email" class="form-control" name="Field3" placeholder="Enter email" data-bvalidator="required,email">
+                                <input type="email" class="form-control" name="email_address" placeholder="Enter email" data-bvalidator="required,email">
                             </div>
                         </div>
                     </div>
@@ -107,11 +108,11 @@
                         <div class="form-row">
                             <div class="col">
                                 <label>Phone</label>
-                                <input type="tel" class="form-control phone_mask" name="Field4" placeholder="Enter phone number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
+                                <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Enter phone number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
                             </div>
                             <div class="col">
                                 <label>ZIP Code</label>
-                                <input type="tel" class="form-control" name="Field5" placeholder="Enter ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
+                                <input type="tel" class="form-control" name="zip_code" placeholder="Enter ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
                             </div>
                         </div>
                     </div>
@@ -135,12 +136,10 @@
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success btn-block">Get a Free Quote Now!</button>
+                    <button type="submit" name="_submit" value="1" class="btn btn-success btn-block">Get a Free Quote Now!</button>
                     <div class="d-none"><input type="hidden" id="" class="form_referrer" name="Field7" value=""><input type="hidden" id="" class="form_source" name="Field6" value=""><input type="hidden" id="" class="" name="comment" value=""><input type="hidden" id="" class="" name="idstamp" value="4s7Ar7vsPkkIgFjlr694qPgiG6NK4/erVptkeBG0ZkY=">
                     </div>
                     @include('fronts.sst._common.hidden_fields')
-                    <input type="hidden" name="lp_campaign_id" value="{{$campaign_id}}">
-                    <input type="hidden" name="lp_campaign_key" value="{{$campaign_key}}">
                 </form>
             </div>
         </div>
@@ -166,7 +165,7 @@
                             <li>The ability to use Epsom Salts to in soaking and jetted experiences</li>
                             <li>And more</li>
                         </ul>
-                        <p>With such a large focus on safety, these are ideal tubs for seniors, as well as those who are disabled or have limited mobility. </p> <a href="http://vwoads.com/path/out.php?g=1" class="btn btn-success">Get a Quote</a>
+                        <p>With such a large focus on safety, these are ideal tubs for seniors, as well as those who are disabled or have limited mobility. </p> <a href="#" class="btn btn-success">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -189,7 +188,7 @@
                         <div class="cta_bottom_text">
                             <p>Take advantage of this great deal by contacting us today.</p>
                         </div>
-                        <a href="http://vwoads.com/path/out.php?g=1" class="btn btn-success">Learn More</a>
+                        <a href="#" class="btn btn-success">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -207,7 +206,7 @@
                         <div class="cta_bottom_text">
                             <p>Contact us today to find out more Jacuzzi<sup>®</sup> and our industry-leading walk-in tubs.</p>
                         </div>
-                        <a href="http://vwoads.com/path/out.php?g=1" class="btn btn-success">Learn More</a>
+                        <a href="#" class="btn btn-success">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -253,7 +252,7 @@
             <div id="secondary_content_right" class="col-12 col-sm-6 col-md-5">
                 <div class="secondary_content_text_container">
                     <div class="secondary_content_top_text">Jacuzzi<sup>®</sup> Brand – Trusted by Consumers</div>
-                    <p>As the company that invented the whirlpool bath, we consider ourselves experts on the subject. Since 1956, we’ve spent decades improving our baths, setting the standard for quality and value. Jacuzzi<sup>®</sup> Walk-In Tubs combine both luxury and safety, offering you the ultimate bathing experience. You can easily get into our tubs, but with the relaxing jets, heated seat, and constant warm water, you won’t want to get out. With a Jacuzzi<sup>®</sup> Walk-In Tub, you’ll never have to sacrifice your comfort or safety while bathing again.</p> <a href="http://vwoads.com/path/out.php?g=1" class="btn btn-success">Learn More</a>
+                    <p>As the company that invented the whirlpool bath, we consider ourselves experts on the subject. Since 1956, we’ve spent decades improving our baths, setting the standard for quality and value. Jacuzzi<sup>®</sup> Walk-In Tubs combine both luxury and safety, offering you the ultimate bathing experience. You can easily get into our tubs, but with the relaxing jets, heated seat, and constant warm water, you won’t want to get out. With a Jacuzzi<sup>®</sup> Walk-In Tub, you’ll never have to sacrifice your comfort or safety while bathing again.</p> <a href="#" class="btn btn-success">Learn More</a>
                 </div>
             </div>
         </div>
@@ -312,18 +311,19 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-10 offset-1">
-                            <form id="subfooter_form" action="https://testtesttest55.wufoo.com/forms/m1w1n1m116ljmsb/" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post">
+                            <form id="subfooter_form" action="/remodeling/jacuzzi/1" method="post">
+                                {{ csrf_field() }}
                                 <div class="form_title text-center">Start Enjoying the Benefits</div>
                                 <div class="form_subtitle text-center">Take the first step towards a new walk-in tub by filling out the form below.</div>
                                 <div class="form-group">
                                     <div class="form-row">
                                         <div class="col">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control" name="Field1" placeholder="First Name" data-bvalidator="required">
+                                            <input type="text" class="form-control" name="first_name" placeholder="First Name" data-bvalidator="required">
                                         </div>
                                         <div class="col">
                                             <label>Last Name</label>
-                                            <input type="text" class="form-control" name="Field2" placeholder="Last Name" data-bvalidator="required">
+                                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" data-bvalidator="required">
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +331,7 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" name="Field3" placeholder="Email" data-bvalidator="required,email">
+                                            <input type="email" class="form-control" name="email_address" placeholder="Email" data-bvalidator="required,email">
                                         </div>
                                     </div>
                                 </div>
@@ -339,11 +339,11 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <label>Phone</label>
-                                            <input type="tel" class="form-control phone_mask" name="Field4" placeholder="Phone Number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
+                                            <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Phone Number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
                                         </div>
                                         <div class="col">
                                             <label>ZIP Code</label>
-                                            <input type="tel" class="form-control" name="Field5" placeholder="ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
+                                            <input type="tel" class="form-control" name="zip_code" placeholder="ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
                                         </div>
                                     </div>
                                 </div>
@@ -371,12 +371,10 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-success btn-block">Get a Free Quote Now!</button>
+                                <button type="submit" name="_submit" value="1" class="btn btn-success btn-block">Get a Free Quote Now!</button>
                                 <div class="d-none"><input type="hidden" id="" class="form_referrer" name="Field7" value=""><input type="hidden" id="" class="form_source" name="Field6" value=""><input type="hidden" id="" class="" name="comment" value=""><input type="hidden" id="" class="" name="idstamp" value="4s7Ar7vsPkkIgFjlr694qPgiG6NK4/erVptkeBG0ZkY=">
                                 </div>
                                 @include('fronts.sst._common.hidden_fields')
-                                <input type="hidden" name="lp_campaign_id" value="{{$campaign_id}}">
-                                <input type="hidden" name="lp_campaign_key" value="{{$campaign_key}}">
                             </form>
                         </div>
                     </div>
@@ -406,7 +404,7 @@
     <div id="mobile_bar" class="container-fluid d-block d-lg-none fixed-bottom">
         <div class="row">
             <div id="first_mobile_buttom" class="mobile_bar_button col-6 text-center">
-                <a href="http://vwoads.com/path/out.php?g=1" class="d-block phone_changer">Get a Free Estimate</a>
+                <a href="#" class="d-block phone_changer">Get a Free Estimate</a>
             </div>
             <div id="last_mobile_button" class="mobile_bar_button col-6 text-center">
                 <a href="tel:8888967228" class="d-block phone_changer">Call Today</a>
@@ -432,18 +430,15 @@
     <script src="/assets/remodeling/jacuzzi/js/jquery.mask.min.js"></script>
     <script src="/assets/remodeling/jacuzzi/js/jquery.bvalidator.js"></script>
     <script src="/assets/remodeling/jacuzzi/js/custom.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase-database.js"></script>
-    <script src="/assets/remodeling/jacuzzi/js/database.js"></script>
+
     <script src="/assets/remodeling/jacuzzi/js/custom_per_micro.js"></script>
     <script>
 
         var formstovalidate = [];
         var source_numbers = {};
-        var city_texts = {};
-        var default_phone_number = "8888967220";
-        var default_formatted_phone_number = "(888) 896-7220";
-        formstovalidate = ["sticky_form","hero_form","subfooter_form","specials_form","contact_form"];source_numbers.googlebrandppc = "8888978135";source_numbers.googlenbppc = "8888967228";source_numbers.bingbrandppc = "8888967231";source_numbers.bingnbppc = "8888970798";source_numbers.googlereppc = "8888976233";source_numbers.googledppc = "8888977455";source_numbers.sftv = "8002738923";source_numbers.aarp = "8883155170";source_numbers.sharedmail = "8883157227";source_numbers.massmedia = "8883157228";source_numbers.print = "8883157230";source_numbers.inserts = "8883159042";source_numbers.consumeraffairs = "8889070149";var referral_url = 'http://www.jacuzzi.com/walkin-bath/l/walk-in-tubs/';var locations = [];      var icon = [];
+
+        formstovalidate = ["sticky_form","hero_form","subfooter_form","specials_form","contact_form"];
+
 
     </script>
     <script src="/assets/remodeling/jacuzzi/js/map.js"></script>
