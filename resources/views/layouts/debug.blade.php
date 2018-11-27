@@ -51,11 +51,28 @@
 
 <div class="container ">
     <h2>These are the values that will be posted to the server</h2>
+    <h3>Please make sure you're coming through the leadspedia link (and adding &debug=1 at the and of it), not directly to the lander</h3>
     <div class="secondarybg  whitebg">
         <h4>Tracking Data</h4>
         <form name="tracking_data" id="tracking" class="form-horizontal quiz_form">
             @foreach($data as $name => $input)
-                <div class="form-group row">
+                <?php
+                // Let's loook for mandatory data
+                switch ($name) {
+                    case 'click_id':
+                        $color = empty($input) ? 'red' : '';
+                        break;
+                    case 'fbid':
+                        $color = empty($input) ? 'red' : '';
+                        break;
+                    case 'lp_request_id':
+                        $color = empty($input) ? 'red' : '';
+                        break;
+                    default:
+                        $color = '';
+                }
+                ?>
+                <div class="form-group row" style="background-color: {{$color}};">
                     <label for="{{$name}}" class="col-sm-2 col-form-label text-right">{{$name}}</label>
                     <div class="col-md-10">
                         <input class="form-control text-left" name="{{$name}}" value="{{$input}}">
@@ -66,7 +83,7 @@
         <hr>
         <h4>Posting Data</h4>
         <h6>(Data currently being sent to the server)</h6>
-        <form name="form_data"  id="posting" class="form-horizontal quiz_form">
+        <form name="form_data" id="posting" class="form-horizontal quiz_form">
             @foreach($post as $name => $input)
                 <div class="form-group row">
                     <label for="{{$name}}" class="col-sm-2 col-form-label text-right">{{$name}}</label>
