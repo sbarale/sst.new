@@ -80,7 +80,7 @@
                 <a href="#" class="d-inline-block d-md-none btn btn-success">Get a Free Quote Now!</a>
             </div>
             <div id="hero_right" class="d-none d-md-block">
-                <form id="hero_form" action="/remodeling/jacuzzi/1" method="post">
+                <form id="hero_form"  action="/remodeling/jacuzzi/1" method="post">
                     {{ csrf_field() }}
                     <div class="form_title text-center">Bathtubs from a Trusted Name</div>
                     <div class="form_subtitle text-center">Fill out the form below for more information about Jacuzzi<sup>®</sup> Walk-In Bathtubs.</div>
@@ -88,11 +88,11 @@
                         <div class="form-row">
                             <div class="col">
                                 <label>First Name</label>
-                                <input type="text" class="form-control" name="first_name" placeholder="Enter first name" data-bvalidator="required">
+                                <input type="text" class="form-control" name="first_name" placeholder="Enter first name" required>
                             </div>
                             <div class="col">
                                 <label>Last Name</label>
-                                <input type="text" class="form-control" name="last_name" placeholder="Enter last name" data-bvalidator="required">
+                                <input type="text" class="form-control" name="last_name" placeholder="Enter last name" required>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                         <div class="form-row">
                             <div class="col">
                                 <label>Email</label>
-                                <input type="email" class="form-control" name="email_address" placeholder="Enter email" data-bvalidator="required,email">
+                                <input type="email" class="form-control" name="email_address" placeholder="Enter email" required>
                             </div>
                         </div>
                     </div>
@@ -108,11 +108,11 @@
                         <div class="form-row">
                             <div class="col">
                                 <label>Phone</label>
-                                <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Enter phone number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
+                                <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Enter phone number" required minlength="10" maxlength="14">
                             </div>
                             <div class="col">
                                 <label>ZIP Code</label>
-                                <input type="tel" class="form-control" name="zip_code" placeholder="Enter ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
+                                <input type="tel" class="form-control" name="zip_code" placeholder="Enter ZIP Code" required maxlength="5">
                             </div>
                         </div>
                     </div>
@@ -123,16 +123,16 @@
 
                         <div class="form-group">
                             <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
-                                <input type="radio" data-parsley-required name="credit_rate" value="Excellent"> Excellent
+                                <input type="radio" data-parsley-required name="credit_rate" value="Excellent" required> Excellent
                             </label>
                             <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
-                                <input type="radio" data-parsley-required name="credit_rate" value="Good"> Good
+                                <input type="radio" data-parsley-required name="credit_rate" value="Good" required> Good
                             </label>
                             <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
-                                <input type="radio" data-parsley-required name="credit_rate" value="Fair"> Fair
+                                <input type="radio" data-parsley-required name="credit_rate" value="Fair" required> Fair
                             </label>
                             <label style="display: block; margin-bottom: 10px; margin-left: 20px;">
-                                <input type="radio" data-parsley-required name="credit_rate" value="Poor"> Poor
+                                <input type="radio" data-parsley-required name="credit_rate" value="Poor" required> Poor
                             </label>
                         </div>
                     </div>
@@ -319,11 +319,11 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control" name="first_name" placeholder="First Name" data-bvalidator="required">
+                                            <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
                                         </div>
                                         <div class="col">
                                             <label>Last Name</label>
-                                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" data-bvalidator="required">
+                                            <input type="text" class="form-control" name="last_name" placeholder="Last Name" required>
                                         </div>
                                     </div>
                                 </div>
@@ -331,7 +331,7 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" name="email_address" placeholder="Email" data-bvalidator="required,email">
+                                            <input type="email" class="form-control" name="email_address" placeholder="Email" required>
                                         </div>
                                     </div>
                                 </div>
@@ -339,11 +339,11 @@
                                     <div class="form-row">
                                         <div class="col">
                                             <label>Phone</label>
-                                            <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Phone Number" data-bvalidator="required,rangelength[10:14]" maxlength="14">
+                                            <input type="tel" class="form-control phone_mask" name="phone_home" placeholder="Phone Number" required minlength="10" maxlength="14">
                                         </div>
                                         <div class="col">
                                             <label>ZIP Code</label>
-                                            <input type="tel" class="form-control" name="zip_code" placeholder="ZIP Code" data-bvalidator="required,rangelength[5:5]" maxlength="5">
+                                            <input type="tel" class="form-control" name="zip_code" placeholder="ZIP Code" required maxlength="5">
                                         </div>
                                     </div>
                                 </div>
@@ -358,16 +358,16 @@
 
                                     <div class="form-group">
                                         <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
-                                            <input type="radio" data-parsley-required name="credit_rate" value="Excellent"> Excellent
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Excellent" required> Excellent
                                         </label>
                                         <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
-                                            <input type="radio" data-parsley-required name="credit_rate" value="Good"> Good
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Good" required> Good
                                         </label>
                                         <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
-                                            <input type="radio" data-parsley-required name="credit_rate" value="Fair"> Fair
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Fair" required> Fair
                                         </label>
                                         <label style="display: block; margin-bottom: 10px; margin-left: 20px; color: white;">
-                                            <input type="radio" data-parsley-required name="credit_rate" value="Poor"> Poor
+                                            <input type="radio" data-parsley-required name="credit_rate" value="Poor" required> Poor
                                         </label>
                                     </div>
                                 </div>
@@ -445,6 +445,7 @@
     <script type="text/javascript">
         AOS.init();
     </script>
+
 
 @endsection
 
